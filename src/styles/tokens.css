@@ -29,6 +29,7 @@
   --space-9: 6rem;      /* 96px */
 
   /* ---------- Layout ---------- */
-  --container-max: 1080px;
+  --container-max: 1600px;   /* outer page width cap */
+  --container-prose: 860px;  /* readable text-column width for case studies */
   --radius-card: 6px;
 }

@@ -1,9 +1,21 @@
 .case-study {
-  max-width: 720px;
+  max-width: var(--container-max);
   margin: 0 auto;
   padding: var(--space-7) var(--space-5) var(--space-9);
   min-height: 100vh;
   background: var(--color-bg);
+}
+
+/* Inner prose width: keep text columns readable even when the page is 1600px wide.
+   Header, intro, body, and bottom nav are centered within this constraint. */
+.case-study__back,
+.case-study__header,
+.case-study__intro,
+.case-study__body,
+.case-study .cs-nav {
+  max-width: var(--container-prose);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ---------- Back link ---------- */
@@ -38,13 +50,13 @@
 .case-study__brand-word {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 1.75vw, 2rem);
   letter-spacing: -0.01em;
 }
 
 .case-study__divider {
   font-weight: 200;
-  font-size: 1.5rem;
+  font-size: clamp(1.25rem, 1.75vw, 2rem);
   opacity: 0.5;
 }
 
@@ -52,7 +64,7 @@
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-size: clamp(1.75rem, 3vw, 3rem);
   line-height: 1.1;
 }
 
