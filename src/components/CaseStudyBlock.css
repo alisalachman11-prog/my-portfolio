@@ -1,0 +1,110 @@
+/* ---------- Shared block spacing ---------- */
+.cs-block {
+  margin-block: 0;
+}
+
+/* ---------- Headings ---------- */
+.cs-h2 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.375rem, 1.75vw, 1.875rem);
+  line-height: 1.25;
+  color: var(--color-text);
+  margin-top: var(--space-7);
+  margin-bottom: var(--space-3);
+}
+
+.cs-h3 {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.125rem, 1.25vw, 1.375rem);
+  line-height: 1.3;
+  color: var(--color-text);
+  margin-top: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+/* ---------- Paragraph ---------- */
+.cs-p {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--color-text);
+  margin-bottom: var(--space-4);
+}
+
+/* ---------- List ---------- */
+.cs-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+  margin-bottom: var(--space-4);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.cs-list li {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ---------- Figures (single image) ---------- */
+.cs-figure {
+  margin-block: var(--space-5);
+}
+
+.cs-figure img {
+  width: 100%;
+  border-radius: 4px;
+  display: block;
+}
+
+.cs-figure__placeholder {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--color-card-bg);
+  border: 1px dashed var(--color-card-border);
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  font-size: 0.875rem;
+}
+
+.cs-figure figcaption {
+  font-size: 0.8125rem;
+  color: var(--color-text-muted);
+  margin-top: var(--space-2);
+  font-style: italic;
+}
+
+/* ---------- Image row (two or three side-by-side) ---------- */
+.cs-img-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--space-4);
+  margin-block: var(--space-5);
+}
+
+.cs-img-row .cs-figure {
+  margin-block: 0;
+}
+
+@media (max-width: 600px) {
+  .cs-h2 {
+    font-size: 1.25rem;
+    margin-top: var(--space-6);
+  }
+
+  .cs-h3 {
+    font-size: 1.0625rem;
+  }
+
+  .cs-p,
+  .cs-list li {
+    font-size: 0.9375rem;
+  }
+}
