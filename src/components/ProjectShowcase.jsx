@@ -1,9 +1,10 @@
 import { Link } from 'react-router-dom'
 import LogoMark from './LogoMark.jsx'
+import { ui } from '../content/site.js'
 import './ProjectShowcase.css'
 
 export default function ProjectShowcase({ project }) {
-  const { brand, title, description, theme, slug } = project
+  const { brand, title, description, theme, slug, image } = project
 
   return (
     <section
@@ -33,9 +34,13 @@ export default function ProjectShowcase({ project }) {
 
       <p className="showcase__description">{description}</p>
 
-      <div className="showcase__media" role="img" aria-label={`${title} preview`}>
-        <span className="showcase__media-label">Hero image placeholder</span>
-      </div>
+      {image ? (
+        <img className="showcase__media-image" src={image} alt={`${title} preview`} />
+      ) : (
+        <div className="showcase__media" role="img" aria-label={`${title} preview`}>
+          <span className="showcase__media-label">{ui.imagePlaceholder}</span>
+        </div>
+      )}
     </section>
   )
 }
