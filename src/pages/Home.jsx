@@ -1,9 +1,14 @@
+import { useEffect } from 'react'
 import Sidebar from '../components/Sidebar.jsx'
 import ProjectShowcase from '../components/ProjectShowcase.jsx'
-import { projects } from '../data/projects.js'
+import { projects, meta } from '../content/site.js'
 import './Home.css'
 
 export default function Home() {
+  useEffect(() => {
+    document.title = meta.siteTitle
+  }, [])
+
   return (
     <main className="home">
       <Sidebar />

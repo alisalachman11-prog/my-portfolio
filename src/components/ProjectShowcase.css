@@ -9,7 +9,12 @@
   min-height: calc(100vh - 2 * var(--space-5));
 }
 
-/* ---- Themes ---- */
+/* ============================================================
+   Themes — quick edit zone
+   Change the background and text color values to retheme a card.
+   Each project picks its theme via the `theme` field in site.js.
+   ============================================================ */
+
 .showcase--light {
   background: #f0eeea;
   color: var(--color-text);
@@ -103,12 +108,18 @@
   max-width: 60ch;
 }
 
-/* ---- Media ---- */
-.showcase__media {
+/* ---- Media (placeholder OR image) ---- */
+.showcase__media,
+.showcase__media-image {
   flex: 1;
   min-height: 320px;
   margin-top: var(--space-3);
   border-radius: 4px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.showcase__media {
   background: rgba(255, 255, 255, 0.4);
   border: 1px dashed rgba(0, 0, 0, 0.15);
   display: flex;
