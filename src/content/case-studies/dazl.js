@@ -1,0 +1,109 @@
+/**
+ * Dazl case study content.
+ * Edit `intro` and the `blocks` array to update the page.
+ * Block types: h2, h3, p, img, img-row, list. See README in this folder.
+ */
+export default {
+  intro:
+    'Dazl is a cutting-edge AI-Builder headed by Nadav Avrahami, the co-founder of Wix, together with a core group of Wix professionals.',
+  blocks: [
+    { type: 'h2', text: 'Bridging the gap between Designer and Developer' },
+    {
+      type: 'p',
+      text: 'The challenge my squad and I were given was to recreate the properties panel — a key component of any IDE or design tool, but a very different thing in each of them. The designer expects a direct visual control, and the developer expects a true-to-code, power-user control for manipulating exact variables.',
+    },
+    {
+      type: 'p',
+      text: "The previous property panel that was implemented in Codux tried to be both, and because of that, it was neither — ending up being too complex for some and too weak for others.",
+    },
+    { type: 'img', caption: 'Initial state of the property panel before redesign.' },
+
+    { type: 'h2', text: 'Be the solution you want to see in the product' },
+    {
+      type: 'p',
+      text: 'We addressed the designer-to-developer gap from the source — the solution was developed by the close cooperation of a developer and me, from prototyping the scope of this endeavor, assessing what worked and what didn’t in the old panel, to mapping out the tasks a user would expect to complete while working in an IDE, and building components with all possible property types.',
+    },
+    { type: 'img' },
+
+    { type: 'h2', text: 'Separate squads, unified design language' },
+    {
+      type: 'p',
+      text: 'In order to ensure Dazl felt like one highly polished product and not like a collection of high-complexity tools taped together, we worked hand in hand with the style panel team, keeping the development rooted in Dazl tools and functionality for these complex panels.',
+    },
+    { type: 'img' },
+
+    { type: 'h2', text: '[try] then [try again]' },
+    {
+      type: 'p',
+      text: 'While developing the solution, we went through several iterations. Going through them, it was key for me to be humble and to work closely with the development team — successfully identifying personal biases (both mine and theirs) and fully comprehending the effect rejections and suggestions had.',
+    },
+    { type: 'p', text: 'Some of the key iterations we went through:' },
+
+    { type: 'h3', text: 'Option 1 — Debugging vs. Editing mode' },
+    {
+      type: 'p',
+      text: 'Instead of showing an overwhelming amount of information in a single panel, create mode-specific panels for the user to cycle between as needed.',
+    },
+    { type: 'img' },
+
+    { type: 'h3', text: 'Option 2 — Computed values on demand' },
+    {
+      type: 'p',
+      text: 'Keep the single-panel approach but resolve information overflow by hiding computed values until requested — exposed via hover or click. Fully scalable regardless of the size of the value.',
+    },
+    { type: 'img' },
+
+    { type: 'h3', text: 'Option 3 — Side by side' },
+    {
+      type: 'p',
+      text: 'Tackle the one-panel issue head-on by creating a larger panel that is organized well enough to still be usable.',
+    },
+    { type: 'img' },
+
+    { type: 'h2', text: 'A great panel has many properties' },
+    {
+      type: 'p',
+      text: 'Our final implemented design combines the best insights from the entire journey, keeping the parts that worked and reimagining the parts that didn’t.',
+    },
+    { type: 'img' },
+
+    { type: 'h2', text: 'If you need it, then you’ll see it' },
+    {
+      type: 'p',
+      text: 'We start by only showing properties that are already passed to the component, while keeping the ability to add new properties via an "Add property" button — addressing the complexity of the code world in a visual way.',
+    },
+    { type: 'img' },
+
+    { type: 'h2', text: 'No error left behind' },
+    {
+      type: 'p',
+      text: 'Multiple levels of error handling cover all error scenarios — surfacing errors on the tab itself, showing the error on each property, and providing a path to resolve them from a summary view.',
+    },
+    { type: 'img' },
+
+    { type: 'h2', text: 'Keep it simple, keep it useful' },
+    {
+      type: 'p',
+      text: 'A simple property panel opens on stage with the option to edit only specific primitive properties (boolean, string, number), with a defined set of characteristics per component, so a designer can produce value from directly editing them.',
+    },
+    { type: 'img' },
+
+    { type: 'h2', text: 'Conclusions' },
+    {
+      type: 'p',
+      text: 'Focus on abilities, not only happy flows. Listing the capabilities that exist in the code — and starting to understand what is important and what is not — helped characterize features better than only mapping ideal paths.',
+    },
+
+    { type: 'h2', text: 'Picking up speed' },
+    {
+      type: 'list',
+      items: [
+        'Aggregating the current available data from different sources and organizing it uniformly in a cloud-based database.',
+        'Setting up OAuth and other prerequisites for a user-facing app.',
+        'Designing and building an Alpha-stage iOS app.',
+        'Testing it all with travelers.',
+        'Populating the app and testing the quality of the database.',
+      ],
+    },
+  ],
+}
