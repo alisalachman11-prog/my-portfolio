@@ -56,7 +56,7 @@ export const projects = [
   },
   {
     slug: 'paradox',
-    brand: { mark: 'triangle', word: '' },
+    brand: { mark: 'triangle', word: 'Paradox' },
     title: 'B2B security hardware company',
     description: 'Redesigning a high-criticality legacy security app',
     theme: 'blue',
