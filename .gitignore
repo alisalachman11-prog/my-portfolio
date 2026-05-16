@@ -3,3 +3,6 @@ dist
 .DS_Store
 *.log
 .vite
+
+# Raw image sources (rendered versions live in public/images/)
+src/images/
