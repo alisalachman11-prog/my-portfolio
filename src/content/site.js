@@ -85,6 +85,7 @@ export const projects = [
 // ---------- Shared UI labels ----------
 export const ui = {
   caseStudyBack: '← Back to home',
+  caseStudyOtherHeading: 'Check other case studies:',
   caseStudyComingSoon: 'Case study content coming soon.',
   projectNotFound: 'Project not found.',
   experienceHeading: 'Experience',
