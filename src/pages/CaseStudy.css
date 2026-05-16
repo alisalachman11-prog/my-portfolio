@@ -21,10 +21,12 @@
 /* ---------- Back link ---------- */
 .case-study__back {
   display: inline-block;
-  font-size: 0.8125rem;
+  font-size: 0.6875rem;
+  font-weight: 500;
   color: var(--color-text-muted);
-  letter-spacing: 0.02em;
-  margin-bottom: var(--space-7);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: var(--space-6);
   transition: color 150ms ease;
 }
 
@@ -34,9 +36,7 @@
 
 /* ---------- Header (brand + title + tagline) ---------- */
 .case-study__header {
-  margin-bottom: var(--space-7);
-  padding-bottom: var(--space-5);
-  border-bottom: 1px solid var(--color-card-border);
+  margin-bottom: var(--space-6);
 }
 
 .case-study__brand {
@@ -44,50 +44,54 @@
   align-items: baseline;
   gap: var(--space-3);
   flex-wrap: wrap;
-  margin-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
 }
 
 .case-study__brand-word {
-  font-family: var(--font-sans);
-  font-weight: 600;
-  font-size: clamp(1.25rem, 1.75vw, 2rem);
-  letter-spacing: -0.01em;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  letter-spacing: 0;
 }
 
 .case-study__divider {
-  font-weight: 200;
-  font-size: clamp(1.25rem, 1.75vw, 2rem);
-  opacity: 0.5;
+  font-family: var(--font-serif);
+  font-weight: 300;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  opacity: 0.35;
 }
 
 .case-study__title {
   font-family: var(--font-serif);
   font-style: italic;
   font-weight: 500;
-  font-size: clamp(1.75rem, 3vw, 3rem);
-  line-height: 1.1;
+  font-size: clamp(1.5rem, 2vw, 2rem);
+  line-height: 1.2;
 }
 
 .case-study__tagline {
-  font-size: 1.0625rem;
-  color: var(--color-text);
-  line-height: 1.5;
-  max-width: 60ch;
-  margin-top: var(--space-3);
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  line-height: 1.55;
+  max-width: 64ch;
+  margin-top: var(--space-2);
 }
 
 /* ---------- Intro paragraph ---------- */
 .case-study__intro {
+  margin-bottom: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.case-study__intro p {
   font-family: var(--font-sans);
   font-size: 1rem;
   line-height: 1.7;
   color: var(--color-text);
-  margin-bottom: var(--space-5);
-}
-
-/* ---------- Body ---------- */
-.case-study__body {
-  /* blocks bring their own margin/spacing */
 }
 
 .case-study__placeholder {

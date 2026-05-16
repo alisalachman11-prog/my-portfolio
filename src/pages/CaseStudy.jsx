@@ -28,12 +28,7 @@ export default function CaseStudy() {
     )
   }
 
-  const currentIndex = projects.findIndex((p) => p.slug === slug)
-  const prev = currentIndex > 0 ? projects[currentIndex - 1] : null
-  const next =
-    currentIndex >= 0 && currentIndex < projects.length - 1
-      ? projects[currentIndex + 1]
-      : null
+  const others = projects.filter((p) => p.slug !== slug)
 
   return (
     <main className="case-study">
@@ -51,7 +46,13 @@ export default function CaseStudy() {
         <p className="case-study__tagline">{project.description}</p>
       </header>
 
-      {study?.intro && <p className="case-study__intro">{study.intro}</p>}
+      {study?.intro && (
+        <div className="case-study__intro">
+          {study.intro.split(/\n{2,}/).map((para, i) => (
+            <p key={i}>{para}</p>
+          ))}
+        </div>
+      )}
 
       <article className="case-study__body">
         {study?.blocks?.length ? (
@@ -61,7 +62,7 @@ export default function CaseStudy() {
         )}
       </article>
 
-      <CaseStudyNav prev={prev} next={next} />
+      <CaseStudyNav heading={ui.caseStudyOtherHeading} others={others} />
     </main>
   )
 }
