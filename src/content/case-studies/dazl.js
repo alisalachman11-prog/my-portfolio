@@ -33,6 +33,7 @@ export default {
       type: 'img',
       src: '/images/dazl/02-focused-panel.jpg',
       alt: 'A focused property panel showing label, variants, value, and prefix, with an "advanced" option.',
+      caption: 'A focused property panel — label, variants, value, and prefix, with advanced options tucked away.',
     },
 
     { type: 'h2', text: 'Separate squads, unified design language' },
@@ -44,6 +45,7 @@ export default {
       type: 'img',
       src: '/images/dazl/03-complexity.jpg',
       alt: 'Complex button property panel showing nested image URL and transform options.',
+      caption: 'A complex button property panel built alongside the style-panel team to keep the design language unified.',
     },
 
     { type: 'h2', text: '[try] then [try again]' },
@@ -56,6 +58,7 @@ export default {
       type: 'img',
       src: '/images/dazl/04-iteration.jpg',
       alt: 'AI chat panel showing the implementation plan during iteration.',
+      caption: 'AI chat panel exposing the implementation plan during one of the iteration rounds.',
     },
 
     { type: 'h3', text: 'Option 1 — Debugging vs. Editing mode' },
@@ -67,6 +70,7 @@ export default {
       type: 'img',
       src: '/images/dazl/05-mode-toggle.jpg',
       alt: 'Two property panels showing Editing and Debugging modes side by side.',
+      caption: 'Option 1 — mode-specific panels for Editing and Debugging, cycled between as needed.',
     },
 
     { type: 'h3', text: 'Option 2 — Computed values on demand' },
@@ -78,6 +82,7 @@ export default {
       type: 'img',
       src: '/images/dazl/06-computed.jpg',
       alt: 'Property panel revealing computed values via a hover popover.',
+      caption: 'Option 2 — computed values exposed on hover so the default view stays calm.',
     },
 
     { type: 'h3', text: 'Option 3 — Side by side' },
@@ -89,6 +94,7 @@ export default {
       type: 'img',
       src: '/images/dazl/07-side-by-side.jpg',
       alt: 'Two stacked property panels showing primary view and computed values side by side.',
+      caption: 'Option 3 — a wider panel that organizes primary view and computed values together.',
     },
 
     { type: 'h2', text: 'A great panel has many properties' },
@@ -100,6 +106,7 @@ export default {
       type: 'img',
       src: '/images/dazl/08-final-ui.jpg',
       alt: 'Final Codux UI with the redesigned property panel in place.',
+      caption: 'The final Codux UI with the redesigned property panel shipped in place.',
     },
 
     { type: 'h2', text: 'If you need it, then you’ll see it' },
@@ -111,6 +118,7 @@ export default {
       type: 'img',
       src: '/images/dazl/09-add-property.jpg',
       alt: 'Property panels showing how new properties are discovered and added on demand.',
+      caption: 'New properties are added on demand via the “Add property” button, keeping the default view focused.',
     },
 
     { type: 'h2', text: 'No error left behind' },
@@ -122,6 +130,7 @@ export default {
       type: 'img',
       src: '/images/dazl/10-errors.jpg',
       alt: 'Property panel with three errors flagged and an inline "isDeveloper is possibly undefined" tooltip.',
+      caption: 'Errors surface at the tab, per-property, and via a summary view with clear resolution paths.',
     },
 
     { type: 'h2', text: 'Keep it simple, keep it useful' },
@@ -133,6 +142,7 @@ export default {
       type: 'img',
       src: '/images/dazl/11-simple.jpg',
       alt: 'On-stage property panel paired with a project images modal for visual editing.',
+      caption: 'A simple on-stage property panel paired with the project images modal for visual editing.',
     },
 
     { type: 'h2', text: 'Conclusions' },
@@ -156,6 +166,7 @@ export default {
       type: 'img',
       src: '/images/dazl/12-brand-teaser.jpg',
       alt: 'Dazl brand teaser: "But something Dazzling is coming next!"',
+      caption: 'Dazl brand teaser — “But something Dazzling is coming next!”',
     },
   ],
 }

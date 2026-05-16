@@ -26,6 +26,7 @@ export default {
       type: 'img',
       src: '/images/paradox/02-areas-before-after.jpg',
       alt: 'After/before comparison of the home areas screen — redesigned tabs and area cards vs. the dark legacy version.',
+      caption: 'Home areas screen — the redesigned tabs and area cards next to the dated legacy version.',
     },
 
     { type: 'h2', text: 'Creating a design system' },
@@ -41,11 +42,13 @@ export default {
       type: 'img',
       src: '/images/paradox/04-design-system-annotations.jpg',
       alt: 'Design system internals: Figma component annotations from the team alongside the library of system files (UI Library, Events, Doorbell, On Boarding, etc.).',
+      caption: 'Design-system internals — Figma annotations alongside the new library of system files.',
     },
     {
       type: 'img',
       src: '/images/paradox/05-design-system-in-use.jpg',
       alt: 'Four production screens (Help Center, Installer Login, Invite Owner, Create Site) showing the design system applied across flows.',
+      caption: 'The design system applied across Help Center, Installer Login, Invite Owner, and Create Site.',
     },
 
     { type: 'h2', text: 'Camera — horizontal → vertical' },
@@ -61,11 +64,13 @@ export default {
       type: 'img',
       src: '/images/paradox/03-doorbell-before-after.jpg',
       alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
+      caption: 'Doorbell stream — dated legacy thumbnails next to the full-bleed redesigned call screens.',
     },
     {
       type: 'img',
       src: '/images/paradox/06-doorbell-anatomy.jpg',
       alt: 'Annotated doorbell stream layout broken into three numbered regions: header, video controls, and action buttons.',
+      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
     },
 
     { type: 'h2', text: 'Timeline view that didn’t ship' },
@@ -81,6 +86,7 @@ export default {
       type: 'img',
       src: '/images/paradox/08-video-timeline.jpg',
       alt: 'Video timeline experience: clip selection, calendar date picker, and scrubbable event timeline.',
+      caption: 'Timeline exploration — clip selection, calendar date picker, and a scrubbable event timeline.',
     },
 
     { type: 'h2', text: 'New way to answer the door' },
@@ -100,6 +106,7 @@ export default {
       type: 'img',
       src: '/images/paradox/07-doorbell-call-flow.jpg',
       alt: 'Doorbell call flow: hardware unit alongside incoming-call, in-call with a package delivery, and missed-call countdown screens.',
+      caption: 'Doorbell call flow — incoming call, in-call with a package delivery, and the missed-call countdown.',
     },
 
     { type: 'h2', text: 'All Notifications in one place' },

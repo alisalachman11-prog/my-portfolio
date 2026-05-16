@@ -41,6 +41,7 @@ export default {
       type: 'img',
       src: '/images/codux/01-principles.jpg',
       alt: 'Three guiding principles: address the complexity of the code, enable effective work, simplify the non-trivial.',
+      caption: 'Three guiding principles steering the squad’s decisions throughout the project.',
     },
 
     { type: 'h2', text: 'A visual tool requires a visual representation' },
@@ -52,11 +53,13 @@ export default {
       type: 'img',
       src: '/images/codux/02-visual-grid-mapping.jpg',
       alt: 'Grid Child panels mapped via arrows to a customer-testimonials layout on the canvas.',
+      caption: 'Grid Child properties mapped onto the canvas so designers can see what each control affects.',
     },
     {
       type: 'img',
       src: '/images/codux/03-grid-panel-states.jpg',
       alt: 'Collapsed layout panel state next to the expanded Grid configuration popover.',
+      caption: 'Collapsed layout entry point next to the expanded Grid configuration popover.',
     },
 
     { type: 'h2', text: 'Not everything can be an icon' },
@@ -72,11 +75,13 @@ export default {
       type: 'img',
       src: '/images/codux/04-display-values.jpg',
       alt: 'Display dropdown alongside the full list of CSS display values shown as text.',
+      caption: 'The Display dropdown surfacing the full set of CSS display values as labeled text.',
     },
     {
       type: 'img',
       src: '/images/codux/05-rows-input.jpg',
       alt: 'Rows input progressing from empty, to autocomplete suggestions, to a filled repeat() value.',
+      caption: 'Rows input progressing from empty, to autocomplete suggestions, to a filled repeat() value.',
     },
 
     { type: 'h2', text: 'Faster and easier starts with grid presets' },
@@ -88,6 +93,7 @@ export default {
       type: 'img',
       src: '/images/codux/06-grid-presets.jpg',
       alt: 'Codux IDE with the Add Elements panel showing grid layout presets (2/2, 3/3, 4/4, 1/2, 1/3, 1/4).',
+      caption: 'Grid layout presets — and custom presets — surfaced inside the Add Elements panel.',
     },
     {
       type: 'img',
@@ -111,6 +117,7 @@ export default {
       type: 'img',
       src: '/images/codux/07-display-dropdown.jpg',
       alt: 'Display icon row revealing a "Grid" tooltip, next to the same control as a labeled dropdown.',
+      caption: 'The Display control before and after — icon-only with a tooltip vs. a labeled dropdown.',
     },
 
     { type: 'h2', text: 'It should likely do what you think it does' },
