@@ -30,6 +30,6 @@
 
   /* ---------- Layout ---------- */
   --container-max: 1600px;   /* outer page width cap */
-  --container-prose: 860px;  /* readable text-column width for case studies */
+  --container-prose: 1200px;  /* readable text-column width for case studies */
   --radius-card: 6px;
 }
