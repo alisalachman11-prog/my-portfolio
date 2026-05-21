@@ -48,12 +48,11 @@ export const experience = [
 ]
 
 // ---------- Sidebar: skills & knowledge ----------
-// `icon` names map to SVGs in src/components/SkillIcon.jsx — add a new
-// case there before referencing a new name here.
+// `icon` — Lucide name from https://lucide.dev/icons (kebab-case: "smile-plus", or PascalCase: "SmilePlus")
 export const skills = [
   {
     heading: 'Domain Expertise',
-    icon: 'search',
+    icon: 'apple',
     bullets: [
       'Complex workflows for enterprise / B2B SaaS products',
       'Worked on Developer tools and AI-powered builders',
@@ -61,7 +60,7 @@ export const skills = [
   },
   {
     heading: 'Research & Discovery',
-    icon: 'microscope',
+    icon: 'search',
     bullets: [
       'Facilitating user interviews & usability tests',
       'Behavioral & product analytics with Mixpanel and FullStory',
@@ -79,14 +78,14 @@ export const skills = [
   },
   {
     heading: 'Building with AI',
-    icon: 'sparkles',
+    icon: 'Wand',
     bullets: [
       'Using Claude Code, Cursor, Base44, and Lovable to prototype, iterate, and extend what I can build solo',
     ],
   },
   {
     heading: 'Design Systems & Team Process',
-    icon: 'component',
+    icon: 'swatch-book',
     bullets: [
       'Co-created and documented a design system',
       'Improved the design-to-development handoff process',
@@ -95,7 +94,7 @@ export const skills = [
   },
   {
     heading: 'Collaboration & Ownership',
-    icon: 'handshake',
+    icon: 'smile-plus',
     bullets: [
       'Comfortable working under leadership, within cross-functional squads, and across multiple teams or alongside other designers',
       'Equally comfortable working independently and owning end-to-end design decisions',
