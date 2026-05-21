@@ -52,7 +52,7 @@ export const projects = [
     description:
       'Designing a dual-mode property panel for an AI builder - built for both developers and designers',
     theme: 'light',
-    // image: '/images/dazl-hero.png',
+    image: '/images/covers/Dazl_cover.jpg',
   },
   {
     slug: 'paradox',
@@ -69,7 +69,7 @@ export const projects = [
     description:
       'Creating a mobile app that allows users to find and collect ink stamps across Taiwan',
     theme: 'painted',
-    // image: '/images/stamphunter-hero.png',
+    image: '/images/covers/StampHunter_Cover.jpg',
   },
   {
     slug: 'codux',
@@ -78,7 +78,7 @@ export const projects = [
     description:
       'CSS Grid is powerful but hard to use. We designed the grid layout experience - letting designers build production layouts without writing code.',
     theme: 'dark',
-    // image: '/images/codux-hero.png',
+    image: '/images/covers/Wix_Cover.jpg',
   },
 ]
 
