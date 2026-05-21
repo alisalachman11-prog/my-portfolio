@@ -14,10 +14,16 @@ export const meta = {
 // ---------- Sidebar: profile ----------
 export const profile = {
   name: 'Alisa Lachman',
-  // Multi-line intro paragraph. Line breaks here are preserved on screen.
-  intro: `I'm Alisa, a product designer.
-Consistently looking to leverage my research finding and knowledge to drive outcomes,
-not just outputs.`,
+  intro:
+    'Product designer with 4 years of experience - the last two focused on developer tools, AI builders, and complex technical workflows. I work end-to-end: from discovery and research through to contributing in the codebase.',
+  principles: {
+    title: 'My principles as a product designer',
+    bullets: [
+      'Rapid iteration for faster user alignment',
+      'Let evidence lead, not opinion',
+      'Anticipate future use cases, but focus on present needs',
+    ],
+  },
   linkedin: 'https://www.linkedin.com/alisa-lachman',
   email: 'alisa.lachman11@gmail.com',
   // avatar: '/images/avatar.jpg', // ← uncomment after adding a square photo to public/images/
