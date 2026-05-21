@@ -66,6 +66,15 @@ function AboutPanel() {
 
       <p className="sidebar__intro">{profile.intro}</p>
 
+      <section className="principles-card">
+        <h3 className="principles-card__title">{profile.principles.title}</h3>
+        <ul className="principles-card__bullets">
+          {profile.principles.bullets.map((bullet, i) => (
+            <li key={i}>{bullet}</li>
+          ))}
+        </ul>
+      </section>
+
       <div className="sidebar__contact">
         <p className="sidebar__contact-row">
           <span className="sidebar__contact-label">{ui.contactLinkedInLabel}</span>{' '}
