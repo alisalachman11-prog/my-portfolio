@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { profile, experience, skills, ui } from '../content/site.js'
+import SkillIcon from './SkillIcon.jsx'
 import './Sidebar.css'
 
 const TABS = [
@@ -121,7 +122,14 @@ function SkillsPanel() {
     <div className="sidebar__panel">
       {skills.map((group) => (
         <section key={group.heading} className="skill-group">
-          <h3 className="skill-group__heading">{group.heading}</h3>
+          <h3 className="skill-group__heading">
+            {group.icon && (
+              <span className="skill-group__icon">
+                <SkillIcon name={group.icon} />
+              </span>
+            )}
+            <span>{group.heading}</span>
+          </h3>
           <ul className="skill-group__bullets">
             {group.bullets.map((bullet, i) => (
               <li key={i}>{bullet}</li>

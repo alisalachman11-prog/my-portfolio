@@ -36,59 +36,66 @@ export const experience = [
     years: '2023 - 2025',
     duration: '2 yrs 2 mos',
     summary:
-      'At Wix, I designed across two developer-focused products: a visual IDE for React projects that later pivoted into an AI-powered builder. Owned specific product areas end-to-end within an agile squad, defining goals and KPIs with the product manager and shipping iteratively. Designed complex developer workflows in close partnership with engineers, occasionally contributing directly to the codebase. Led user interviews and usability tests, and used Mixpanel and FullStory to surface insights, combining findings into an Opportunity Solution Tree framework I introduced to the team to articulate more product opportunities together.',
+      'At Wix, I designed two developer-focused products: a visual IDE for React that pivoted into an AI-powered builder. Owned product areas, defined KPIs with product, and shipped iteratively. Worked closely with engineers and occasionally contributed to the codebase. Ran interviews, usability tests, and analytics (Mixpanel, FullStory), and introduced an Opportunity Solution Tree framework to the team.',
   },
   {
     company: 'Paradox Security',
     years: '2020 - 2023',
     duration: '2 yrs 5 mos',
     summary:
-      "At Paradox, I collaborated with a cross-functional team of designers and developers to redesign a critical legacy mobile app. Shaped the end-to-end experience for the Doorbell, a newly launched security device. Established and documented a new design system, restructured the team's project file architecture, and refined the design-to-development handoff process to enable clearer, more precise communication. Also curated an onboarding experience for incoming designers.",
+      "At Paradox, I helped redesign a critical legacy mobile app and shaped the experience for the Doorbell, a new security device. Built and documented a design system, restructured the file architecture, refined the design-to-dev handoff, and created onboarding for new designers.",
   },
 ]
 
 // ---------- Sidebar: skills & knowledge ----------
+// `icon` names map to SVGs in src/components/SkillIcon.jsx — add a new
+// case there before referencing a new name here.
 export const skills = [
   {
     heading: 'Domain Expertise',
+    icon: 'search',
     bullets: [
       'Complex workflows for enterprise / B2B SaaS products',
       'Worked on Developer tools and AI-powered builders',
-      'Designing in fast-evolving product spaces, with attention to where capabilities are heading',
     ],
   },
   {
     heading: 'Research & Discovery',
+    icon: 'microscope',
     bullets: [
-      'Facilitating user interviews and usability tests',
-      'Behavioral and product analytics with Mixpanel and FullStory',
+      'Facilitating user interviews & usability tests',
+      'Behavioral & product analytics with Mixpanel and FullStory',
       'Translating insights into structured product opportunities using the Opportunity Solution Tree framework',
     ],
   },
   {
     heading: 'Technical Fluency',
+    icon: 'code',
     bullets: [
-      'Working knowledge of HTML, CSS, TypeScript, JavaScript, and React',
+      'Working knowledge of HTML, CSS, TS, JS, and React',
       'Direct contributions to the codebases on smaller features',
       'Git workflow: commits, pull requests, and opening tickets for bugs and UX improvements',
     ],
   },
   {
     heading: 'Building with AI',
+    icon: 'sparkles',
     bullets: [
       'Using Claude Code, Cursor, Base44, and Lovable to prototype, iterate, and extend what I can build solo',
     ],
   },
   {
     heading: 'Design Systems & Team Process',
+    icon: 'component',
     bullets: [
-      'Co-created and documented a design system used across the team',
-      'Improved the design-to-development handoff process for clearer, more precise collaboration',
+      'Co-created and documented a design system',
+      'Improved the design-to-development handoff process',
       'Designed an onboarding experience for incoming designers',
     ],
   },
   {
     heading: 'Collaboration & Ownership',
+    icon: 'handshake',
     bullets: [
       'Comfortable working under leadership, within cross-functional squads, and across multiple teams or alongside other designers',
       'Equally comfortable working independently and owning end-to-end design decisions',

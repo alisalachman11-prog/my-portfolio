@@ -4,14 +4,19 @@
   gap: var(--space-5);
   padding: var(--space-5);
   background: #fafafa;
-  align-items: start;
-  min-height: 100vh;
+  align-items: stretch;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .home__stack {
   display: flex;
   flex-direction: column;
-  gap: var(--space-5);
+  gap: var(--space-7);
+  overflow-y: auto;
+  height: 100%;
+  /* a little inner gutter so the scrollbar doesn't crowd the content */
+  padding-right: var(--space-2);
 }
 
 @media (max-width: 900px) {
@@ -19,5 +24,13 @@
     grid-template-columns: 1fr;
     padding: var(--space-4);
     gap: var(--space-4);
+    height: auto;
+    overflow: visible;
+  }
+
+  .home__stack {
+    overflow: visible;
+    height: auto;
+    padding-right: 0;
   }
 }
