@@ -4,10 +4,7 @@
   border-radius: var(--radius-card);
   display: flex;
   flex-direction: column;
-  align-self: start;
-  position: sticky;
-  top: var(--space-5);
-  height: calc(100vh - 2 * var(--space-5));
+  height: 100%;
   overflow: hidden;
 }
 
@@ -186,6 +183,17 @@
   font-weight: 600;
   color: var(--color-text);
   margin: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.skill-group__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-muted);
+  flex-shrink: 0;
 }
 
 .skill-group__bullets {
@@ -204,7 +212,10 @@
 
 @media (max-width: 900px) {
   .sidebar {
-    position: static;
     height: auto;
+  }
+
+  .sidebar__content {
+    overflow-y: visible;
   }
 }
