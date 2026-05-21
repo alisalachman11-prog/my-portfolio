@@ -18,25 +18,74 @@ export const profile = {
   intro: `I'm Alisa, a product designer.
 Consistently looking to leverage my research finding and knowledge to drive outcomes,
 not just outputs.`,
+  linkedin: 'https://www.linkedin.com/alisa-lachman',
+  email: 'alisa.lachman11@gmail.com',
   // avatar: '/images/avatar.jpg', // ← uncomment after adding a square photo to public/images/
 }
 
 // ---------- Sidebar: experience list ----------
 export const experience = [
   {
-    company: 'WIX',
+    company: 'Wix',
     years: '2023 - 2025',
+    duration: '2 yrs 2 mos',
+    summary:
+      'At Wix, I designed across two developer-focused products: a visual IDE for React projects that later pivoted into an AI-powered builder. Owned specific product areas end-to-end within an agile squad, defining goals and KPIs with the product manager and shipping iteratively. Designed complex developer workflows in close partnership with engineers, occasionally contributing directly to the codebase. Led user interviews and usability tests, and used Mixpanel and FullStory to surface insights, combining findings into an Opportunity Solution Tree framework I introduced to the team to articulate more product opportunities together.',
+  },
+  {
+    company: 'Paradox Security',
+    years: '2020 - 2023',
+    duration: '2 yrs 5 mos',
+    summary:
+      "At Paradox, I collaborated with a cross-functional team of designers and developers to redesign a critical legacy mobile app. Shaped the end-to-end experience for the Doorbell, a newly launched security device. Established and documented a new design system, restructured the team's project file architecture, and refined the design-to-development handoff process to enable clearer, more precise communication. Also curated an onboarding experience for incoming designers.",
+  },
+]
+
+// ---------- Sidebar: skills & knowledge ----------
+export const skills = [
+  {
+    heading: 'Domain Expertise',
     bullets: [
-      'Working on a visual IDE headed for React project lead by Wix co-founder Nadav Avrahami and a core group of Wix professionals.',
-      'Pivoting to working on Dazl, an AI Builder',
+      'Complex workflows for enterprise / B2B SaaS products',
+      'Worked on Developer tools and AI-powered builders',
+      'Designing in fast-evolving product spaces, with attention to where capabilities are heading',
     ],
   },
   {
-    company: 'PARADOX',
-    years: '2020 - 2023',
+    heading: 'Research & Discovery',
     bullets: [
-      'Working on a visual IDE headed for React project lead by Wix co-founder Nadav Avrahami and a core group of Wix professionals.',
-      'Pivoting to working on Dazl, an AI Builder',
+      'Facilitating user interviews and usability tests',
+      'Behavioral and product analytics with Mixpanel and FullStory',
+      'Translating insights into structured product opportunities using the Opportunity Solution Tree framework',
+    ],
+  },
+  {
+    heading: 'Technical Fluency',
+    bullets: [
+      'Working knowledge of HTML, CSS, TypeScript, JavaScript, and React',
+      'Direct contributions to the codebases on smaller features',
+      'Git workflow: commits, pull requests, and opening tickets for bugs and UX improvements',
+    ],
+  },
+  {
+    heading: 'Building with AI',
+    bullets: [
+      'Using Claude Code, Cursor, Base44, and Lovable to prototype, iterate, and extend what I can build solo',
+    ],
+  },
+  {
+    heading: 'Design Systems & Team Process',
+    bullets: [
+      'Co-created and documented a design system used across the team',
+      'Improved the design-to-development handoff process for clearer, more precise collaboration',
+      'Designed an onboarding experience for incoming designers',
+    ],
+  },
+  {
+    heading: 'Collaboration & Ownership',
+    bullets: [
+      'Comfortable working under leadership, within cross-functional squads, and across multiple teams or alongside other designers',
+      'Equally comfortable working independently and owning end-to-end design decisions',
     ],
   },
 ]
@@ -88,6 +137,12 @@ export const ui = {
   caseStudyOtherHeading: 'Check other case studies:',
   caseStudyComingSoon: 'Case study content coming soon.',
   projectNotFound: 'Project not found.',
-  experienceHeading: 'Experience',
   imagePlaceholder: 'Hero image placeholder',
+  sidebarTabs: {
+    about: 'About Me',
+    experience: 'My Experience',
+    skills: 'Skills & Knowledge',
+  },
+  contactLinkedInLabel: 'LinkedIn:',
+  contactEmailLabel: 'Can be sent to:',
 }
