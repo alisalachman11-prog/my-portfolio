@@ -1,6 +1,4 @@
 .home {
-  max-width: var(--container-max);
-  margin: 0 auto;
   display: grid;
   grid-template-columns: minmax(280px, 380px) 1fr;
   gap: var(--space-5);
