@@ -52,7 +52,7 @@
 
 /* ---------- Figures (single image) ---------- */
 .cs-figure {
-  margin-block: var(--space-5);
+  margin-block: var(--space-7);
 }
 
 .cs-figure img {

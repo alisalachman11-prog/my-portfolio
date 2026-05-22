@@ -6,7 +6,7 @@
  */
 export default {
   intro:
-    'Codux (a visual IDE we have worked on) journey came to an end and we pivoted on to work on Dazel.Dazl is a cutting-edge AI Builder Check it here headed by Nadav Avrahami, the co-founder of WIX, together with a core group of Wix professionals.',
+    'Codux (a visual IDE we have worked on) journey came to an end and we pivoted on to work on Dazel.\n\nDazl is a cutting-edge AI Builder Check it here headed by Nadav Avrahami, the co-founder of WIX, together with a core group of Wix professionals.',
 
   blocks: [
     { type: 'h2', text: 'Bridging the gap between Designer and Developer' },
@@ -20,9 +20,9 @@ export default {
     },
     {
       type: 'img',
-      src: '/images/dazl/01-before.jpg',
-      alt: 'Initial state of the Codux property panel before redesign.',
-      caption: 'Initial state of the property panel before redesign.',
+      src: '/images/dazl/12-brand-teaser.jpg',
+      alt: 'Dazl brand teaser announcement on the old Codux website: “But something Dazzling is coming next!”',
+      caption: 'Dazl brand teaser announcement on the old Codux website: “But something Dazzling is coming next!”',
     },
 
     { type: 'h2', text: 'Be the solution you want to see in the product' },
@@ -32,9 +32,9 @@ export default {
     },
     {
       type: 'img',
-      src: '/images/dazl/02-focused-panel.jpg',
-      alt: 'A focused property panel showing label, variants, value, and prefix, with an "advanced" option.',
-      caption: 'A focused property panel — label, variants, value, and prefix, with advanced options tucked away.',
+      src: '/images/dazl/03-complexity.jpg',
+      alt: 'The property panel that was implemented in Codux - showcasing visually one of the issues in this implementation, had an endless drill in pattern to reveal more info when clicking on objects.',
+      caption: 'The property panel that was implemented in Codux - showcasing visually one of the issues in this implementation, had an endless drill in pattern to reveal more info when clicking on objects.',
     },
 
     { type: 'h2', text: 'Separate squads, unified design language' },
@@ -44,9 +44,9 @@ export default {
     },
     {
       type: 'img',
-      src: '/images/dazl/03-complexity.jpg',
-      alt: 'Complex button property panel showing nested image URL and transform options.',
-      caption: 'A complex button property panel built alongside the style-panel team to keep the design language unified.',
+      src: '/images/dazl/02-focused-panel.jpg',
+      alt: 'A focused and simple property panel for designers , with advanced options tucked away and opened on demand.',
+      caption: 'A focused and simple property panel for designers , with advanced options tucked away and opened on demand.',
     },
 
     { type: 'h2', text: '[try] then [try again]' },
@@ -57,9 +57,9 @@ export default {
     { type: 'p', text: 'Some of the key iterations we went through:' },
     {
       type: 'img',
-      src: '/images/dazl/04-iteration.jpg',
-      alt: 'AI chat panel showing the implementation plan during iteration.',
-      caption: 'AI chat panel exposing the implementation plan during one of the iteration rounds.',
+      src: '/images/dazl/01-before.jpg',
+      alt: 'property panel and style panel side by side, showing the similarity of the design language between the two.',
+      caption: 'property panel and style panel side by side, showing the similarity of the design language between the two.',
     },
 
     { type: 'h3', text: 'Option 1 — Debugging vs. Editing mode' },
@@ -146,6 +146,13 @@ export default {
       caption: 'A simple on-stage property panel paired with the project images modal for visual editing.',
     },
 
+    {
+      type: 'img',
+      src: '/images/dazl/13-simple panel.jpg',
+      alt: 'A simple on-stage property panel with context menu open with the following options: Ask AI, View Code, Clear Value.',
+      caption: 'A simple on-stage property panel with context menu open with the following options: Ask AI, View Code, Clear Value.',
+    },
+
     { type: 'h2', text: 'Conclusions' },
     {
       type: 'p',
@@ -162,12 +169,6 @@ export default {
         'Testing it all with travelers.',
         'Populating the app and testing the quality of the database.',
       ],
-    },
-    {
-      type: 'img',
-      src: '/images/dazl/12-brand-teaser.jpg',
-      alt: 'Dazl brand teaser: "But something Dazzling is coming next!"',
-      caption: 'Dazl brand teaser — “But something Dazzling is coming next!”',
     },
   ],
 }
