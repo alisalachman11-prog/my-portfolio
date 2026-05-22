@@ -1,47 +1,31 @@
-import { useState } from 'react'
 import { profile, experience, skills, ui } from '../content/site.js'
 import SkillIcon from './SkillIcon.jsx'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import './Sidebar.css'
 
 const TABS = [
-  { id: 'about', label: ui.sidebarTabs.about },
-  { id: 'experience', label: ui.sidebarTabs.experience },
-  { id: 'skills', label: ui.sidebarTabs.skills },
+  { id: 'about', label: ui.sidebarTabs.about, Panel: AboutPanel },
+  { id: 'experience', label: ui.sidebarTabs.experience, Panel: ExperiencePanel },
+  { id: 'skills', label: ui.sidebarTabs.skills, Panel: SkillsPanel },
 ]
 
 export default function Sidebar() {
-  const [activeTab, setActiveTab] = useState('about')
-
   return (
     <aside className="sidebar">
-      <div className="sidebar__tabs" role="tablist">
-        {TABS.map((tab) => {
-          const isActive = activeTab === tab.id
-          return (
-            <button
-              key={tab.id}
-              type="button"
-              role="tab"
-              aria-selected={isActive}
-              aria-controls={`sidebar-panel-${tab.id}`}
-              className={`sidebar__tab${isActive ? ' sidebar__tab--active' : ''}`}
-              onClick={() => setActiveTab(tab.id)}
-            >
+      <Tabs defaultValue="about" className="flex-1 min-h-0">
+        <TabsList className="tablist_size_large">
+          {TABS.map((tab) => (
+            <TabsTrigger key={tab.id} value={tab.id}>
               {tab.label}
-            </button>
-          )
-        })}
-      </div>
-
-      <div
-        className="sidebar__content"
-        role="tabpanel"
-        id={`sidebar-panel-${activeTab}`}
-      >
-        {activeTab === 'about' && <AboutPanel />}
-        {activeTab === 'experience' && <ExperiencePanel />}
-        {activeTab === 'skills' && <SkillsPanel />}
-      </div>
+            </TabsTrigger>
+          ))}
+        </TabsList>
+        {TABS.map(({ id, Panel }) => (
+          <TabsContent key={id} value={id} className="sidebar__content">
+            <Panel />
+          </TabsContent>
+        ))}
+      </Tabs>
     </aside>
   )
 }

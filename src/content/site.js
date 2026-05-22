@@ -153,7 +153,7 @@ export const ui = {
   sidebarTabs: {
     about: 'About Me',
     experience: 'My Experience',
-    skills: 'Skills & Knowledge',
+    skills: 'Skills',
   },
   contactLinkedInLabel: 'LinkedIn:',
   contactEmailLabel: 'Can be sent to:',
