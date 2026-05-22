@@ -29,6 +29,45 @@ export const profile = {
   // avatar: '/images/avatar.jpg', // ← uncomment after adding a square photo to public/images/
 }
 
+// ---------- Sidebar: about — personal blurb with hover-card facts ----------
+// Each fact is referenced by `{key}` in `template`. Each hover shows the next
+// image in `images` (rotates through the list). Add/remove paths freely.
+// Drop the image files into public/images/about/ using the filenames below.
+export const aboutMe = {
+  template:
+    'Currently I am traveling the world for a year now, and I have been to {countries} so far. In my free time I enjoy folding {origami} and watching {youtube}.',
+  facts: {
+    countries: {
+      label: '17 countries',
+      images: [
+        '/images/about/1_countries.jpg',
+        '/images/about/2_countries.jpg',
+        '/images/about/3_countries.jpg',
+        '/images/about/4_countries.jpg',
+      ],
+    },
+    origami: {
+      label: 'origami',
+      images: [
+        '/images/about/1_origami.jpg',
+        '/images/about/2_origami.jpg',
+        '/images/about/3_origami.jpg',
+        '/images/about/4_origami.jpg',
+      ],
+    },
+    youtube: {
+      label: 'science channels',
+      images: [
+        '/images/about/1_youtube.jpg',
+        '/images/about/2_youtube.jpg',
+        '/images/about/3_youtube.jpg',
+        '/images/about/4_youtube.jpg',
+        '/images/about/5_youtube.jpg',
+      ],
+    },
+  },
+}
+
 // ---------- Sidebar: experience list ----------
 export const experience = [
   {
