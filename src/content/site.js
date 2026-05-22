@@ -155,12 +155,13 @@ export const projects = [
     image: '/images/covers/Dazl_cover.jpg',
   },
   {
-    slug: 'paradox',
-    brand: { mark: 'triangle', word: 'Paradox' },
-    title: 'B2B security hardware company',
-    description: 'Redesigning a high-criticality legacy security app',
-    theme: 'blue',
-    // image: '/images/paradox-hero.png',
+    slug: 'codux',
+    brand: { mark: null, word: 'WIX' },
+    title: 'Codux - visual IDE for react projects',
+    description:
+      'CSS Grid is powerful but hard to use. We designed the grid layout experience - letting designers build production layouts without writing code.',
+    theme: 'dark',
+    image: '/images/covers/Wix_Cover.jpg',
   },
   {
     slug: 'stamphunter',
@@ -172,13 +173,12 @@ export const projects = [
     image: '/images/covers/StampHunter_Cover.jpg',
   },
   {
-    slug: 'codux',
-    brand: { mark: null, word: 'WIX' },
-    title: 'Codux - visual IDE for react projects',
-    description:
-      'CSS Grid is powerful but hard to use. We designed the grid layout experience - letting designers build production layouts without writing code.',
-    theme: 'dark',
-    image: '/images/covers/Wix_Cover.jpg',
+    slug: 'paradox',
+    brand: { mark: 'triangle', word: 'Paradox' },
+    title: 'B2B security hardware company',
+    description: 'Redesigning a high-criticality legacy security app',
+    theme: 'blue',
+    // image: '/images/paradox-hero.png',
   },
 ]
 
