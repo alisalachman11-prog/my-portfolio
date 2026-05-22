@@ -1,6 +1,8 @@
-import { profile, experience, skills, ui } from '../content/site.js'
+import { useState } from 'react'
+import { profile, aboutMe, experience, skills, ui } from '../content/site.js'
 import SkillIcon from './SkillIcon.jsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 import './Sidebar.css'
 
 const TABS = [
@@ -60,6 +62,10 @@ function AboutPanel() {
         </ul>
       </section>
 
+      <p className="sidebar__about-blurb">
+        {renderAboutBlurb(aboutMe)}
+      </p>
+
       <div className="sidebar__contact">
         <p className="sidebar__contact-row">
           <span className="sidebar__contact-label">{ui.contactLinkedInLabel}</span>{' '}
@@ -80,6 +86,41 @@ function AboutPanel() {
         </p>
       </div>
     </div>
+  )
+}
+
+function renderAboutBlurb({ template, facts }) {
+  return template.split(/(\{[a-z]+\})/g).map((segment, i) => {
+    const match = segment.match(/^\{([a-z]+)\}$/)
+    if (!match) return segment
+    const fact = facts[match[1]]
+    if (!fact) return segment
+    return <AboutFact key={i} fact={fact} />
+  })
+}
+
+function AboutFact({ fact }) {
+  const images = fact.images ?? []
+  const [index, setIndex] = useState(0)
+  return (
+    <HoverCard
+      onOpenChange={(open) => {
+        if (!open && images.length > 1) {
+          setIndex((i) => (i + 1) % images.length)
+        }
+      }}
+    >
+      <HoverCardTrigger className="sidebar__about-fact">
+        {fact.label}
+      </HoverCardTrigger>
+      <HoverCardContent className="sidebar__about-popover">
+        <img
+          className="sidebar__about-image"
+          src={images[index]}
+          alt={fact.label}
+        />
+      </HoverCardContent>
+    </HoverCard>
   )
 }
 
