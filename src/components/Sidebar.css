@@ -8,38 +8,6 @@
   overflow: hidden;
 }
 
-/* ---- Tab strip ---- */
-.sidebar__tabs {
-  display: flex;
-  border-bottom: 1px solid var(--color-card-border);
-  flex-shrink: 0;
-}
-
-.sidebar__tab {
-  flex: 1;
-  background: none;
-  border: none;
-  padding: var(--space-4) var(--space-2);
-  font-family: inherit;
-  font-size: 0.8125rem;
-  font-weight: 400;
-  color: var(--color-text-muted);
-  cursor: pointer;
-  border-bottom: 1px solid transparent;
-  margin-bottom: -1px;
-  transition: color 0.15s ease;
-  text-align: center;
-}
-
-.sidebar__tab:hover {
-  color: var(--color-text);
-}
-
-.sidebar__tab--active {
-  color: var(--color-text);
-  border-bottom-color: var(--color-text);
-}
-
 /* ---- Scrollable content area ---- */
 .sidebar__content {
   padding: var(--space-5);
@@ -217,5 +185,9 @@
 
   .sidebar__content {
     overflow-y: visible;
+  }
+
+  .tablist_size_large{
+    width: auto;
   }
 }
