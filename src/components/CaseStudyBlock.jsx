@@ -2,7 +2,7 @@ import './CaseStudyBlock.css'
 
 /**
  * Renders a single content block inside a case study.
- * Supported types: h2, h3, p, img, img-row, list.
+ * Supported types: h2, h3, p, img, img-row, video, list.
  */
 export default function CaseStudyBlock({ block }) {
   switch (block.type) {
@@ -41,6 +41,25 @@ export default function CaseStudyBlock({ block }) {
             </figure>
           ))}
         </div>
+      )
+
+    case 'video':
+      return (
+        <figure className="cs-block cs-figure">
+          {block.src ? (
+            <video
+              src={block.src}
+              autoPlay
+              muted
+              loop
+              playsInline
+              aria-label={block.alt || ''}
+            />
+          ) : (
+            <div className="cs-figure__placeholder">Video placeholder</div>
+          )}
+          {block.caption && <figcaption>{block.caption}</figcaption>}
+        </figure>
       )
 
     case 'list':

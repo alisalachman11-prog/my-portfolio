@@ -55,18 +55,13 @@ export default {
       alt: 'Grid Child panels mapped via arrows to a customer-testimonials layout on the canvas.',
       caption: 'Grid Child properties mapped onto the canvas so designers can see what each control affects.',
     },
-    {
-      type: 'img',
-      src: '/images/codux/03-grid-panel-states.jpg',
-      alt: 'Collapsed layout panel state next to the expanded Grid configuration popover.',
-      caption: 'Collapsed layout entry point next to the expanded Grid configuration popover.',
-    },
 
     { type: 'h2', text: 'Not everything can be an icon' },
     {
       type: 'p',
       text: 'Users found it difficult to differentiate the icons of the different grid setups.',
     },
+
     {
       type: 'p',
       text: 'Our solution addressed the true complexity of the code by including a textual element alongside the icon, creating a scalable solution that could include more CSS layouts as needed.',
@@ -90,14 +85,10 @@ export default {
       text: 'As there is no reason to do the complex work of starting a new grid from scratch each time, we added the option to use presets — and custom presets — so the user can get going with their project much faster.',
     },
     {
-      type: 'img',
-      src: '/images/codux/06-grid-presets.jpg',
+      type: 'video',
+      src: '/images/codux/06-grid-presets.mp4',
       alt: 'Codux IDE with the Add Elements panel showing grid layout presets (2/2, 3/3, 4/4, 1/2, 1/3, 1/4).',
       caption: 'Grid layout presets — and custom presets — surfaced inside the Add Elements panel.',
-    },
-    {
-      type: 'img',
-      caption: 'Video placeholder — short capture of using a grid preset to scaffold a layout.',
     },
 
     { type: 'h2', text: 'The right cell for the right element' },
@@ -129,11 +120,24 @@ export default {
       type: 'p',
       text: 'The approach I proposed here was to simplify the non-trivial by allowing them to do this, and creating a distinct complex mode to customise the grid further.',
     },
-    { type: 'img', alt: 'Iteration screen placeholder' },
-    { type: 'img', alt: 'Iteration screen placeholder' },
-    { type: 'img', alt: 'Iteration screen placeholder' },
-    { type: 'img', alt: 'Iteration screen placeholder' },
-    { type: 'img', alt: 'Iteration screen placeholder' },
+    {
+      type: 'img',
+      src: '/images/codux/07-display-dropdown.jpg',
+      alt: 'Display icon row revealing a "Grid" tooltip, next to the same control as a labeled dropdown.',
+      caption: 'The Display control before and after — icon-only with a tooltip vs. a labeled dropdown.',
+    },
+    {
+      type: 'img',
+      src: '/images/codux/07-display-dropdown.jpg',
+      alt: 'Display icon row revealing a "Grid" tooltip, next to the same control as a labeled dropdown.',
+      caption: 'The Display control before and after — icon-only with a tooltip vs. a labeled dropdown.',
+    },
+    {
+      type: 'img',
+      src: '/images/codux/07-display-dropdown.jpg',
+      alt: 'Display icon row revealing a "Grid" tooltip, next to the same control as a labeled dropdown.',
+      caption: 'The Display control before and after — icon-only with a tooltip vs. a labeled dropdown.',
+    },
 
     { type: 'h2', text: 'Lesson learned' },
     { type: 'h3', text: 'Focus on abilities — not only happy flows' },
