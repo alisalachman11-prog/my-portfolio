@@ -1,8 +1,8 @@
-export default function LogoMark({ mark }) {
+export default function LogoMark({ mark, className = '' }) {
   if (mark === 'asterisk') {
     return (
       <svg
-        className="logo-mark"
+        className={className}
         width="16"
         height="16"
         viewBox="0 0 16 16"
@@ -17,7 +17,7 @@ export default function LogoMark({ mark }) {
   if (mark === 'triangle') {
     return (
       <svg
-        className="logo-mark"
+        className={className}
         width="16"
         height="14"
         viewBox="0 0 16 14"

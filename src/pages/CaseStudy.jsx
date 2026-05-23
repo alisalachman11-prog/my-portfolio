@@ -5,7 +5,12 @@ import { caseStudies } from '../content/case-studies/index.js'
 import LogoMark from '../components/LogoMark.jsx'
 import CaseStudyBlock from '../components/CaseStudyBlock.jsx'
 import CaseStudyNav from '../components/CaseStudyNav.jsx'
-import './CaseStudy.css'
+
+const prose = 'mx-auto max-w-[1200px]'
+const backLink =
+  'inline-block text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-muted-foreground transition-colors duration-150 hover:text-foreground'
+const displayType =
+  'font-serif text-cs-display font-medium italic max-[720px]:text-lg'
 
 export default function CaseStudy() {
   const { slug } = useParams()
@@ -21,9 +26,11 @@ export default function CaseStudy() {
 
   if (!project) {
     return (
-      <main className="case-study case-study--missing">
-        <p>{ui.projectNotFound}</p>
-        <Link to="/" className="case-study__back">{ui.caseStudyBack}</Link>
+      <main className="mx-auto flex min-h-screen max-w-[1600px] flex-col gap-4 bg-background px-6 pt-24 pb-24 max-[720px]:px-4 max-[720px]:pb-16">
+        <p className={prose}>{ui.projectNotFound}</p>
+        <Link to="/" className={`${prose} ${backLink}`}>
+          {ui.caseStudyBack}
+        </Link>
       </main>
     )
   }
@@ -31,38 +38,56 @@ export default function CaseStudy() {
   const others = projects.filter((p) => p.slug !== slug)
 
   return (
-    <main className="case-study">
-      <Link to="/" className="case-study__back">{ui.caseStudyBack}</Link>
+    <main className="mx-auto min-h-screen max-w-[1600px] bg-background px-6 pt-12 pb-24 max-[720px]:px-4 max-[720px]:pt-6 max-[720px]:pb-16">
+      <Link to="/" className={`${prose} mb-8 block ${backLink}`}>
+        {ui.caseStudyBack}
+      </Link>
 
-      <header className="case-study__header">
-        <div className="case-study__brand">
+      <header className={`${prose} mb-8`}>
+        <div className="mb-2 flex flex-wrap items-baseline gap-3">
           {project.brand.mark && <LogoMark mark={project.brand.mark} />}
           {project.brand.word && (
-            <span className="case-study__brand-word">{project.brand.word}</span>
+            <span className={`${displayType} tracking-normal`}>
+              {project.brand.word}
+            </span>
           )}
-          <span className="case-study__divider" aria-hidden="true">|</span>
-          <h1 className="case-study__title">{project.title}</h1>
+          <span
+            className="font-serif font-light text-cs-display opacity-35 max-[720px]:text-lg"
+            aria-hidden="true"
+          >
+            |
+          </span>
+          <h1 className={`${displayType} leading-tight`}>{project.title}</h1>
         </div>
-        <p className="case-study__tagline">{project.description}</p>
+        <p className="mt-2 max-w-[64ch] font-sans text-[0.9375rem] leading-[1.55] text-muted-foreground">
+          {project.description}
+        </p>
       </header>
 
       {study?.intro && (
-        <div className="case-study__intro">
+        <div className={`${prose} mb-6 flex flex-col gap-4`}>
           {study.intro.split(/\n{2,}/).map((para, i) => (
-            <p key={i}>{para}</p>
+            <p
+              key={i}
+              className="font-sans text-base leading-[1.7] text-foreground"
+            >
+              {para}
+            </p>
           ))}
         </div>
       )}
 
-      <article className="case-study__body">
+      <article className={prose}>
         {study?.blocks?.length ? (
           study.blocks.map((block, i) => <CaseStudyBlock key={i} block={block} />)
         ) : (
-          <p className="case-study__placeholder">{ui.caseStudyComingSoon}</p>
+          <p className="italic text-muted-foreground">{ui.caseStudyComingSoon}</p>
         )}
       </article>
 
-      <CaseStudyNav heading={ui.caseStudyOtherHeading} others={others} />
+      <div className={prose}>
+        <CaseStudyNav heading={ui.caseStudyOtherHeading} others={others} />
+      </div>
     </main>
   )
 }

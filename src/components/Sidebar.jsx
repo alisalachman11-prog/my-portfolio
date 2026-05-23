@@ -3,7 +3,6 @@ import { profile, aboutMe, experience, skills, ui } from '../content/site.js'
 import SkillIcon from './SkillIcon.jsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
-import './Sidebar.css'
 
 const TABS = [
   { id: 'about', label: ui.sidebarTabs.about, Panel: AboutPanel },
@@ -11,9 +10,13 @@ const TABS = [
   { id: 'skills', label: ui.sidebarTabs.skills, Panel: SkillsPanel },
 ]
 
+const panel = 'flex flex-col gap-6'
+const bulletList = 'flex list-disc flex-col gap-1 pl-[1.1rem]'
+const smallBody = 'text-[0.8125rem] leading-[1.5] text-foreground'
+
 export default function Sidebar() {
   return (
-    <aside className="sidebar">
+    <aside className="flex h-full flex-col overflow-hidden rounded-md border border-border bg-white max-[900px]:h-auto">
       <Tabs defaultValue="about" className="flex-1 min-h-0">
         <TabsList className="tablist_size_large">
           {TABS.map((tab) => (
@@ -23,7 +26,11 @@ export default function Sidebar() {
           ))}
         </TabsList>
         {TABS.map(({ id, Panel }) => (
-          <TabsContent key={id} value={id} className="sidebar__content">
+          <TabsContent
+            key={id}
+            value={id}
+            className="min-h-0 flex-1 overflow-y-auto p-6 max-[900px]:overflow-y-visible"
+          >
             <Panel />
           </TabsContent>
         ))}
@@ -34,43 +41,51 @@ export default function Sidebar() {
 
 function AboutPanel() {
   return (
-    <div className="sidebar__panel">
-      <div className="sidebar__profile">
+    <div className={panel}>
+      <div className="flex items-center gap-3">
         {profile.avatar ? (
           <img
-            className="sidebar__avatar"
+            className="h-7 w-7 shrink-0 rounded-full object-cover"
             src={profile.avatar}
             alt={profile.name}
           />
         ) : (
           <div
-            className="sidebar__avatar sidebar__avatar--placeholder"
+            className="h-7 w-7 shrink-0 rounded-full bg-[#5a5a5a]"
             aria-hidden="true"
           />
         )}
-        <span className="sidebar__name">{profile.name}</span>
+        <span className="text-[0.9375rem] font-medium text-foreground">
+          {profile.name}
+        </span>
       </div>
 
-      <p className="sidebar__intro">{profile.intro}</p>
+      <p className="whitespace-pre-line text-sm leading-[1.55] text-foreground">
+        {profile.intro}
+      </p>
 
-      <section className="principles-card">
-        <h3 className="principles-card__title">{profile.principles.title}</h3>
-        <ul className="principles-card__bullets">
+      <section className="flex flex-col gap-2 rounded-md border border-border p-4">
+        <h3 className="text-sm font-semibold text-foreground">
+          {profile.principles.title}
+        </h3>
+        <ul className={bulletList}>
           {profile.principles.bullets.map((bullet, i) => (
-            <li key={i}>{bullet}</li>
+            <li key={i} className={smallBody}>
+              {bullet}
+            </li>
           ))}
         </ul>
       </section>
 
-      <p className="sidebar__about-blurb">
+      <p className="text-sm leading-[1.55] text-foreground">
         {renderAboutBlurb(aboutMe)}
       </p>
 
-      <div className="sidebar__contact">
-        <p className="sidebar__contact-row">
-          <span className="sidebar__contact-label">{ui.contactLinkedInLabel}</span>{' '}
+      <div className="mt-auto flex flex-col gap-2">
+        <p className={`${smallBody} break-words`}>
+          <span>{ui.contactLinkedInLabel}</span>{' '}
           <a
-            className="sidebar__contact-link"
+            className="text-foreground no-underline hover:underline"
             href={profile.linkedin}
             target="_blank"
             rel="noreferrer"
@@ -78,9 +93,12 @@ function AboutPanel() {
             {profile.linkedin}
           </a>
         </p>
-        <p className="sidebar__contact-row">
-          <span className="sidebar__contact-label">{ui.contactEmailLabel}</span>{' '}
-          <a className="sidebar__contact-link" href={`mailto:${profile.email}`}>
+        <p className={`${smallBody} break-words`}>
+          <span>{ui.contactEmailLabel}</span>{' '}
+          <a
+            className="text-foreground no-underline hover:underline"
+            href={`mailto:${profile.email}`}
+          >
             {profile.email}
           </a>
         </p>
@@ -110,12 +128,12 @@ function AboutFact({ fact }) {
         }
       }}
     >
-      <HoverCardTrigger className="sidebar__about-fact">
+      <HoverCardTrigger className="cursor-default underline underline-offset-2 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground">
         {fact.label}
       </HoverCardTrigger>
-      <HoverCardContent className="sidebar__about-popover">
+      <HoverCardContent className="h-[220px] w-[220px] overflow-hidden rounded-xl p-0">
         <img
-          className="sidebar__about-image"
+          className="block h-full w-full object-cover"
           src={images[index]}
           alt={fact.label}
         />
@@ -126,16 +144,18 @@ function AboutFact({ fact }) {
 
 function ExperiencePanel() {
   return (
-    <div className="sidebar__panel">
+    <div className={panel}>
       {experience.map((job) => (
-        <article key={job.company} className="job">
-          <header className="job__header">
-            <span className="job__company">{job.company}</span>
-            <span className="job__years">
+        <article key={job.company}>
+          <header className="mb-3 flex items-baseline justify-between gap-3">
+            <span className="text-sm font-semibold text-foreground">
+              {job.company}
+            </span>
+            <span className="whitespace-nowrap text-xs text-muted-foreground">
               {job.years} ({job.duration})
             </span>
           </header>
-          <p className="job__summary">{job.summary}</p>
+          <p className={smallBody}>{job.summary}</p>
         </article>
       ))}
     </div>
@@ -144,20 +164,22 @@ function ExperiencePanel() {
 
 function SkillsPanel() {
   return (
-    <div className="sidebar__panel">
+    <div className={panel}>
       {skills.map((group) => (
-        <section key={group.heading} className="skill-group">
-          <h3 className="skill-group__heading">
+        <section key={group.heading} className="flex flex-col gap-2">
+          <h3 className="m-0 flex items-center gap-2 text-sm font-semibold text-foreground">
             {group.icon && (
-              <span className="skill-group__icon">
+              <span className="inline-flex shrink-0 items-center justify-center text-muted-foreground">
                 <SkillIcon name={group.icon} />
               </span>
             )}
             <span>{group.heading}</span>
           </h3>
-          <ul className="skill-group__bullets">
+          <ul className={bulletList}>
             {group.bullets.map((bullet, i) => (
-              <li key={i}>{bullet}</li>
+              <li key={i} className={smallBody}>
+                {bullet}
+              </li>
             ))}
           </ul>
         </section>
