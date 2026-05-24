@@ -86,6 +86,24 @@ export const experience = [
   },
 ]
 
+// ---------- Sidebar: education & credentials ----------
+// Rendered as a collapsible accordion under the "Education" heading.
+// `summary` is placeholder copy — replace with real content.
+export const education = [
+  {
+    title: 'Product Management Course',
+    subtitle: 'Product Experts',
+    years: '2024',
+    summary: 'Placeholder — add a short description of the course and what it covered.',
+  },
+  {
+    title: 'B.Ed.Des',
+    subtitle: 'Design & Visual Communication',
+    years: '2016 - 2020',
+    summary: 'Placeholder — add a short description of the degree and your focus.',
+  },
+]
+
 // ---------- Sidebar: skills & knowledge ----------
 // `icon` — Lucide name from https://lucide.dev/icons (kebab-case: "smile-plus", or PascalCase: "SmilePlus")
 export const skills = [
