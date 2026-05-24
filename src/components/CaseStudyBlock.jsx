@@ -8,28 +8,28 @@ export default function CaseStudyBlock({ block }) {
   switch (block.type) {
     case 'h2':
       return (
-        <h2 className="mt-12 mb-3 font-serif font-medium italic leading-tight text-cs-h2 text-foreground max-[600px]:mt-8 max-[600px]:text-xl">
+        <h2 className="mx-auto mt-20 mb-10 w-full max-w-cs-text font-sans font-bold leading-[initial] tracking-[-0.08rem] text-[4rem] text-foreground max-[600px]:mt-12 max-[600px]:text-[2.5rem]">
           {block.text}
         </h2>
       )
 
     case 'h3':
       return (
-        <h3 className="mt-6 mb-2 font-serif font-medium italic leading-[1.3] text-cs-h3 text-foreground max-[600px]:text-[1.0625rem]">
+        <h3 className="mx-auto mt-6 mb-2 w-full max-w-cs-text font-serif font-medium italic leading-[1.3] text-cs-h3 text-foreground max-[600px]:text-[1.0625rem]">
           {block.text}
         </h3>
       )
 
     case 'p':
       return (
-        <p className="mb-4 text-base leading-[1.7] text-foreground max-[600px]:text-[0.9375rem]">
+        <p className="mx-auto mb-4 w-full max-w-cs-text text-[1.125rem] leading-[1.7] text-foreground max-[600px]:text-base">
           {block.text}
         </p>
       )
 
     case 'img':
       return (
-        <figure className="my-12">
+        <figure className="mx-auto my-12 w-full max-w-cs-media">
           {block.src ? (
             <img className={figureMedia} src={block.src} alt={block.alt || ''} />
           ) : (
@@ -41,7 +41,7 @@ export default function CaseStudyBlock({ block }) {
 
     case 'img-row':
       return (
-        <div className="my-6 grid grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
+        <div className="mx-auto my-6 grid w-full max-w-cs-media grid-cols-[repeat(auto-fit,minmax(220px,1fr))] gap-4">
           {block.images.map((img, i) => (
             <figure key={i}>
               {img.src ? (
@@ -57,7 +57,7 @@ export default function CaseStudyBlock({ block }) {
 
     case 'video':
       return (
-        <figure className="my-12">
+        <figure className="mx-auto my-12 w-full max-w-cs-media">
           {block.src ? (
             <video
               className={figureMedia}
@@ -77,7 +77,7 @@ export default function CaseStudyBlock({ block }) {
 
     case 'list':
       return (
-        <ul className="mb-4 flex list-disc flex-col gap-2 pl-5">
+        <ul className="mx-auto mb-4 flex w-full max-w-cs-text list-disc flex-col gap-2 pl-5">
           {block.items.map((item, i) => (
             <li
               key={i}

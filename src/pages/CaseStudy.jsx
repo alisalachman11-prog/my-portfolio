@@ -6,7 +6,7 @@ import LogoMark from '../components/LogoMark.jsx'
 import CaseStudyBlock from '../components/CaseStudyBlock.jsx'
 import CaseStudyNav from '../components/CaseStudyNav.jsx'
 
-const prose = 'mx-auto max-w-[1200px]'
+const prose = 'mx-auto w-full max-w-cs-text'
 const backLink =
   'inline-block text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-muted-foreground transition-colors duration-150 hover:text-foreground'
 const displayType =
@@ -26,7 +26,7 @@ export default function CaseStudy() {
 
   if (!project) {
     return (
-      <main className="mx-auto flex min-h-screen max-w-[1600px] flex-col gap-4 bg-background px-6 pt-24 pb-24 max-[720px]:px-4 max-[720px]:pb-16">
+      <main className="mx-auto flex min-h-screen max-w-[1680px] flex-col gap-4 bg-background px-6 pt-24 pb-24 max-[720px]:px-4 max-[720px]:pb-16">
         <p className={prose}>{ui.projectNotFound}</p>
         <Link to="/" className={`${prose} ${backLink}`}>
           {ui.caseStudyBack}
@@ -38,38 +38,51 @@ export default function CaseStudy() {
   const others = projects.filter((p) => p.slug !== slug)
 
   return (
-    <main className="mx-auto min-h-screen max-w-[1600px] bg-background px-6 pt-12 pb-24 max-[720px]:px-4 max-[720px]:pt-6 max-[720px]:pb-16">
-      <Link to="/" className={`${prose} mb-8 block ${backLink}`}>
-        {ui.caseStudyBack}
-      </Link>
+    <main className="mx-auto min-h-screen max-w-[1680px] bg-background px-6 pt-12 pb-24 max-[720px]:px-4 max-[720px]:pt-6 max-[720px]:pb-16">
+      <div className="mx-auto mb-8 w-full max-w-cs-hero">
+        <Link to="/" className={backLink}>
+          {ui.caseStudyBack}
+        </Link>
+      </div>
 
-      <header className={`${prose} mb-8`}>
-        <div className="mb-2 flex flex-wrap items-baseline gap-3">
+      <header className="mx-auto mb-8 w-full max-w-cs-hero">
+        <div className="flex flex-wrap items-baseline gap-3">
           {project.brand.mark && <LogoMark mark={project.brand.mark} />}
           {project.brand.word && (
             <span className={`${displayType} tracking-normal`}>
               {project.brand.word}
             </span>
           )}
-          <span
-            className="font-serif font-light text-cs-display opacity-35 max-[720px]:text-lg"
-            aria-hidden="true"
-          >
-            |
-          </span>
-          <h1 className={`${displayType} leading-tight`}>{project.title}</h1>
         </div>
-        <p className="mt-2 max-w-[64ch] font-sans text-[0.9375rem] leading-[1.55] text-muted-foreground">
+        <h1 className="my-[48px] font-serif font-medium italic text-[5.625rem] leading-[0.95] tracking-[-0.1125rem] max-[720px]:text-[3rem]">
+          {project.title}
+        </h1>
+        <p className="max-w-[64ch] font-sans text-[0.9375rem] leading-[1.55] text-muted-foreground">
           {project.description}
         </p>
       </header>
 
+      {/* Top hero image — one per case study (placeholder until a src is set). */}
+      <figure className="mx-auto mb-10 w-full max-w-cs-hero max-[720px]:mb-6">
+        {study?.hero?.src ? (
+          <img
+            className="block aspect-[2/1] w-full rounded-[4px] object-cover"
+            src={study.hero.src}
+            alt={study.hero.alt || ''}
+          />
+        ) : (
+          <div className="flex aspect-[2/1] w-full items-center justify-center rounded-[4px] border border-dashed border-border bg-muted text-sm text-muted-foreground">
+            Hero image placeholder
+          </div>
+        )}
+      </figure>
+
       {study?.intro && (
-        <div className={`${prose} mb-6 flex flex-col gap-4`}>
+        <div className={`${prose} my-[120px] flex flex-col gap-4`}>
           {study.intro.split(/\n{2,}/).map((para, i) => (
             <p
               key={i}
-              className="font-sans text-base leading-[1.7] text-foreground"
+              className="font-sans text-[1.5rem] font-bold leading-[40px] text-foreground"
             >
               {para}
             </p>
@@ -77,11 +90,13 @@ export default function CaseStudy() {
         </div>
       )}
 
-      <article className={prose}>
+      <article className="w-full">
         {study?.blocks?.length ? (
           study.blocks.map((block, i) => <CaseStudyBlock key={i} block={block} />)
         ) : (
-          <p className="italic text-muted-foreground">{ui.caseStudyComingSoon}</p>
+          <p className={`${prose} italic text-muted-foreground`}>
+            {ui.caseStudyComingSoon}
+          </p>
         )}
       </article>
 
