@@ -5,6 +5,8 @@
  * Image blocks with no `src` render as a placeholder.
  */
 export default {
+  // Top hero image (1632px wide, shown as a 2:1 banner crop). Add: /images/codux/hero.png
+  hero: { src: '', alt: '' },
   intro:
     'Codux, a visual IDE headed by Wix co-founder Nadav Avrahami and a core group of Wix professionals.\n\nCreated to remove the ping-pong between developers and designers, Codux is designed to render a live React project on a visual canvas, letting designers change UI directly and modify the real code. Read more about it here.',
   blocks: [

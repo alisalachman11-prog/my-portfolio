@@ -3,6 +3,8 @@
  * Replace placeholders with real copy from the Figma when ready.
  */
 export default {
+  // Top hero image (1632px wide, shown as a 2:1 banner crop). Add: /images/stamphunter/hero.png
+  hero: { src: '', alt: '' },
   intro:
     'StampHunter is a passion project — a mobile app that allows users to find and collect ink stamps across Taiwan.',
   blocks: [

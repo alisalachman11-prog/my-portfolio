@@ -5,6 +5,8 @@
  * Images live in /public/images/dazl/.
  */
 export default {
+  // Top hero image (1632px wide, shown as a 2:1 banner crop). Add: /images/dazl/hero.png
+  hero: { src: '', alt: '' },
   intro:
     'Codux (a visual IDE we have worked on) journey came to an end and we pivoted on to work on Dazel.\n\nDazl is a cutting-edge AI Builder Check it here headed by Nadav Avrahami, the co-founder of WIX, together with a core group of Wix professionals.',
 

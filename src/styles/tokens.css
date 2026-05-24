@@ -29,7 +29,8 @@
   --space-9: 6rem;      /* 96px */
 
   /* ---------- Layout ---------- */
-  --container-max: 1600px;   /* outer page width cap */
-  --container-prose: 1200px;  /* readable text-column width for case studies */
+  --container-max: 1680px;   /* outer page width cap (fits the 1632 hero + gutters) */
+  /* Case-study column widths live in global.css @theme as --container-cs-*
+     (text 800 / media 1080 / hero 1632), exposed as max-w-cs-* utilities. */
   --radius-card: 6px;
 }
