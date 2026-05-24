@@ -1,10 +1,12 @@
 import { useState } from 'react'
 import { Mail, File, ArrowUpRight } from 'lucide-react'
-import { profile, aboutMe, experience, skills, ui } from '../content/site.js'
+import { profile, aboutMe, experience, education, skills, ui } from '../content/site.js'
 import SkillIcon from './SkillIcon.jsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 import { Item, ItemGroup, ItemMedia, ItemContent, ItemTitle, ItemActions } from "@/components/ui/item"
+import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
+import { Separator } from "@/components/ui/separator"
 
 const TABS = [
   { id: 'about', label: ui.sidebarTabs.about, Panel: AboutPanel },
@@ -152,20 +154,59 @@ function AboutFact({ fact }) {
 
 function ExperiencePanel() {
   return (
-    <div className={panel}>
-      {experience.map((job) => (
-        <article key={job.company}>
-          <header className="mb-3 flex items-baseline justify-between gap-3">
-            <span className="text-sm font-semibold text-foreground">
-              {job.company}
-            </span>
-            <span className="whitespace-nowrap text-xs text-muted-foreground">
-              {job.years} ({job.duration})
-            </span>
-          </header>
-          <p className={smallBody}>{job.summary}</p>
-        </article>
-      ))}
+    <div className="flex flex-col gap-5">
+      <section className="flex flex-col gap-2">
+        <h3 className="text-base font-semibold text-foreground">Roles</h3>
+        <Accordion defaultValue={[experience[0]?.company]}>
+          {experience.map((job) => (
+            <AccordionItem key={job.company} value={job.company}>
+              <AccordionTrigger>
+                <span className="flex flex-1 items-baseline justify-between gap-3 pr-2">
+                  <span className="text-sm font-semibold text-foreground">
+                    {job.company}
+                  </span>
+                  <span className="whitespace-nowrap text-xs font-normal text-muted-foreground">
+                    {job.years} ({job.duration})
+                  </span>
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className={smallBody}>
+                {job.summary}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </section>
+
+      <Separator />
+
+      <section className="flex flex-col gap-2">
+        <h3 className="text-base font-semibold text-foreground">Education</h3>
+        <Accordion>
+          {education.map((item) => (
+            <AccordionItem key={item.title} value={item.title}>
+              <AccordionTrigger>
+                <span className="flex flex-1 items-start justify-between gap-3 pr-2">
+                  <span className="flex flex-col gap-0.5">
+                    <span className="text-sm font-semibold text-foreground">
+                      {item.title}
+                    </span>
+                    <span className="text-[0.8125rem] font-normal leading-[1.4] text-muted-foreground">
+                      {item.subtitle}
+                    </span>
+                  </span>
+                  <span className="whitespace-nowrap text-xs font-normal text-muted-foreground">
+                    {item.years}
+                  </span>
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className={smallBody}>
+                {item.summary}
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </section>
     </div>
   )
 }
