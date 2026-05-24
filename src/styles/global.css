@@ -187,3 +187,101 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* ---------- Confetti hover (ported from the Lucide docs copy button) ----------
+   Bursts gradient "bubbles" from the top and bottom of an element on hover.
+   Applied to the "view case study" CTA via the `confetti-link` class.
+   `isolation: isolate` keeps the z-index:-1 bubbles above the element's own
+   background but behind its text. Color follows the theme foreground, which
+   contrasts against the light page the button sits on. */
+.confetti-link {
+  position: relative;
+  isolation: isolate;
+  --confetti-color: var(--foreground);
+}
+
+.confetti-link::before,
+.confetti-link::after {
+  position: absolute;
+  content: "";
+  display: none;
+  width: 140%;
+  max-width: 160px;
+  height: 100%;
+  left: -20%;
+  z-index: -1;
+  pointer-events: none;
+  background-repeat: no-repeat;
+}
+
+.confetti-link::before {
+  top: -85%;
+  background-image:
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, transparent 20%, var(--confetti-color) 20%, transparent 30%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, var(--confetti-color) 15%, transparent 20%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%);
+  background-size: 10% 10%, 20% 20%, 15% 15%, 20% 20%, 18% 18%, 10% 10%, 15% 15%, 10% 10%, 18% 18%;
+}
+
+.confetti-link::after {
+  bottom: -75%;
+  background-image:
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, transparent 10%, var(--confetti-color) 15%, transparent 20%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%),
+    radial-gradient(circle, var(--confetti-color) 20%, transparent 20%);
+  background-size: 15% 15%, 20% 20%, 18% 18%, 20% 20%, 15% 15%, 10% 10%, 20% 20%;
+}
+
+.confetti-link:hover::before {
+  display: block;
+  animation: confetti-top ease-in-out 0.75s forwards;
+}
+
+.confetti-link:hover::after {
+  display: block;
+  animation: confetti-bottom ease-in-out 0.75s forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .confetti-link:hover::before,
+  .confetti-link:hover::after {
+    display: none;
+    animation: none;
+  }
+}
+
+@keyframes confetti-top {
+  0% {
+    background-position: 5% 90%, 10% 90%, 10% 90%, 15% 90%, 25% 90%, 25% 90%, 40% 90%, 55% 90%, 70% 90%;
+  }
+  50% {
+    background-position: 0% 80%, 0% 20%, 10% 40%, 20% 0%, 30% 30%, 22% 50%, 50% 50%, 65% 20%, 90% 30%;
+  }
+  to {
+    background-position: 0% 70%, 0% 10%, 10% 30%, 20% -10%, 30% 20%, 22% 40%, 50% 40%, 65% 10%, 90% 20%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+
+@keyframes confetti-bottom {
+  0% {
+    background-position: 10% -10%, 30% 10%, 55% -10%, 70% -10%, 85% -10%, 70% -10%, 70% 0%;
+  }
+  50% {
+    background-position: 0% 80%, 20% 80%, 45% 60%, 60% 100%, 75% 70%, 95% 60%, 105% 0%;
+  }
+  to {
+    background-position: 0% 90%, 20% 90%, 45% 70%, 60% 110%, 75% 80%, 95% 70%, 110% 10%;
+    background-size: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%;
+  }
+}
+

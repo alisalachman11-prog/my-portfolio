@@ -14,7 +14,7 @@ export default function ProjectInfo({
       <p className="text-[0.8125rem] leading-[1.55] text-foreground">{text}</p>
       <Link
         to={ctaHref}
-        className="mt-3 self-start rounded bg-foreground px-4 py-3 text-[0.8125rem] text-background transition-colors duration-150 hover:bg-[#333] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
+        className="confetti-link mt-3 self-start rounded bg-foreground px-4 py-3 text-[0.8125rem] text-background transition-colors duration-150 hover:bg-[#333] focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
       >
         {ctaLabel}
       </Link>
