@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Mail, File, ArrowUpRight, CircleUserIcon } from 'lucide-react'
+import { Mail, File, ArrowUpRight } from 'lucide-react'
 import { profile, aboutMe, experience, skills, ui } from '../content/site.js'
 import SkillIcon from './SkillIcon.jsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
@@ -12,9 +12,19 @@ const TABS = [
   { id: 'skills', label: ui.sidebarTabs.skills, Panel: SkillsPanel },
 ]
 
+// LinkedIn brand glyph — lucide dropped its logo icons, so we inline it.
+// No own size class, so ItemMedia's `variant="icon"` sizes it to size-4.
+function LinkedInGlyph(props) {
+  return (
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" {...props}>
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.852 3.37-1.852 3.601 0 4.267 2.37 4.267 5.455v6.288zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+    </svg>
+  )
+}
+
 // Sticky footer links. `external` adds target/rel; mailto opens the mail client.
 const CONTACT_LINKS = [
-  { label: 'Check my LinkedIn', href: profile.linkedin, external: true, Icon: CircleUserIcon },
+  { label: 'Check my LinkedIn', href: profile.linkedin, external: true, Icon: LinkedInGlyph },
   { label: 'Send me an Email', href: `mailto:${profile.email}`, external: false, Icon: Mail },
   { label: 'Check my CV', href: '/cv.pdf', external: true, Icon: File },
 ]
@@ -45,7 +55,7 @@ export default function Sidebar() {
         ))}
       </Tabs>
 
-      <ItemGroup className="shrink-0 border-t border-border p-3">
+      <ItemGroup className="shrink-0 border-t border-border p-4">
         {CONTACT_LINKS.map(({ label, href, external, Icon }) => (
           <Item
             key={label}
@@ -57,7 +67,7 @@ export default function Sidebar() {
               />
             }
           >
-            <ItemMedia variant="icon" className="text-muted-foreground">
+            <ItemMedia variant="icon">
               <Icon />
             </ItemMedia>
             <ItemContent>
@@ -97,19 +107,6 @@ function AboutPanel() {
       <p className="whitespace-pre-line text-sm leading-[1.55] text-foreground">
         {profile.intro}
       </p>
-
-      <section className="flex flex-col gap-2 rounded-md border border-border p-4">
-        <h3 className="text-sm font-semibold text-foreground">
-          {profile.principles.title}
-        </h3>
-        <ul className={bulletList}>
-          {profile.principles.bullets.map((bullet, i) => (
-            <li key={i} className={smallBody}>
-              {bullet}
-            </li>
-          ))}
-        </ul>
-      </section>
 
       <p className="text-sm leading-[1.55] text-foreground">
         {renderAboutBlurb(aboutMe)}
