@@ -142,16 +142,16 @@ function ExperiencePanel() {
     <div className="flex flex-col gap-5">
       <section className="flex flex-col gap-2">
         <h3 className="text-base font-semibold text-foreground">Roles</h3>
-        <Accordion defaultValue={[experience[0]?.company]}>
+        <Accordion className="border-border border-1 p-3 rounded-md"defaultValue={[experience[0]?.company]}>
           {experience.map((job) => (
             <AccordionItem key={job.company} value={job.company}>
               <AccordionTrigger>
-                <span className="flex flex-1 items-baseline justify-between gap-3 pr-2">
+                <span className="flex flex-1 items-baseline justify-between gap-3 pr-2 ">
                   <span className="text-sm font-semibold text-foreground">
                     {job.company}
                   </span>
                   <span className="whitespace-nowrap text-xs font-normal text-muted-foreground">
-                    {job.years} ({job.duration})
+                    {job.years}
                   </span>
                 </span>
               </AccordionTrigger>
@@ -163,11 +163,9 @@ function ExperiencePanel() {
         </Accordion>
       </section>
 
-      <Separator />
-
       <section className="flex flex-col gap-2">
         <h3 className="text-base font-semibold text-foreground">Education</h3>
-        <Accordion>
+        <Accordion className="border-border border-1 p-3 rounded-md">
           {education.map((item) => (
             <AccordionItem key={item.title} value={item.title}>
               <AccordionTrigger>

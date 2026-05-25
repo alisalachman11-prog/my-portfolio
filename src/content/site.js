@@ -81,14 +81,12 @@ export const experience = [
   {
     company: 'Wix',
     years: '2023 - 2025',
-    duration: '2 yrs 2 mos',
     summary:
       'At Wix, I designed two developer-focused products: a visual IDE for React that pivoted into an AI-powered builder. Owned product areas, defined KPIs with product, and shipped iteratively. Worked closely with engineers and occasionally contributed to the codebase. Ran interviews, usability tests, and analytics (Mixpanel, FullStory), and introduced an Opportunity Solution Tree framework to the team.',
   },
   {
     company: 'Paradox Security',
     years: '2020 - 2023',
-    duration: '2 yrs 5 mos',
     summary:
       "At Paradox, I helped redesign a critical legacy mobile app and shaped the experience for the Doorbell, a new security device. Built and documented a design system, restructured the file architecture, refined the design-to-dev handoff, and created onboarding for new designers.",
   },
@@ -100,15 +98,13 @@ export const experience = [
 export const education = [
   {
     title: 'Product Management Course',
-    subtitle: 'Product Experts',
     years: '2024',
-    summary: 'Placeholder — add a short description of the course and what it covered.',
+    summary: 'Product Experts.',
   },
   {
-    title: 'B.Ed.Des',
-    subtitle: 'Design & Visual Communication',
+    title: 'B.Ed.Des - Design & Visual Communication',
     years: '2016 - 2020',
-    summary: 'Placeholder — add a short description of the degree and your focus.',
+    summary: 'Design & Visual Communication',
   },
 ]
 
