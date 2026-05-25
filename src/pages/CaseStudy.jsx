@@ -1,14 +1,28 @@
 import { useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { ArrowLeft } from 'lucide-react'
 import { projects, ui, meta } from '../content/site.js'
 import { caseStudies } from '../content/case-studies/index.js'
 import LogoMark from '../components/LogoMark.jsx'
 import CaseStudyBlock from '../components/CaseStudyBlock.jsx'
 import CaseStudyNav from '../components/CaseStudyNav.jsx'
+import { Button } from '@/components/ui/button'
 
 const prose = 'mx-auto w-full max-w-cs-text'
-const backLink =
-  'inline-block text-[0.6875rem] font-medium uppercase tracking-[0.12em] text-muted-foreground transition-colors duration-150 hover:text-foreground'
+
+function BackToHomeButton() {
+  return (
+    <Button
+      variant="outline"
+      size="sm"
+      nativeButton={false}
+      render={<Link to="/" />}
+    >
+      <ArrowLeft data-icon="inline-start" />
+      {ui.caseStudyBack}
+    </Button>
+  )
+}
 const displayType =
   'font-serif text-cs-display font-medium italic max-[720px]:text-lg'
 
@@ -28,9 +42,9 @@ export default function CaseStudy() {
     return (
       <main className="mx-auto flex min-h-screen max-w-[1680px] flex-col gap-4 bg-background px-6 pt-24 pb-24 max-[720px]:px-4 max-[720px]:pb-16">
         <p className={prose}>{ui.projectNotFound}</p>
-        <Link to="/" className={`${prose} ${backLink}`}>
-          {ui.caseStudyBack}
-        </Link>
+        <div className={prose}>
+          <BackToHomeButton />
+        </div>
       </main>
     )
   }
@@ -40,9 +54,7 @@ export default function CaseStudy() {
   return (
     <main className="mx-auto min-h-screen max-w-[1680px] bg-background px-6 pt-12 pb-24 max-[720px]:px-4 max-[720px]:pt-6 max-[720px]:pb-16">
       <div className="mx-auto mb-8 w-full max-w-cs-hero">
-        <Link to="/" className={backLink}>
-          {ui.caseStudyBack}
-        </Link>
+        <BackToHomeButton />
       </div>
 
       <header className="mx-auto mb-8 w-full max-w-cs-hero">
