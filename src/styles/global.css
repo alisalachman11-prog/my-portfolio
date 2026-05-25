@@ -71,6 +71,8 @@
   --text-cs-h2: clamp(1.375rem, 1.75vw, 1.875rem);
   --text-cs-h3: clamp(1.125rem, 1.25vw, 1.375rem);
   --text-cs-display: clamp(1.5rem, 2vw, 2rem);
+  --color-brand: #DC0027;
+  --color-brand-muted: #F3E5EE;
 
   /* Case-study layout columns (centered, increasing width). */
   --container-cs-text: 800px; /* body / reading column */
