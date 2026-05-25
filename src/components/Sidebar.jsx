@@ -138,7 +138,7 @@ function AboutFact({ fact }) {
         }
       }}
     >
-      <HoverCardTrigger className="cursor-default underline underline-offset-2 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground">
+      <HoverCardTrigger className="cursor-default text-brand underline underline-offset-2 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground">
         {fact.label}
       </HoverCardTrigger>
       <HoverCardContent className="h-[220px] w-[220px] overflow-hidden rounded-xl p-0">
