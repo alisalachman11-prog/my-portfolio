@@ -111,16 +111,17 @@ export const skills = [
     heading: 'Domain Expertise',
     icon: 'apple',
     bullets: [
-      'Complex workflows for enterprise / B2B SaaS products',
-      'Worked on Developer tools and AI-powered builders',
+      'Complex workflows for enterprise B2B SaaS',
+      'Worked on Developer tool and AI-powered builder',
+      'IoT security products - designed app integrations tested against real security hardware'
     ],
   },
   {
     heading: 'Research & Discovery',
     icon: 'search',
     bullets: [
-      'Facilitating user interviews & usability tests',
-      'Behavioral & product analytics with Mixpanel and FullStory',
+      'User interviews and usability testing',
+      'Behavioral analytics in Mixpanel and FullStory - build reports to surface product opportunities and catch event-tracking issues',
       'Translating insights into structured product opportunities using the Opportunity Solution Tree framework',
     ],
   },
@@ -128,16 +129,18 @@ export const skills = [
     heading: 'Technical Fluency',
     icon: 'code',
     bullets: [
-      'Working knowledge of HTML, CSS, TS, JS, and React',
-      'Direct contributions to the codebases on smaller features',
-      'Git workflow: commits, pull requests, and opening tickets for bugs and UX improvements',
+      'HTML, CSS, TS, JS, and React',
+      'Ship small ui changes directly to the codebase',
+      'Familiar with Git workflow: commits, PRs, and bug/UX tickets',
     ],
   },
   {
     heading: 'Building with AI',
     icon: 'Wand',
     bullets: [
-      'Using Claude Code, Cursor, Base44, and Lovable to prototype, iterate, and extend what I can build solo',
+      'Prototype and iterate design concepts using Claude Code, Cursor, Base44, and Lovable',
+      'Evaluate LLM design outputs as part of shipping AI features',
+      'Build personal projects end-to-end using AI-assisted planning, design, and code',
     ],
   },
   {
@@ -146,15 +149,15 @@ export const skills = [
     bullets: [
       'Co-created and documented a design system',
       'Improved the design-to-development handoff process',
-      'Designed an onboarding experience for incoming designers',
+      'Designed an onboarding experience for new designers',
     ],
   },
   {
     heading: 'Collaboration & Ownership',
     icon: 'smile-plus',
     bullets: [
-      'Comfortable working under leadership, within cross-functional squads, and across multiple teams or alongside other designers',
-      'Equally comfortable working independently and owning end-to-end design decisions',
+      'Comfortable working under leadership, operate inside squads, across teams, and alongside other designers',
+      'Own end-to-end decisions independently when needed',
     ],
   },
 ]

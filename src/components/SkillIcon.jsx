@@ -37,5 +37,5 @@ export default function SkillIcon({ name, size = 18 }) {
     return null
   }
 
-  return <Icon size={size} strokeWidth={2} aria-hidden />
+  return <Icon size={size} strokeWidth={2} aria-hidden color="var(--color-brand)" />
 }
