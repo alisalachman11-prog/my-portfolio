@@ -77,11 +77,11 @@ export default function CaseStudyBlock({ block }) {
 
     case 'list':
       return (
-        <ul className="mx-auto mb-4 flex w-full max-w-cs-text list-disc flex-col gap-2 pl-5">
+        <ul className="mx-auto mb-4 flex w-full max-w-cs-text list-disc flex-col gap-2 border-border border-1 p-3 rounded-md pl-5 bg-muted/50">
           {block.items.map((item, i) => (
             <li
               key={i}
-              className="text-base leading-relaxed max-[600px]:text-[0.9375rem]"
+              className="ml-3 text-base leading-relaxed max-[600px]:text-[0.9375rem]"
             >
               {item}
             </li>
