@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { Mail, File, ArrowUpRight } from 'lucide-react'
 import { profile, aboutMe, experience, education, skills, ui } from '../content/site.js'
 import SkillIcon from './SkillIcon.jsx'
+import PhotoStack from './PhotoStack.jsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 import { Item, ItemGroup, ItemMedia, ItemContent, ItemTitle, ItemActions } from "@/components/ui/item"
@@ -88,23 +89,7 @@ export default function Sidebar() {
 function AboutPanel() {
   return (
     <div className={panel}>
-      <div className="flex items-center gap-3">
-        {profile.avatar ? (
-          <img
-            className="h-7 w-7 shrink-0 rounded-full object-cover"
-            src={profile.avatar}
-            alt={profile.name}
-          />
-        ) : (
-          <div
-            className="h-7 w-7 shrink-0 rounded-full bg-[#5a5a5a]"
-            aria-hidden="true"
-          />
-        )}
-        <span className="text-[0.9375rem] font-medium text-foreground">
-          {profile.name}
-        </span>
-      </div>
+      <PhotoStack images={aboutMe.gallery} />
 
       <p className="whitespace-pre-line text-sm leading-[1.55] text-foreground">
         {profile.intro}
