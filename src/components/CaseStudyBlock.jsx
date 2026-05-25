@@ -22,7 +22,7 @@ export default function CaseStudyBlock({ block }) {
 
     case 'p':
       return (
-        <p className="mx-auto mb-4 w-full max-w-cs-text text-[1.125rem] leading-[1.7] text-foreground max-[600px]:text-base">
+        <p className="mx-auto mb-4 w-full max-w-cs-text text-[1.125rem] leading-[1.7] max-[600px]:text-base">
           {block.text}
         </p>
       )

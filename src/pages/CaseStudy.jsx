@@ -57,7 +57,7 @@ export default function CaseStudy() {
         <h1 className="my-[48px] font-serif font-medium italic text-[5.625rem] leading-[0.95] tracking-[-0.1125rem] max-[720px]:text-[3rem]">
           {project.title}
         </h1>
-        <p className="max-w-[64ch] font-sans text-[0.9375rem] leading-[1.55] text-muted-foreground">
+        <p className="max-w-[64ch] font-sans text-[0.9375rem] leading-[1.55]">
           {project.description}
         </p>
       </header>
@@ -94,7 +94,7 @@ export default function CaseStudy() {
         {study?.blocks?.length ? (
           study.blocks.map((block, i) => <CaseStudyBlock key={i} block={block} />)
         ) : (
-          <p className={`${prose} italic text-muted-foreground`}>
+          <p className={`${prose} italic`}>
             {ui.caseStudyComingSoon}
           </p>
         )}

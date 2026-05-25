@@ -58,6 +58,14 @@
     font-weight: 400;
     line-height: 1.2;
   }
+
+  /* Body text color, project-wide. Change the value in tokens.css.
+     Covers paragraphs, list items, and accordion panel content. */
+  p,
+  li,
+  [data-slot="accordion-content"] {
+    color: var(--color-paragraph);
+  }
   html {
     @apply font-sans;
   }

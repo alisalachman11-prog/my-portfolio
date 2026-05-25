@@ -9,6 +9,7 @@
   --color-page: #fafafa;
   --color-text: #0B0508;
   --color-text-muted: #555555;
+  --color-paragraph: rgb(82, 82, 91); /* body paragraph (<p>) text */
   --color-card-bg: #f5f5f3;
   --color-card-border: #e6e6e3;
   --color-divider: #d8d8d4;
