@@ -200,7 +200,7 @@ function SkillsPanel() {
   return (
     <div className={panel}>
       {skills.map((group) => (
-        <section key={group.heading} className="flex flex-col gap-2">
+        <section key={group.heading} className="flex flex-col gap-2 border-border border-1 p-3 rounded-md">
           <h3 className="m-0 flex items-center gap-2 text-sm font-semibold text-foreground">
             {group.icon && (
               <span className="inline-flex shrink-0 items-center justify-center text-muted-foreground">
