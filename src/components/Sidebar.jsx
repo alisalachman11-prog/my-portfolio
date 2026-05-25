@@ -34,7 +34,7 @@ const CONTACT_LINKS = [
 
 const panel = 'flex flex-col gap-6'
 const bulletList = 'flex list-disc flex-col gap-1 pl-[1.1rem]'
-const smallBody = 'text-[0.8125rem] leading-[1.5] text-foreground'
+const smallBody = 'text-[0.8125rem] leading-[1.5]'
 
 export default function Sidebar() {
   return (
@@ -91,11 +91,11 @@ function AboutPanel() {
     <div className={panel}>
       <PhotoStack images={aboutMe.gallery} />
 
-      <p className="whitespace-pre-line text-sm leading-[1.55] text-foreground">
+      <p className="whitespace-pre-line text-sm leading-[1.55]">
         {profile.intro}
       </p>
 
-      <p className="text-sm leading-[1.55] text-foreground">
+      <p className="text-sm leading-[1.55]">
         {renderAboutBlurb(aboutMe)}
       </p>
     </div>
