@@ -174,9 +174,6 @@ function ExperiencePanel() {
                     <span className="text-sm font-semibold text-foreground">
                       {item.title}
                     </span>
-                    <span className="text-[0.8125rem] font-normal leading-[1.4] text-muted-foreground">
-                      {item.subtitle}
-                    </span>
                   </span>
                   <span className="whitespace-nowrap text-xs font-normal text-muted-foreground">
                     {item.years}
