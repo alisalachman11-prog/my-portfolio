@@ -13,9 +13,8 @@ export const meta = {
 
 // ---------- Sidebar: profile ----------
 export const profile = {
-  name: 'Alisa Lachman',
   intro:
-    'Product designer with 4 years of experience - the last two focused on developer tools, AI builders, and complex technical workflows. I work end-to-end: from discovery and research through to contributing in the codebase.',
+  'Hey, Im Alisa 👋 I most recently worked at Wix, where I took a developer tool and an AI builder - both with complex technical workflows - end-to-end from discovery and research through to contributing to the codebase. Before that, I works on a mobile IoT app.',
   principles: {
     title: 'My principles as a product designer',
     bullets: [
@@ -34,6 +33,15 @@ export const profile = {
 // image in `images` (rotates through the list). Add/remove paths freely.
 // Drop the image files into public/images/about/ using the filenames below.
 export const aboutMe = {
+  // Fanned photo stack shown at the top of the About panel. Hovering shuffles
+  // through them. Reuses the about images — reorder, add, or swap freely.
+  gallery: [
+    '/images/about/1_countries.jpg',
+    '/images/about/1_origami.jpg',
+    '/images/about/1_youtube.jpg',
+    '/images/about/2_countries.jpg',
+    '/images/about/3_countries.jpg',
+  ],
   template:
     'Currently I am traveling the world for a year now, and I have been to {countries} so far. In my free time I enjoy folding {origami} and watching {youtube}.',
   facts: {
