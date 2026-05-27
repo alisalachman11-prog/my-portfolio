@@ -15,23 +15,9 @@ export const meta = {
 export const profile = {
   intro:
   'Hey, Im Alisa 👋 I most recently worked at Wix, where I took a developer tool and an AI builder - both with complex technical workflows - end-to-end from discovery and research through to contributing to the codebase. Before that, I works on a mobile IoT app.',
-  principles: {
-    title: 'My principles as a product designer',
-    bullets: [
-      'Rapid iteration for faster user alignment',
-      'Let evidence lead, not opinion',
-      'Anticipate future use cases, but focus on present needs',
-    ],
-  },
-  linkedin: 'https://www.linkedin.com/alisa-lachman',
-  email: 'alisa.lachman11@gmail.com',
   // avatar: '/images/avatar.jpg', // ← uncomment after adding a square photo to public/images/
 }
 
-// ---------- Sidebar: about — personal blurb with hover-card facts ----------
-// Each fact is referenced by `{key}` in `template`. Each hover shows the next
-// image in `images` (rotates through the list). Add/remove paths freely.
-// Drop the image files into public/images/about/ using the filenames below.
 export const aboutMe = {
   // Fanned photo stack shown at the top of the About panel. Hovering shuffles
   // through them. Reuses the about images — reorder, add, or swap freely.
