@@ -7,6 +7,7 @@ import LogoMark from '../components/LogoMark.jsx'
 import CaseStudyBlock from '../components/CaseStudyBlock.jsx'
 import CaseStudyNav from '../components/CaseStudyNav.jsx'
 import { Button } from '@/components/ui/button'
+import { asset } from '@/lib/utils'
 
 const prose = 'mx-auto w-full max-w-cs-text'
 
@@ -79,7 +80,7 @@ export default function CaseStudy() {
         {study?.hero?.src ? (
           <img
             className="block aspect-[2/1] w-full rounded-[4px] object-cover"
-            src={study.hero.src}
+            src={asset(study.hero.src)}
             alt={study.hero.alt || ''}
           />
         ) : (

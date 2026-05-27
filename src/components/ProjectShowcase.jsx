@@ -1,5 +1,6 @@
 import ProjectInfo from './ProjectInfo.jsx'
 import { ui } from '../content/site.js'
+import { asset } from '@/lib/utils'
 
 export default function ProjectShowcase({ project }) {
   const { title, description, slug, image } = project
@@ -13,7 +14,7 @@ export default function ProjectShowcase({ project }) {
         {image ? (
           <img
             className="h-full w-full object-cover"
-            src={image}
+            src={asset(image)}
             alt={`${title} preview`}
           />
         ) : (

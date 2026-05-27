@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
+import { asset } from '@/lib/utils'
 
 // A fanned deck of photos. Each image is positioned by its current slot;
 // hovering advances the order so images rotate through the slots, which —
@@ -55,7 +56,7 @@ export default function PhotoStack({ images = [], className = '' }) {
         return (
           <img
             key={src}
-            src={src}
+            src={asset(src)}
             alt=""
             aria-hidden="true"
             draggable={false}
