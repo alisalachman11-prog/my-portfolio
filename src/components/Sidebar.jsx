@@ -39,7 +39,7 @@ const smallBody = 'text-[0.8125rem] leading-[1.5]'
 
 export default function Sidebar() {
   return (
-    <aside className="flex h-full flex-col overflow-hidden rounded-md border border-border bg-white max-[900px]:h-auto">
+    <aside className="flex h-full flex-col overflow-hidden rounded-md border border-border bg-white p-7 pt-10 max-[900px]:h-auto">
       <Tabs defaultValue="about" className="flex-1 min-h-0">
         <TabsList className="tablist_size_large">
           {TABS.map((tab) => (
@@ -52,14 +52,14 @@ export default function Sidebar() {
           <TabsContent
             key={id}
             value={id}
-            className="min-h-0 flex-1 overflow-y-auto p-6 max-[900px]:overflow-y-visible"
+            className="min-h-0 flex-1 overflow-y-auto pb-6 max-[900px]:overflow-y-visible"
           >
             <Panel />
           </TabsContent>
         ))}
       </Tabs>
 
-      <ItemGroup className="shrink-0 border-t border-border p-4">
+      <ItemGroup className="shrink-0 border-t border-border pt-7">
         {CONTACT_LINKS.map(({ label, href, external, Icon }) => (
           <Item
             key={label}
