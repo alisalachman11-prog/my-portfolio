@@ -190,7 +190,7 @@ export const projects = [
   },
   {
     slug: 'stamphunter',
-    brand: { mark: 'triangle', word: '' },
+    brand: { mark: 'triangle', word: 'stamphunter' },
     title: 'A passion project (WIP)',
     description:
       'Creating a mobile app that allows users to find and collect ink stamps across Taiwan',

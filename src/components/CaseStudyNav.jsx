@@ -1,45 +1,52 @@
 import { Link } from 'react-router-dom'
-import LogoMark from './LogoMark.jsx'
+import { ChevronRightIcon, ExternalLinkIcon } from "lucide-react"
+import {
+  Item,
+  ItemActions,
+  ItemGroup,
+  ItemMedia,
+  ItemContent,
+  ItemTitle,
+  ItemDescription,
+} from '@/components/ui/item'
 
 export default function CaseStudyNav({ heading, others }) {
   if (!others?.length) return null
 
   return (
     <nav
-      className="mt-16 border-t border-border pt-6"
+      className="flex flex-col gap-6"
       aria-label="Other case studies"
     >
       <h2 className="mb-4 font-serif text-lg font-medium italic text-foreground">
         {heading}
       </h2>
-      <ul className="flex list-none flex-col gap-4">
+      <ItemGroup className="gap-4">
         {others.map((project) => (
-          <li key={project.slug}>
-            <Link
-              to={`/work/${project.slug}`}
-              className="grid grid-cols-[minmax(120px,max-content)_1fr] items-baseline gap-4 transition-opacity duration-150 hover:opacity-65 max-[600px]:grid-cols-1 max-[600px]:gap-1"
-            >
-              <span className="inline-flex items-baseline gap-2 font-serif text-base font-medium italic text-foreground">
-                {project.brand.mark && (
-                  <LogoMark
-                    mark={project.brand.mark}
-                    className="relative top-[2px]"
-                  />
-                )}
-                {project.brand.word && <span>{project.brand.word}</span>}
-              </span>
-              <span className="flex flex-col gap-1">
-                <span className="font-serif text-base font-medium italic text-foreground">
-                  {project.title}
-                </span>
-                <span className="text-sm leading-[1.5] text-muted-foreground">
-                  {project.description}
-                </span>
-              </span>
-            </Link>
-          </li>
+          <Item
+            key={project.slug}
+            variant="outline"
+            render={<Link to={`/work/${project.slug}`} />}
+          >
+            <ItemMedia variant="image" className="size-[6.4rem] rounded-xl">
+              {project.image && (
+                <img src={project.image} alt={project.title} />
+              )}
+            </ItemMedia>
+            <ItemContent>
+              <ItemTitle className="line-clamp-none font-serif text-base font-medium italic text-foreground">
+                {project.title}
+              </ItemTitle>
+              <ItemDescription className="line-clamp-none leading-[1.5]">
+                {project.description}
+              </ItemDescription>
+            </ItemContent>
+            <ItemActions>
+            <ChevronRightIcon className="size-4 text-muted-foreground" />
+          </ItemActions>
+          </Item>
         ))}
-      </ul>
+      </ItemGroup>
     </nav>
   )
 }
