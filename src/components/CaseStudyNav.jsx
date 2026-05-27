@@ -9,6 +9,7 @@ import {
   ItemTitle,
   ItemDescription,
 } from '@/components/ui/item'
+import { asset } from '@/lib/utils'
 
 export default function CaseStudyNav({ heading, others }) {
   if (!others?.length) return null
@@ -30,7 +31,7 @@ export default function CaseStudyNav({ heading, others }) {
           >
             <ItemMedia variant="image" className="size-[6.4rem] rounded-xl">
               {project.image && (
-                <img src={project.image} alt={project.title} />
+                <img src={asset(project.image)} alt={project.title} />
               )}
             </ItemMedia>
             <ItemContent>

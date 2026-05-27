@@ -8,6 +8,7 @@ import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/h
 import { Item, ItemGroup, ItemMedia, ItemContent, ItemTitle, ItemActions } from "@/components/ui/item"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import { Separator } from "@/components/ui/separator"
+import { asset } from "@/lib/utils"
 
 const TABS = [
   { id: 'about', label: ui.sidebarTabs.about, Panel: AboutPanel },
@@ -129,7 +130,7 @@ function AboutFact({ fact }) {
       <HoverCardContent className="h-[220px] w-[220px] overflow-hidden rounded-xl p-0">
         <img
           className="block h-full w-full object-cover"
-          src={images[index]}
+          src={asset(images[index])}
           alt={fact.label}
         />
       </HoverCardContent>
