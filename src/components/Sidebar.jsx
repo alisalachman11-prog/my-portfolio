@@ -27,8 +27,8 @@ function LinkedInGlyph(props) {
 
 // Sticky footer links. `external` adds target/rel; mailto opens the mail client.
 const CONTACT_LINKS = [
-  { label: 'Check my LinkedIn', href: profile.linkedin, external: true, Icon: LinkedInGlyph },
-  { label: 'Send me an Email', href: `mailto:${profile.email}`, external: false, Icon: Mail },
+  { label: 'Check my LinkedIn', href:'https://www.linkedin.com/in/alisa-lachman/', external: true, Icon: LinkedInGlyph },
+  { label: 'Send me an Email', href: `mailto:alisa.lachman11@gmail.com`, external: false, Icon: Mail },
   { label: 'Check my CV', href: '/cv.pdf', external: true, Icon: File },
 ]
 
