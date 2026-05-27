@@ -9,9 +9,9 @@ export default function Home() {
   }, [])
 
   return (
-    <main className="grid h-screen grid-cols-[minmax(280px,430px)_1fr] gap-6 overflow-hidden bg-page p-6 max-[900px]:h-auto max-[900px]:grid-cols-1 max-[900px]:gap-4 max-[900px]:overflow-visible max-[900px]:p-4">
+    <main className="grid h-screen grid-cols-[minmax(280px,430px)_1fr] overflow-hidden bg-page max-[900px]:h-auto max-[900px]:grid-cols-1 max-[900px]:gap-4 max-[900px]:overflow-visible max-[900px]:p-4">
       <Sidebar />
-      <div className="flex h-full flex-col gap-12 overflow-y-auto pr-2 max-[900px]:h-auto max-[900px]:overflow-visible max-[900px]:pr-0">
+      <div className=" flex h-full flex-col p-7 pr-20 pt-10 gap-12 overflow-y-auto max-[900px]:h-auto max-[900px]:overflow-visible max-[900px]:pr-0">
         {projects.map((project) => (
           <ProjectShowcase key={project.slug} project={project} />
         ))}
