@@ -16,6 +16,12 @@ import {
   CollapsibleContent,
   CollapsibleTrigger,
 } from '@/components/ui/collapsible'
+import {
+  Dialog,
+  DialogContent,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog'
 
 // Centered reading column (layout only; type styles come from `typography`).
 const textCol = 'mx-auto w-full max-w-cs-text'
@@ -172,6 +178,9 @@ export default function CaseStudyBlock({ block }) {
         </Card>
       )
 
+    case 'prompt':
+      return <PromptCard block={block} />
+
     case 'list':
       // Centering lives on the wrapper; the `ml-6` indent in `typography.ul`
       // would otherwise override `mx-auto` and pin the list to the left.
@@ -188,6 +197,41 @@ export default function CaseStudyBlock({ block }) {
     default:
       return null
   }
+}
+
+function PromptCard({ block }) {
+  const cta = block.cta || 'Click to see full prompt'
+
+  return (
+    <Dialog>
+      <Card className="mx-auto my-8 w-full max-w-cs-text gap-0">
+        <CardContent className="relative max-h-56 overflow-hidden">
+          {/* Faded preview of the prompt; the gradient + CTA sit over the fade. */}
+          <p className="whitespace-pre-wrap text-sm text-muted-foreground">
+            {block.text}
+          </p>
+          <div className="absolute inset-x-0 bottom-0 flex h-40 flex-col items-center justify-end gap-3 bg-gradient-to-t from-card via-card/90 to-transparent pb-4">
+            <DialogTrigger render={<Button variant="outline" size="lg" />}>
+              {cta}
+            </DialogTrigger>
+          </div>
+        </CardContent>
+      </Card>
+
+      <DialogContent>
+        {block.title && (
+          <div className="border-b px-6 py-4 pr-12">
+            <DialogTitle>{block.title}</DialogTitle>
+          </div>
+        )}
+        <div className="overflow-y-auto px-6 py-6">
+          <p className="whitespace-pre-wrap text-sm leading-relaxed text-foreground">
+            {block.text}
+          </p>
+        </div>
+      </DialogContent>
+    </Dialog>
+  )
 }
 
 function CollapsibleImage({ block }) {
