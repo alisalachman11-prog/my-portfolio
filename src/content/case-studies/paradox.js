@@ -1,6 +1,6 @@
 /**
  * Paradox (B2B security) case study content.
- * Block types: h2, h3, p, img, img-row, list.
+ * Block types: h2, h3, p, img, img-row,carousel, video, lost.list.
  * Images live in /public/images/paradox/.
  */
 export default {
@@ -51,6 +51,49 @@ export default {
       src: '/images/paradox/05-design-system-in-use.jpg',
       alt: 'Four production screens (Help Center, Installer Login, Invite Owner, Create Site) showing the design system applied across flows.',
       caption: 'The design system applied across Help Center, Installer Login, Invite Owner, and Create Site.',
+    },
+
+    { type: 'h2', text: 'Testing the new doorbell functionality with the real hardware' },
+    {
+      type: 'p',
+      text: 'add here some textabout the testing with the real hardwer',
+    },
+
+    {
+      type: 'carousel',
+      images: [
+        {
+      type: 'img',
+      src: '/images/paradox/01-carusel-testing.jpg',
+      alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
+      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
+        },
+        {
+      type: 'img',
+      src: '/images/paradox/02-carusel-testing.jpg',
+      alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
+      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
+        },
+        {
+      type: 'img',
+      src: '/images/paradox/03-carusel-testing.jpg',
+      alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
+      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
+        },
+        {
+      type: 'img',
+      src: '/images/paradox/04-carusel-testing.jpg',
+      alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
+      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
+        },
+        {
+      type: 'img',
+      src: '/images/paradox/05-carusel-testing.jpg',
+      alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
+      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
+        },
+        
+      ]
     },
 
     { type: 'h2', text: 'Camera — horizontal → vertical' },

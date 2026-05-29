@@ -1,4 +1,11 @@
 import { asset } from '@/lib/utils'
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from '@/components/ui/carousel'
 
 const figureMedia = 'block w-full rounded-[4px]'
 const placeholder =
@@ -55,6 +62,42 @@ export default function CaseStudyBlock({ block }) {
             </figure>
           ))}
         </div>
+      )
+
+    case 'carousel':
+      return (
+        <figure className="mx-auto my-12 w-full max-w-cs-media">
+          <Carousel
+            opts={{ loop: true, dragFree: true, align: 'start' }}
+            className="w-full"
+          >
+            <CarouselContent className="-ml-4 gap-6">
+              {block.images.map((img, i) => (
+                <CarouselItem key={i} className="basis-auto pl-4 ">
+                  <figure className="flex flex-col w-min">
+                    {img.src ? (
+                      <img
+                        className="block h-[600px] w-auto max-w-none rounded-[4px]"
+                        src={asset(img.src)}
+                        alt={img.alt || ''}
+                      />
+                    ) : (
+                      <div className={`${placeholder} h-[600px]`}>Image</div>
+                    )}
+                    {img.caption && (
+                      <figcaption className={`${figcaption} w-full`}>
+                        {img.caption}
+                      </figcaption>
+                    )}
+                  </figure>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
+          {block.caption && <figcaption className={figcaption}>{block.caption}</figcaption>}
+        </figure>
       )
 
     case 'video':
