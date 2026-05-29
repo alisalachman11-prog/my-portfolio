@@ -7,7 +7,8 @@ import LogoMark from '../components/LogoMark.jsx'
 import CaseStudyBlock from '../components/CaseStudyBlock.jsx'
 import CaseStudyNav from '../components/CaseStudyNav.jsx'
 import { Button } from '@/components/ui/button'
-import { asset } from '@/lib/utils'
+import { asset, cn } from '@/lib/utils'
+import { typography } from '@/lib/typography'
 
 const prose = 'mx-auto w-full max-w-cs-text'
 
@@ -67,9 +68,7 @@ export default function CaseStudy() {
             </span>
           )}
         </div>
-        <h1 className="my-[48px] font-serif font-medium italic text-[5.625rem] leading-[0.95] tracking-[-0.1125rem] max-[720px]:text-[3rem]">
-          {project.title}
-        </h1>
+        <h1 className={cn('my-12', typography.h1)}>{project.title}</h1>
         <p className="max-w-[64ch] font-sans text-[0.9375rem] leading-[1.55]">
           {project.description}
         </p>
@@ -93,10 +92,7 @@ export default function CaseStudy() {
       {study?.intro && (
         <div className={`${prose} my-[120px] flex flex-col gap-4`}>
           {study.intro.split(/\n{2,}/).map((para, i) => (
-            <p
-              key={i}
-              className="font-sans text-[1.5rem] font-bold leading-[40px] text-foreground"
-            >
+            <p key={i} className={typography.lead}>
               {para}
             </p>
           ))}

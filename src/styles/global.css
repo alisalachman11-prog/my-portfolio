@@ -54,8 +54,9 @@
     background: var(--color-bg);
   }
 
+  /* Headings set their own weight via utility classes (shadcn typography).
+     Keep a tight default line-height; weight is intentionally not set here. */
   h1, h2, h3, h4 {
-    font-weight: 400;
     line-height: 1.2;
   }
 
@@ -73,11 +74,10 @@
 
 @theme {
   /* Custom theme tokens for the portfolio. Enables utilities like
-     bg-page, text-cs-h2, text-cs-h3, text-cs-display, and the
-     case-study width columns max-w-cs-text / -media / -hero. */
+     bg-page, text-cs-display, and the case-study width columns
+     max-w-cs-text / -media / -hero. Headings/paragraphs/lists now use
+     shadcn typography classes (see src/lib/typography.js). */
   --color-page: #fafafa;
-  --text-cs-h2: clamp(1.375rem, 1.75vw, 1.875rem);
-  --text-cs-h3: clamp(1.125rem, 1.25vw, 1.375rem);
   --text-cs-display: clamp(1.5rem, 2vw, 2rem);
   --color-brand: #DC0027;
   --color-brand-muted: #FFF0FB;
