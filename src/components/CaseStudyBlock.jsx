@@ -1,4 +1,7 @@
-import { asset } from '@/lib/utils'
+import { useState } from 'react'
+import { ChevronDownIcon } from 'lucide-react'
+import { asset, cn } from '@/lib/utils'
+import { typography } from '@/lib/typography'
 import {
   Carousel,
   CarouselContent,
@@ -6,7 +9,16 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from '@/components/ui/carousel'
+import { Button } from '@/components/ui/button'
+import { Card, CardContent, CardDescription } from '@/components/ui/card'
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@/components/ui/collapsible'
 
+// Centered reading column (layout only; type styles come from `typography`).
+const textCol = 'mx-auto w-full max-w-cs-text'
 const figureMedia = 'block w-full rounded-[4px]'
 const placeholder =
   'flex w-full aspect-video items-center justify-center rounded-[4px] border border-dashed border-border bg-muted text-sm text-muted-foreground'
@@ -17,24 +29,30 @@ export default function CaseStudyBlock({ block }) {
   switch (block.type) {
     case 'h2':
       return (
-        <h2 className="mx-auto mt-20 mb-10 w-full max-w-cs-text font-sans font-bold leading-[initial] tracking-[-0.08rem] text-[4rem] text-foreground max-[600px]:mt-12 max-[600px]:text-[2.5rem]">
+        <h2 className={cn(textCol, 'mt-12 text-foreground', typography.h2)}>
           {block.text}
         </h2>
       )
 
     case 'h3':
       return (
-        <h3 className="mx-auto mt-6 mb-2 w-full max-w-cs-text font-serif font-medium italic leading-[1.3] text-cs-h3 text-foreground max-[600px]:text-[1.0625rem]">
+        <h3 className={cn(textCol, 'mt-8 text-foreground', typography.h3)}>
           {block.text}
         </h3>
       )
 
     case 'p':
+      return <p className={cn(textCol, typography.p)}>{block.text}</p>
+
+    case 'blockquote':
       return (
-        <p className="mx-auto mb-4 w-full max-w-cs-text text-[1.125rem] leading-[1.7] max-[600px]:text-base">
+        <blockquote className={cn(textCol, typography.blockquote)}>
           {block.text}
-        </p>
+        </blockquote>
       )
+
+    case 'lead':
+      return <p className={cn(textCol, typography.lead)}>{block.text}</p>
 
     case 'img':
       return (
@@ -120,21 +138,104 @@ export default function CaseStudyBlock({ block }) {
         </figure>
       )
 
-    case 'list':
-      return (
-        <ul className="mx-auto mb-4 flex w-full max-w-cs-text list-disc flex-col gap-2 border-border border-1 p-3 rounded-md pl-5 bg-muted/50">
+    case 'collapsible':
+      return block.items.some((item) => item.image) ? (
+        <CollapsibleImage block={block} />
+      ) : (
+        <Card className="mx-auto my-8 w-full max-w-cs-text gap-4">
+          <CardContent>
           {block.items.map((item, i) => (
-            <li
-              key={i}
-              className="ml-3 text-base leading-relaxed max-[600px]:text-[0.9375rem]"
-            >
-              {item}
-            </li>
+            <Collapsible key={i} className="rounded-md data-open:bg-muted">
+              <CollapsibleTrigger
+                render={
+                  <Button variant="ghost" className="group w-full" />
+                }
+              >
+                {item.trigger}
+                <ChevronDownIcon className="ml-auto transition-transform group-data-[open]:rotate-180" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="flex flex-col items-start gap-2 p-2.5 pt-0 text-sm">
+                {item.description && (
+                  <CardDescription>{item.description}</CardDescription>
+                )}
+                {item.bullets && (
+                  <ul className="ml-6 list-disc text-muted-foreground [&>li]:mt-2">
+                    {item.bullets.map((b, j) => (
+                      <li key={j}>{b}</li>
+                    ))}
+                  </ul>
+                )}
+              </CollapsibleContent>
+            </Collapsible>
           ))}
-        </ul>
+          </CardContent>
+        </Card>
+      )
+
+    case 'list':
+      // Centering lives on the wrapper; the `ml-6` indent in `typography.ul`
+      // would otherwise override `mx-auto` and pin the list to the left.
+      return (
+        <div className={textCol}>
+          <ul className={typography.ul}>
+            {block.items.map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        </div>
       )
 
     default:
       return null
   }
+}
+
+function CollapsibleImage({ block }) {
+  // First item drives the image by default; clicking another item swaps it.
+  const [activeIndex, setActiveIndex] = useState(0)
+  const active = block.items[activeIndex]
+
+  return (
+    <div className="mx-auto my-8 grid w-full max-w-cs-media grid-cols-1 items-start gap-6 md:grid-cols-2">
+      <Card>
+        <CardContent>
+          {block.items.map((item, i) => (
+            <Collapsible
+              key={i}
+              open={activeIndex === i}
+              onOpenChange={(open) => open && setActiveIndex(i)}
+              className="rounded-md data-open:bg-muted"
+            >
+              <CollapsibleTrigger
+                render={<Button variant="ghost" className="group w-full" />}
+              >
+                {item.trigger}
+                <ChevronDownIcon className="ml-auto transition-transform group-data-[open]:rotate-180" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="flex flex-col items-start gap-2 p-2.5 pt-0 text-sm">
+                {item.description && (
+                  <CardDescription>{item.description}</CardDescription>
+                )}
+                {item.bullets && (
+                  <ul className="ml-6 list-disc text-muted-foreground [&>li]:mt-2">
+                    {item.bullets.map((b, j) => (
+                      <li key={j}>{b}</li>
+                    ))}
+                  </ul>
+                )}
+              </CollapsibleContent>
+            </Collapsible>
+          ))}
+        </CardContent>
+      </Card>
+      <figure className="md:sticky md:top-24">
+        {active?.image ? (
+          <img className={figureMedia} src={asset(active.image)} alt={active.alt || ''} />
+        ) : (
+          <div className={placeholder}>Image placeholder</div>
+        )}
+        {active?.caption && <figcaption className={figcaption}>{active.caption}</figcaption>}
+      </figure>
+    </div>
+  )
 }
