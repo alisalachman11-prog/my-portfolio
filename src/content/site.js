@@ -14,7 +14,7 @@ export const meta = {
 // ---------- Sidebar: profile ----------
 export const profile = {
   intro:
-  'Hey, Im Alisa 👋 I most recently worked at Wix, where I took a developer tool and an AI builder - both with complex technical workflows - end-to-end from discovery and research through to contributing to the codebase. Before that, I works on a mobile IoT app.',
+  "Hey, I'm Alisa 👋 \n I’m a product designer for complex systems.\n\n My most recent work was for Wix, where I collaborated on creating a **Visual IDE** and an **AI builder**, both projects involving highly complex technical workflows. For both, I have contributed across the full product lifecycle, from discovery through to codebase contributions. Previously, I worked on a high-criticality IoT mobile app.\n\n Currently, I am traveling the world, and I have been to 17 countries so far. In my free time, I enjoy folding origami and watching scientific videos.",
   // avatar: '/images/avatar.jpg', // ← uncomment after adding a square photo to public/images/
 }
 
@@ -28,40 +28,8 @@ export const aboutMe = {
     '/images/about/2_countries.jpg',
     '/images/about/3_countries.jpg',
   ],
-  template:
-    'Currently I am traveling the world for a year now, and I have been to {countries} so far. In my free time I enjoy folding {origami} and watching {youtube}.',
-  facts: {
-    countries: {
-      label: '17 countries',
-      images: [
-        '/images/about/1_countries.jpg',
-        '/images/about/2_countries.jpg',
-        '/images/about/3_countries.jpg',
-        '/images/about/4_countries.jpg',
-      ],
-    },
-    origami: {
-      label: 'origami',
-      images: [
-        '/images/about/1_origami.jpg',
-        '/images/about/2_origami.jpg',
-        '/images/about/3_origami.jpg',
-        '/images/about/4_origami.jpg',
-      ],
-    },
-    youtube: {
-      label: 'science channels',
-      images: [
-        '/images/about/1_youtube.jpg',
-        '/images/about/2_youtube.jpg',
-        '/images/about/3_youtube.jpg',
-        '/images/about/4_youtube.jpg',
-        '/images/about/5_youtube.jpg',
-      ],
-    },
-  },
-}
-
+  // Plain About blurb. Was previously a template with hover-card facts; now just text.
+};
 // ---------- Sidebar: experience list ----------
 export const experience = [
   {

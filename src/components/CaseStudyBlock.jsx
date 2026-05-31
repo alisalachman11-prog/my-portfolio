@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { ChevronDownIcon } from 'lucide-react'
 import { asset, cn } from '@/lib/utils'
 import { typography } from '@/lib/typography'
+import { renderRich } from '@/lib/richText'
 import {
   Carousel,
   CarouselContent,
@@ -48,17 +49,17 @@ export default function CaseStudyBlock({ block }) {
       )
 
     case 'p':
-      return <p className={cn(textCol, typography.p)}>{block.text}</p>
+      return <p className={cn(textCol, typography.p)}>{renderRich(block.text)}</p>
 
     case 'blockquote':
       return (
         <blockquote className={cn(textCol, typography.blockquote)}>
-          {block.text}
+          {renderRich(block.text)}
         </blockquote>
       )
 
     case 'lead':
-      return <p className={cn(textCol, typography.lead)}>{block.text}</p>
+      return <p className={cn(textCol, typography.lead)}>{renderRich(block.text)}</p>
 
     case 'img':
       return (
@@ -188,7 +189,7 @@ export default function CaseStudyBlock({ block }) {
         <div className={textCol}>
           <ul className={typography.ul}>
             {block.items.map((item, i) => (
-              <li key={i}>{item}</li>
+              <li key={i}>{renderRich(item)}</li>
             ))}
           </ul>
         </div>

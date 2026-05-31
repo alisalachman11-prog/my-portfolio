@@ -1,14 +1,11 @@
-import { useState } from 'react'
 import { Mail, File, ArrowUpRight } from 'lucide-react'
 import { profile, aboutMe, experience, education, skills, ui } from '../content/site.js'
 import SkillIcon from './SkillIcon.jsx'
 import PhotoStack from './PhotoStack.jsx'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { HoverCard, HoverCardContent, HoverCardTrigger } from "@/components/ui/hover-card"
 import { Item, ItemGroup, ItemMedia, ItemContent, ItemTitle, ItemActions } from "@/components/ui/item"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
-import { Separator } from "@/components/ui/separator"
-import { asset } from "@/lib/utils"
+import { renderRich } from "@/lib/richText"
 
 const TABS = [
   { id: 'about', label: ui.sidebarTabs.about, Panel: AboutPanel },
@@ -93,48 +90,13 @@ function AboutPanel() {
       <PhotoStack images={aboutMe.gallery} />
 
       <p className="whitespace-pre-line text-sm leading-[1.55]">
-        {profile.intro}
+        {renderRich(profile.intro)}
       </p>
 
       <p className="text-sm leading-[1.55]">
-        {renderAboutBlurb(aboutMe)}
+        {renderRich(aboutMe.blurb)}
       </p>
     </div>
-  )
-}
-
-function renderAboutBlurb({ template, facts }) {
-  return template.split(/(\{[a-z]+\})/g).map((segment, i) => {
-    const match = segment.match(/^\{([a-z]+)\}$/)
-    if (!match) return segment
-    const fact = facts[match[1]]
-    if (!fact) return segment
-    return <AboutFact key={i} fact={fact} />
-  })
-}
-
-function AboutFact({ fact }) {
-  const images = fact.images ?? []
-  const [index, setIndex] = useState(0)
-  return (
-    <HoverCard
-      onOpenChange={(open) => {
-        if (!open && images.length > 1) {
-          setIndex((i) => (i + 1) % images.length)
-        }
-      }}
-    >
-      <HoverCardTrigger className="cursor-default text-brand underline underline-offset-2 focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-foreground">
-        {fact.label}
-      </HoverCardTrigger>
-      <HoverCardContent className="h-[220px] w-[220px] overflow-hidden rounded-xl p-0">
-        <img
-          className="block h-full w-full object-cover"
-          src={asset(images[index])}
-          alt={fact.label}
-        />
-      </HoverCardContent>
-    </HoverCard>
   )
 }
 
@@ -143,7 +105,7 @@ function ExperiencePanel() {
     <div className="flex flex-col gap-5">
       <section className="flex flex-col gap-2">
         <h3 className="text-base font-semibold text-foreground">Roles</h3>
-        <Accordion className="border-border border-1 p-3 rounded-md"defaultValue={[experience[0]?.company]}>
+        <Accordion className="border-border border-1 p-3 rounded-md">
           {experience.map((job) => (
             <AccordionItem key={job.company} value={job.company}>
               <AccordionTrigger>
