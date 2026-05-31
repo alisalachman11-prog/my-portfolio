@@ -97,6 +97,18 @@ export default function CaseStudy() {
               {renderRich(para)}
             </p>
           ))}
+          {study.cta?.label && (
+            <Button
+              className="w-min"
+              variant="secondary"
+              nativeButton={false}
+              render={
+                <a href={study.cta.href} target="_blank" rel="noreferrer" />
+              }
+            >
+              {study.cta.label}
+            </Button>
+          )}
         </div>
       )}
 
