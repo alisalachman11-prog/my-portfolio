@@ -143,39 +143,57 @@ Abilities that the app provides:
       ],
     },
 
+    { type: 'h3', text: "⋆✴︎˚｡⋆ Learning to code with AI"},
+    { type: 'p', text: 'I used the build as a way to actually learn the code, not just generate it. My habit throughout:' },
+    {
+      type: 'list',
+      items: [
+        'Asked why it made specific decisions, instead of accepting the output as-is',
+        'Asked where particular snippets and styles lived in the codebase',
+        "Used those answers to build a real mental map of the project",
+        'This let me make UI changes manually when I needed more control, rather than relying on prompts for every small tweak',
+      ],
+    },
+    {
+      type: 'video',
+      src: '/images/stamphunter/01-video-design-changes.mov',
+      alt: 'Four production screens (Help Center, Installer Login, Invite Owner, Create Site) showing the design system applied across flows.',
+      caption: 'Sceenshots from my iterations with Lovable & Base44',
+    },
     
-    { type: 'h2', text: 'Wearing multiple hats' },
+    { type: 'h2', text: 'Wearing three hats in one project' },
+    {type:'p', text:'Working solo meant switching between three roles, often in the same hour.'},
+   
 
-  {type:'h3', text:'The Product Manager'},
-  {type:'p', text:'ffffffff'},
+  {type:'h3', text:'As the developer,'},
+  {type:'p', text:' I built the app itself, using Claude Code as my pair. This is where most of the hands-on work happened — turning decisions into a working iOS app.'},
     {
       type: 'list',
       items: [
         'Aggregating the current available data from different sources and organizing it uniformly in a cloud-based database.',
         'Setting up OAuth and other prerequisites for a user-facing app.',
-        'Designing and building an Alpha-stage iOS app.',
+        'Designing and building an Alpha-stage iOS / Android app.',
       ],
     },
 
-    {type:'h3', text:'The Developer'},
-  {type:'p', text:'ffffffff'},
+    {type:'h3', text:'As the product owner, '},
     {
       type: 'list',
       items: [
-        'Aggregating the current available data from different sources and organizing it uniformly in a cloud-based database.',
-        'Setting up OAuth and other prerequisites for a user-facing app.',
-        'Designing and building an Alpha-stage iOS app.',
+        "Set the vision — defined what the app is for and who it's for (travelers and collectors who want to find and plan stamp hunts, not just stumble onto them).",
+        'Set the product goals and success criteria for Phase 1.',
+        'Stayed focused on the core experience, consciously pushing "nice to have" ideas to later phases',
       ],
     },
 
-    {type:'h3', text:'The Designer'},
-  {type:'p', text:'ffffffff'},
+    {type:'h3', text:'As the designer,'},
     {
       type: 'list',
       items: [
-        'Aggregating the current available data from different sources and organizing it uniformly in a cloud-based database.',
-        'Setting up OAuth and other prerequisites for a user-facing app.',
-        'Designing and building an Alpha-stage iOS app.',
+        'Worked with a basic React component library, focused on making the app functional and usable rather than pixel-perfect.',
+        'Kept Phase 1 unpolished by design — the priority was proving the flows work, not the visual finish.',
+        'Set the foundations in design.md files so the whole look can be swapped out more easily later',
+        "Spotted UX/UI issues and described them to Claude the way I'd point out a visual problem to a developer — it helped me phrase each one clearly and turn it into a Git ticket with the full steps to fix it",
       ],
     },
 

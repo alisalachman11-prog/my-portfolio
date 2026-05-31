@@ -131,7 +131,7 @@ export default function CaseStudyBlock({ block }) {
             <video
               className={figureMedia}
               src={asset(block.src)}
-              autoPlay
+              controls
               muted
               loop
               playsInline
