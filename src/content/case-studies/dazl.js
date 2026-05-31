@@ -6,9 +6,15 @@
  */
 export default {
   // Top hero image (1632px wide, shown as a 2:1 banner crop). Add: /images/dazl/hero.png
-  hero: { src: '', alt: '' },
+  hero: {  type: 'img',
+    src: '/images/dazl/12-brand-teaser.jpg',
+    alt: 'Dazl brand teaser announcement on the old Codux website: “But something Dazzling is coming next!”',
+    caption: 'Dazl brand teaser announcement on the old Codux website: “But something Dazzling is coming next!”', },
   intro:
     'Codux (a visual IDE we have worked on) journey came to an end and we pivoted on to work on Dazel.\n\nDazl is a cutting-edge AI Builder Check it here headed by Nadav Avrahami, the co-founder of WIX, together with a core group of Wix professionals.',
+
+  // Intro CTA button. Omit `cta` entirely to hide the button on a study.
+  cta: { label: 'Dazl Website', href: 'https://dazl.dev/' },
 
   blocks: [
     { type: 'h2', text: 'Bridging the gap between Designer and Developer' },
@@ -22,9 +28,9 @@ export default {
     },
     {
       type: 'img',
-      src: '/images/dazl/12-brand-teaser.jpg',
-      alt: 'Dazl brand teaser announcement on the old Codux website: “But something Dazzling is coming next!”',
-      caption: 'Dazl brand teaser announcement on the old Codux website: “But something Dazzling is coming next!”',
+      src: '/images/dazl/03-complexity.jpg',
+      alt: 'The property panel that was implemented in Codux - showcasing visually one of the issues in this implementation, had an endless drill in pattern to reveal more info when clicking on objects.',
+      caption: 'The property panel that was implemented in Codux - showcasing visually one of the issues in this implementation, had an endless drill in pattern to reveal more info when clicking on objects.',
     },
 
     { type: 'h2', text: 'Be the solution you want to see in the product' },
@@ -34,9 +40,9 @@ export default {
     },
     {
       type: 'img',
-      src: '/images/dazl/03-complexity.jpg',
-      alt: 'The property panel that was implemented in Codux - showcasing visually one of the issues in this implementation, had an endless drill in pattern to reveal more info when clicking on objects.',
-      caption: 'The property panel that was implemented in Codux - showcasing visually one of the issues in this implementation, had an endless drill in pattern to reveal more info when clicking on objects.',
+      src: '/images/dazl/02-focused-panel.jpg',
+      alt: 'A focused and simple property panel for designers , with advanced options tucked away and opened on demand.',
+      caption: 'A focused and simple property panel for designers , with advanced options tucked away and opened on demand.',
     },
 
     { type: 'h2', text: 'Separate squads, unified design language' },
@@ -46,9 +52,9 @@ export default {
     },
     {
       type: 'img',
-      src: '/images/dazl/02-focused-panel.jpg',
-      alt: 'A focused and simple property panel for designers , with advanced options tucked away and opened on demand.',
-      caption: 'A focused and simple property panel for designers , with advanced options tucked away and opened on demand.',
+      src: '/images/dazl/01-before.jpg',
+      alt: 'property panel and style panel side by side, showing the similarity of the design language between the two.',
+      caption: 'property panel and style panel side by side, showing the similarity of the design language between the two.',
     },
 
     { type: 'h2', text: '[try] then [try again]' },
@@ -59,9 +65,9 @@ export default {
     { type: 'p', text: 'Some of the key iterations we went through:' },
     {
       type: 'img',
-      src: '/images/dazl/01-before.jpg',
-      alt: 'property panel and style panel side by side, showing the similarity of the design language between the two.',
-      caption: 'property panel and style panel side by side, showing the similarity of the design language between the two.',
+      src: '/images/dazl/05-mode-toggle.jpg',
+      alt: 'Two property panels showing Editing and Debugging modes side by side.',
+      caption: 'Option 1 — mode-specific panels for Editing and Debugging, cycled between as needed.',
     },
 
     { type: 'h3', text: 'Option 1 — Debugging vs. Editing mode' },
@@ -71,9 +77,9 @@ export default {
     },
     {
       type: 'img',
-      src: '/images/dazl/05-mode-toggle.jpg',
-      alt: 'Two property panels showing Editing and Debugging modes side by side.',
-      caption: 'Option 1 — mode-specific panels for Editing and Debugging, cycled between as needed.',
+      src: '/images/dazl/06-computed.jpg',
+      alt: 'Property panel revealing computed values via a hover popover.',
+      caption: 'Option 2 — computed values exposed on hover so the default view stays calm.',
     },
 
     { type: 'h3', text: 'Option 2 — Computed values on demand' },
@@ -83,9 +89,9 @@ export default {
     },
     {
       type: 'img',
-      src: '/images/dazl/06-computed.jpg',
-      alt: 'Property panel revealing computed values via a hover popover.',
-      caption: 'Option 2 — computed values exposed on hover so the default view stays calm.',
+      src: '/images/dazl/07-side-by-side.jpg',
+      alt: 'Two stacked property panels showing primary view and computed values side by side.',
+      caption: 'Option 3 — a wider panel that organizes primary view and computed values together.',
     },
 
     { type: 'h3', text: 'Option 3 — Side by side' },
@@ -158,19 +164,19 @@ export default {
     { type: 'h2', text: 'Conclusions' },
     {
       type: 'p',
-      text: 'Focus on abilities, not only happy flows. Listing the capabilities that exist in the code — and starting to understand what is important and what is not — helped characterize features better than only mapping ideal paths.',
+      text: "I had the pleasure of working with great people on an intense but insightful 90-day sprint, In which we made a pivot from working on Codux (Visual IDE)  to Dazl, a dazzling new AI builder.",
     },
-
-    { type: 'h2', text: 'Picking up speed' },
     {
-      type: 'list',
-      items: [
-        'Aggregating the current available data from different sources and organizing it uniformly in a cloud-based database.',
-        'Setting up OAuth and other prerequisites for a user-facing app.',
-        'Designing and building an Alpha-stage iOS app.',
-        'Testing it all with travelers.',
-        'Populating the app and testing the quality of the database.',
-      ],
+      type: 'p',
+     text: "In the early stages, I partnered with a PM to evaluate one potential product direction, including market and competitor research that we ultimately recommended against pursuing, a call that helped the team focus its energy elsewhere. ",
+    },
+    {
+      type: 'p',
+     text: "Throughout the project, I collaborated with brilliant developers - together we built components using every React property , watched how each one was reflected in Codux, and let that hands-on testing tell us what worked and what didn't.",
+    },
+    {
+      type: 'p',
+     text: "This was my final project before leaving the team.\n I crafted a detailed handoff for the team to carry it forward, and the panel shipped after I left.",
     },
   ],
 }

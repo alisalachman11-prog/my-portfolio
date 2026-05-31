@@ -9,7 +9,8 @@ import {
   ItemTitle,
   ItemDescription,
 } from '@/components/ui/item'
-import { asset } from '@/lib/utils'
+import { asset, cn } from '@/lib/utils'
+import { typography } from '@/lib/typography'
 
 export default function CaseStudyNav({ heading, others }) {
   if (!others?.length) return null
@@ -19,7 +20,7 @@ export default function CaseStudyNav({ heading, others }) {
       className="flex flex-col gap-6"
       aria-label="Other case studies"
     >
-      <h2 className="mb-4 font-serif text-lg font-medium italic text-foreground">
+      <h2 className={cn('mb-4 text-foreground', typography.h2)}>
         {heading}
       </h2>
       <ItemGroup className="gap-4">

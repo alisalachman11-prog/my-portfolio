@@ -8,6 +8,8 @@ export default {
   hero: { src: '', alt: '' },
   intro:
     'Paradox Security Systems is a B2B security hardware company. The app, used daily by end users to monitor and control their home or business security, was a legacy product that had drifted out of sync with modern mobile UX.',
+  // Intro CTA button. Omit `cta` entirely to hide the button on a study.
+  cta: { label: 'Blue Eye app', href: 'https://play.google.com/store/apps/details?id=com.paradox.insitegoldv2&hl=en' },
   blocks: [
     {
       type: 'p',
