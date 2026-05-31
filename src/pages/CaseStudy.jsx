@@ -9,6 +9,7 @@ import CaseStudyNav from '../components/CaseStudyNav.jsx'
 import { Button } from '@/components/ui/button'
 import { asset, cn } from '@/lib/utils'
 import { typography } from '@/lib/typography'
+import { renderRich } from '@/lib/richText'
 
 const prose = 'mx-auto w-full max-w-cs-text'
 
@@ -54,7 +55,7 @@ export default function CaseStudy() {
   const others = projects.filter((p) => p.slug !== slug)
 
   return (
-    <main className="mx-auto min-h-screen max-w-[1680px] bg-background px-6 pt-12 pb-24 max-[720px]:px-4 max-[720px]:pt-6 max-[720px]:pb-16">
+    <main className="mx-auto min-h-screen max-w-[800px] bg-background px-6 pt-12 pb-24 max-[720px]:px-4 max-[720px]:pt-6 max-[720px]:pb-16">
       <div className="mx-auto mb-8 w-full max-w-cs-hero">
         <BackToHomeButton />
       </div>
@@ -90,10 +91,10 @@ export default function CaseStudy() {
       </figure>
 
       {study?.intro && (
-        <div className={`${prose} my-[120px] flex flex-col gap-4`}>
+        <div className={`${prose} my-[80px] flex flex-col gap-4`}>
           {study.intro.split(/\n{2,}/).map((para, i) => (
             <p key={i} className={typography.lead}>
-              {para}
+              {renderRich(para)}
             </p>
           ))}
         </div>
