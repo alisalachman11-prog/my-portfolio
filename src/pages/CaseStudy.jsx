@@ -74,13 +74,17 @@ export default function CaseStudy() {
       </figure>
 
 <header className="mx-auto mb-8 w-full max-w-cs-hero">
-        <h1 className={cn('my-12', typography.h1)}>{project.description}</h1>
+        {/* Override text-4xl's font-size with an arbitrary value so its paired
+            line-height is dropped; the heading inherits line-height instead. */}
+        <h1 className={cn('my-2', typography.h1, 'text-[length:var(--text-4xl)]')}>
+          {project.description}
+        </h1>
       </header>
 
 
 
       {study?.intro && (
-        <div className={`${prose} my-[80px] flex flex-col gap-4`}>
+        <div className={`${prose} mb-[80px] flex flex-col gap-4`}>
           {study.intro.split(/\n{2,}/).map((para, i) => (
             <p key={i} className={typography.lead}>
               {renderRich(para)}
