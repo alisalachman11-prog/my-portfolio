@@ -24,16 +24,11 @@ export default {
     },
     {
       type: 'p',
-      text: 'Before conducting usabilities, the PM and I set this bar: a tech-savvy designer can complete a full page layout end to end in the visual editor — add a grid, edit it, and place components — all without writing code, making sure we could answer:',
+      text: 'The PM and I set the bar up front: a tech-savvy designer should be able to build a full page layout end to end in the visual editor — grid, edits, components — without writing code.',
     },
     {
-      type: 'list',
-      items: [
-        'Did the changes indeed remove blockers?',
-        'Did it improve the efficiency of creating a page layout from the previous usability?',
-        'What other improvements can we make?',
-        'How discoverable are the grid layouts?',
-      ],
+      type: 'p',
+      text: 'We ran usability as a continuous loop rather than a single final test: 7–8 designers across several rounds (one twice), changing the design and re-testing each time. We tracked whether each friction point got resolved, and the experience improved round over round.',
     },
 
     { type: 'h2', text: 'The lighthouse at the edge of the code' },
@@ -133,7 +128,7 @@ export default {
       caption: 'A video of how to use the grid child properties visual controlers',
     },
 
-    { type: 'h2', text: 'It should likely do what you think it does' },
+    { type: 'h2', text: 'Mental model vs. System model' },
     {
       type: 'p',
       text: "Many users tried inputting the number of columns and rows they wanted to have on stage, but didn't achieve this — that habit eroded the size of the rows, mirroring what it does in the code.",
@@ -155,14 +150,22 @@ export default {
       caption: 'Complex grid editing mode with flexible inputs that surface suggestions',
     },
 
-    { type: 'h2', text: 'Post-changes usability findings' },
+    { type: 'h2', text: 'Outcomes' },
+
+    {
+      type: 'p',
+      text: 'Two of the clearest wins:',
+    },
     {
       type: 'list',
       items: [
-        'In all the usability testing, when instructed to use the grid, the users discovered the layout starters in the add panel quickly — it felt very natural for them, and they were pleasantly surprised to find them there.',
-        'The grid indicators on stage were a positive change and especially helped the users when they were doing rough child-related properties.',
-        'It became intuitive to spread elements across columns and rows — the users were saved from needing to estimate arbitrary numbers.',
+        "Presets that landed because placement was researched, not guessed. 4 of 5 designers used the grid presets and all found them fast — because I'd mapped where designers expected them in earlier rounds, before they existed.",
+        "An input redesigned to match instinct. Designers kept typing the number of rows/columns into a control that set their size — a known, recurring mismatch. After I redesigned it to represent count, their instinct finally produced what they expected.",
       ],
+    },
+    {
+      type: 'p',
+      text: 'I treated testing as an ongoing instrument, not a final gate — which is what caught these mismatches early.',
     },
   ],
 }
