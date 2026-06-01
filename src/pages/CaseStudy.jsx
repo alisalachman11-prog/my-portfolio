@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { projects, ui, meta } from '../content/site.js'
 import { caseStudies } from '../content/case-studies/index.js'
-import LogoMark from '../components/LogoMark.jsx'
 import CaseStudyBlock from '../components/CaseStudyBlock.jsx'
 import CaseStudyNav from '../components/CaseStudyNav.jsx'
 import { Button } from '@/components/ui/button'
@@ -26,9 +25,6 @@ function BackToHomeButton() {
     </Button>
   )
 }
-const displayType =
-  'font-serif text-cs-display font-medium italic max-[720px]:text-lg'
-
 export default function CaseStudy() {
   const { slug } = useParams()
   const project = projects.find((p) => p.slug === slug)
@@ -78,18 +74,7 @@ export default function CaseStudy() {
       </figure>
 
 <header className="mx-auto mb-8 w-full max-w-cs-hero">
-        <div className="flex flex-col items-baseline gap-3">
-          {project.brand.mark && <LogoMark mark={project.brand.mark} />}
-          {project.brand.word && (
-            <span className={`${displayType} tracking-normal`}>
-              {project.brand.word}
-            </span>
-          )}
-        </div>
-        <h1 className={cn('my-12', typography.h1)}>{project.title}</h1>
-        <p className="max-w-[64ch] font-sans text-[0.9375rem] leading-[1.55]">
-          {project.description}
-        </p>
+        <h1 className={cn('my-12', typography.h1)}>{project.description}</h1>
       </header>
 
 
