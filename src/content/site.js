@@ -164,7 +164,7 @@ export const projects = [
     title: 'B2B security hardware company',
     description: 'Redesigning a high-criticality legacy security app',
     theme: 'blue',
-    image: '/images/covers/Paradox_Cover.jpg',
+    image: '/images/Paradox_Cover.jpg',
     cta: {
       label: 'View Blue eye app',
       href: 'https://play.google.com/store/apps/details?id=com.paradox.insitegoldv2&hl=en',

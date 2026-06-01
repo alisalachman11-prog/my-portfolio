@@ -7,23 +7,9 @@ import {
   useMemo,
 } from 'react'
 import { createPortal } from 'react-dom'
+import { ChevronLeftIcon, ChevronRightIcon, XIcon } from 'lucide-react'
 import { asset, cn } from '@/lib/utils'
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from '@/components/ui/carousel'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-} from '@/components/ui/pagination'
 
 const HOVER_LABEL = 'Click to see image in larger scale'
 
@@ -108,87 +94,110 @@ function LightboxDialog({ images, openIndex, onClose }) {
   return (
     <Dialog open={isOpen} onOpenChange={(o) => !o && onClose()}>
       <DialogContent
-        className="flex w-auto max-w-[96vw] max-h-[96vh] items-center justify-center border-0 bg-transparent p-0 shadow-none ring-0 [&_[data-slot=dialog-close]]:text-white/90 [&_[data-slot=dialog-close]]:hover:text-white"
+        showCloseButton={false}
+        className="top-0 left-0 h-screen w-screen max-h-none max-w-none translate-x-0 translate-y-0 rounded-none border-0 bg-black/90 p-0 shadow-none ring-0"
       >
         <DialogTitle className="sr-only">Image viewer</DialogTitle>
-        {isOpen && <LightboxCarousel images={images} startIndex={openIndex} />}
+        {isOpen && (
+          <LightboxView
+            key={openIndex}
+            images={images}
+            startIndex={openIndex}
+            onClose={onClose}
+          />
+        )}
       </DialogContent>
     </Dialog>
   )
 }
 
-function LightboxCarousel({ images, startIndex }) {
-  const [api, setApi] = useState(null)
-  const [current, setCurrent] = useState(startIndex)
+// Edge control: a circular, translucent button that reads on the dark overlay.
+const edgeBtn =
+  'absolute top-1/2 z-10 flex size-11 -translate-y-1/2 items-center justify-center rounded-full bg-white/10 text-white backdrop-blur transition-colors hover:bg-white/20 focus-visible:ring-3 focus-visible:ring-white/40 focus-visible:outline-none'
 
-  useEffect(() => {
-    if (!api) return
-    setCurrent(api.selectedScrollSnap())
-    const onSelect = () => setCurrent(api.selectedScrollSnap())
-    api.on('select', onSelect)
-    return () => api.off('select', onSelect)
-  }, [api])
-
+function LightboxView({ images, startIndex, onClose }) {
+  const [index, setIndex] = useState(startIndex)
   const hasMany = images.length > 1
 
+  const go = useCallback(
+    (delta) => setIndex((i) => (i + delta + images.length) % images.length),
+    [images.length],
+  )
+
+  // Arrow-key navigation (Escape close is handled by the Dialog).
+  useEffect(() => {
+    if (!hasMany) return
+    const onKey = (e) => {
+      if (e.key === 'ArrowLeft') go(-1)
+      else if (e.key === 'ArrowRight') go(1)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [go, hasMany])
+
+  const img = images[index]
+
   return (
-    <div className="flex max-h-[96vh] flex-col items-center gap-4">
-      <Carousel
-        setApi={setApi}
-        opts={{ startIndex, loop: true }}
-        className="flex w-[90vw] max-w-[1500px] min-h-0 items-center"
+    <div className="relative flex h-full w-full items-center justify-center">
+      {/* Backdrop click closes; the image/controls stop propagation. */}
+      <button
+        type="button"
+        aria-label="Close image viewer"
+        className="absolute inset-0 cursor-zoom-out"
+        onClick={onClose}
+      />
+
+      <button
+        type="button"
+        aria-label="Close image viewer"
+        onClick={onClose}
+        className={cn(edgeBtn, 'top-4 right-4 size-9 translate-y-0')}
       >
-        <CarouselContent className="items-center">
-          {images.map((img, i) => (
-            <CarouselItem key={i} className="flex flex-col items-center justify-center">
-              {/* Sized to the image's own ratio, bounded by the viewport so the
-                  whole image is visible without cropping. */}
-              <img
-                className="mx-auto h-auto max-h-[80vh] w-auto max-w-[88vw] rounded-[4px] object-contain"
-                src={asset(img.src)}
-                alt={img.alt || ''}
-              />
-              {img.caption && (
-                <figcaption className="mt-3 max-w-cs-text text-center text-sm text-white/80 italic">
-                  {img.caption}
-                </figcaption>
-              )}
-            </CarouselItem>
-          ))}
-        </CarouselContent>
-        {hasMany && <CarouselPrevious />}
-        {hasMany && <CarouselNext />}
-      </Carousel>
+        <XIcon className="size-5" />
+      </button>
+
+      <figure className="relative z-0 flex flex-col items-center">
+        <img
+          className="max-h-[82vh] max-w-[92vw] rounded-[4px] object-contain"
+          src={asset(img.src)}
+          alt={img.alt || ''}
+        />
+      </figure>
 
       {hasMany && (
-        <Pagination className="w-auto">
-          <PaginationContent className="rounded-full bg-background/90 px-1.5 py-1 shadow-md ring-1 ring-foreground/10 backdrop-blur">
-            <PaginationItem>
-              <PaginationPrevious
-                className="cursor-pointer"
-                onClick={() => api?.scrollPrev()}
-              />
-            </PaginationItem>
-            {images.map((_, i) => (
-              <PaginationItem key={i}>
-                <PaginationLink
-                  className="cursor-pointer"
-                  isActive={i === current}
-                  onClick={() => api?.scrollTo(i)}
-                >
-                  {i + 1}
-                </PaginationLink>
-              </PaginationItem>
-            ))}
-            <PaginationItem>
-              <PaginationNext
-                className="cursor-pointer"
-                onClick={() => api?.scrollNext()}
-              />
-            </PaginationItem>
-          </PaginationContent>
-        </Pagination>
+        <>
+          <button
+            type="button"
+            aria-label="Previous image"
+            onClick={() => go(-1)}
+            className={cn(edgeBtn, 'left-4')}
+          >
+            <ChevronLeftIcon className="size-6" />
+          </button>
+          <button
+            type="button"
+            aria-label="Next image"
+            onClick={() => go(1)}
+            className={cn(edgeBtn, 'right-4')}
+          >
+            <ChevronRightIcon className="size-6" />
+          </button>
+        </>
       )}
+
+      {/* Caption + counter sit in a readable bottom bar over a soft gradient. */}
+      <div className="absolute inset-x-0 bottom-0 z-10 flex flex-col items-center gap-2 bg-gradient-to-t from-black/80 to-transparent px-6 pt-12 pb-5 text-center">
+        {img.caption && (
+          <figcaption className="max-w-cs-text text-sm leading-snug text-white">
+            {img.caption}
+          </figcaption>
+        )}
+        {hasMany && (
+          <div className="rounded-full bg-white/15 px-3 py-1 text-xs text-white tabular-nums backdrop-blur">
+            {index + 1} / {images.length}
+          </div>
+        )}
+      </div>
     </div>
   )
 }

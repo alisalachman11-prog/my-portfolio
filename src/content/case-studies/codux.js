@@ -56,14 +56,14 @@ export default {
     {
       type: 'img',
       src: '/images/codux/09-visual-grid.jpg',
-      alt: 'Grid Child panels mapped via arrows to a customer-testimonials layout on the canvas.',
-      caption: 'Grid Child properties mapped onto the canvas so designers can see what each control affects.',
+      alt: 'Grid visual representation on canvas',
+      caption: 'Grid visual representation on canvas',
     },
     {
       type: 'img',
       src: '/images/codux/10-visual-grid.jpg',
-      alt: 'Grid Child panels mapped via arrows to a customer-testimonials layout on the canvas.',
-      caption: 'Grid Child properties mapped onto the canvas so designers can see what each control affects.',
+      alt: 'Grid visual representation on canvas - focuse on a code snippet + style panel controllers',
+      caption: 'Grid visual representation on canvas - focuse on a code snippet + style panel controllers',
     },
 
     { type: 'h2', text: 'Not everything can be an icon' },
@@ -80,8 +80,8 @@ export default {
     {
       type: 'img',
       src: '/images/codux/03-grid-panel-states.jpg',
-      alt: 'Rows input progressing from empty, to autocomplete suggestions, to a filled repeat() value.',
-      caption: 'Rows input progressing from empty, to autocomplete suggestions, to a filled repeat() value.',
+      alt: 'Before and after of the layout controlers in the syle panel - icons only vs. icons with text lables.',
+      caption: 'Before and after of the layout controlers in the syle panel - icons only vs. icons with text lables ',
     },
 
     {
@@ -96,11 +96,18 @@ export default {
       type: 'p',
       text: 'As there is no reason to do the complex work of starting a new grid from scratch each time, we added the option to use presets — and custom presets — so the user can get going with their project much faster.',
     },
+
+    {
+      type: 'img',
+      src: '/images/codux/06-grid-presets.jpg',
+      alt: 'Codux IDE with the Add Elements panel showing grid layout presets (2/2, 3/3, 4/4, 1/2, 1/3, 1/4).',
+      caption: 'Codux IDE with the Add Elements panel showing grid layout presets (2/2, 3/3, 4/4, 1/2, 1/3, 1/4).',
+    },
     {
       type: 'video',
       src: '/images/codux/06-grid-presets.mp4',
-      alt: 'Codux IDE with the Add Elements panel showing grid layout presets (2/2, 3/3, 4/4, 1/2, 1/3, 1/4).',
-      caption: 'Grid layout presets — and custom presets — surfaced inside the Add Elements panel.',
+      alt: 'A video of how to use the grid presets',
+      caption: 'A video of how to use the grid presets',
     },
 
     { type: 'h2', text: 'The right cell for the right element' },
@@ -112,15 +119,18 @@ export default {
       type: 'p',
       text: 'We added a clear visual representation to help them achieve these complex cell layouts with ease.',
     },
+   
     {
       type: 'img',
-      caption: 'Video placeholder — short capture of spreading an element across multiple grid cells.',
+      src: '/images/codux/02-visual-grid-mapping.jpg',
+      alt: 'Visual representation of grid child properties',
+      caption: 'Visual representation of grid child properties',
     },
     {
-      type: 'img',
-      src: '/images/codux/07-display-dropdown.jpg',
-      alt: 'Display icon row revealing a "Grid" tooltip, next to the same control as a labeled dropdown.',
-      caption: 'The Display control before and after — icon-only with a tooltip vs. a labeled dropdown.',
+      type: 'video',
+      src: '/images/codux/07-grid-child.mov',
+      alt: 'A video of how to use the grid child properties visual controlers',
+      caption: 'A video of how to use the grid child properties visual controlers',
     },
 
     { type: 'h2', text: 'It should likely do what you think it does' },
@@ -134,33 +144,15 @@ export default {
     },
     {
       type: 'img',
-      src: '/images/codux/07-display-dropdown.jpg',
-      alt: 'Display icon row revealing a "Grid" tooltip, next to the same control as a labeled dropdown.',
-      caption: 'The Display control before and after — icon-only with a tooltip vs. a labeled dropdown.',
+      src: '/images/codux/05-rows-input.jpg',
+      alt: 'Rows and columns inputs are representing amount of rows instead of the sizes. Clicking on edit to enter complex grid editing mode',
+      caption: 'Rows and columns inputs are representing amount of rows instead of the sizes. Clicking on edit to enter complex grid editing mode',
     },
     {
       type: 'img',
       src: '/images/codux/07-display-dropdown.jpg',
-      alt: 'Display icon row revealing a "Grid" tooltip, next to the same control as a labeled dropdown.',
-      caption: 'The Display control before and after — icon-only with a tooltip vs. a labeled dropdown.',
-    },
-    {
-      type: 'img',
-      src: '/images/codux/07-display-dropdown.jpg',
-      alt: 'Display icon row revealing a "Grid" tooltip, next to the same control as a labeled dropdown.',
-      caption: 'The Display control before and after — icon-only with a tooltip vs. a labeled dropdown.',
-    },
-
-    { type: 'h2', text: 'Lesson learned' },
-    { type: 'h3', text: 'Focus on abilities — not only happy flows' },
-    {
-      type: 'p',
-      text: 'A happy flow is nice, but what really helped me characterize other features better was mapping the capabilities that exist in the code — and only from there, starting on the worth and a happier flow. Before we even got into grid solutions, we had to research what the capabilities and the entire set of options of the Grid are.',
-    },
-    { type: 'h3', text: 'Benchmarking for better KPIs' },
-    {
-      type: 'p',
-      text: "We noticed that we often assume users will use a specific feature more, rather than work together with the product owner to establish quantifiable benchmarks. If you don't define the metric you want the user to hit — how do you measure whether it is in your product? Adding color? Adding an image? Is there even an expectation that it will be used a lot, or is this a task that is done once in a while, or rarely?",
+      alt: 'Complex grid editing mode with flexible inputs that surface suggestions',
+      caption: 'Complex grid editing mode with flexible inputs that surface suggestions',
     },
 
     { type: 'h2', text: 'Post-changes usability findings' },
