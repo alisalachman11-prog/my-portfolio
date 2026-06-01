@@ -54,14 +54,31 @@ export default function CaseStudy() {
 
   const others = projects.filter((p) => p.slug !== slug)
 
+  
+
   return (
     <main className="mx-auto min-h-screen max-w-[800px] bg-background px-6 pt-12 pb-24 max-[720px]:px-4 max-[720px]:pt-6 max-[720px]:pb-16">
       <div className="mx-auto mb-8 w-full max-w-cs-hero">
         <BackToHomeButton />
       </div>
 
-      <header className="mx-auto mb-8 w-full max-w-cs-hero">
-        <div className="flex flex-wrap items-baseline gap-3">
+        {/* Top hero image — one per case study (placeholder until a src is set). */}
+        <figure className="mx-auto my-12 w-full max-w-cs-media">
+        {study?.hero?.src ? (
+          <img
+            className="block w-full rounded-[4px]"
+            src={asset(study.hero.src)}
+            alt={study.hero.alt || ''}
+          />
+        ) : (
+          <div className="flex aspect-[2/1] w-full items-center justify-center rounded-[4px] border border-dashed border-border bg-muted text-sm text-muted-foreground">
+            Hero image placeholder
+          </div>
+        )}
+      </figure>
+
+<header className="mx-auto mb-8 w-full max-w-cs-hero">
+        <div className="flex flex-col items-baseline gap-3">
           {project.brand.mark && <LogoMark mark={project.brand.mark} />}
           {project.brand.word && (
             <span className={`${displayType} tracking-normal`}>
@@ -75,20 +92,7 @@ export default function CaseStudy() {
         </p>
       </header>
 
-      {/* Top hero image — one per case study (placeholder until a src is set). */}
-      <figure className="mx-auto mb-10 w-full max-w-cs-hero max-[720px]:mb-6">
-        {study?.hero?.src ? (
-          <img
-            className="block aspect-[2/1] w-full rounded-[4px] object-cover"
-            src={asset(study.hero.src)}
-            alt={study.hero.alt || ''}
-          />
-        ) : (
-          <div className="flex aspect-[2/1] w-full items-center justify-center rounded-[4px] border border-dashed border-border bg-muted text-sm text-muted-foreground">
-            Hero image placeholder
-          </div>
-        )}
-      </figure>
+
 
       {study?.intro && (
         <div className={`${prose} my-[80px] flex flex-col gap-4`}>
