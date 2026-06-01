@@ -157,8 +157,8 @@ Abilities that the app provides:
     {
       type: 'video',
       src: '/images/stamphunter/01-video-design-changes.mov',
-      alt: 'Four production screens (Help Center, Installer Login, Invite Owner, Create Site) showing the design system applied across flows.',
-      caption: 'Sceenshots from my iterations with Lovable & Base44',
+      alt: 'A video of manual changes to the app design.',
+      caption: 'A video of manual changes to the app design.',
     },
     
     { type: 'h2', text: 'Wearing three hats in one project' },
