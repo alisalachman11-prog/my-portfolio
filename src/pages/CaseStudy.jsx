@@ -97,7 +97,7 @@ export default function CaseStudy() {
               {renderRich(para)}
             </p>
           ))}
-          {study.cta?.label && (
+          {study.cta?.href && (
             <Button
               className="w-min"
               variant="secondary"

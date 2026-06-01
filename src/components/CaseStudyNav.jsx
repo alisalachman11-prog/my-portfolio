@@ -17,7 +17,7 @@ export default function CaseStudyNav({ heading, others }) {
 
   return (
     <nav
-      className="flex flex-col gap-6"
+      className="mt-12 flex flex-col gap-6"
       aria-label="Other case studies"
     >
       <h2 className={cn('mb-4 text-foreground', typography.h2)}>
