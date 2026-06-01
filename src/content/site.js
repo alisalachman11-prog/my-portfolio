@@ -132,6 +132,7 @@ export const projects = [
       'Designing a dual-mode property panel for an AI builder - built for both developers and designers',
     theme: 'light',
     image: '/images/covers/Dazl_cover.jpg',
+    cta: { label: 'View Dazzl', href: 'https://dazl.dev/' },
   },
   {
     slug: 'codux',
@@ -141,6 +142,10 @@ export const projects = [
       'CSS Grid is powerful but hard to use. We designed the grid layout experience - letting designers build production layouts without writing code.',
     theme: 'dark',
     image: '/images/covers/Wix_Cover.jpg',
+    cta: {
+      label: 'Introducing Codux',
+      href: 'https://dev.to/codux/introducing-codux-15j5',
+    },
   },
   {
     slug: 'stamphunter',
@@ -150,6 +155,8 @@ export const projects = [
       'Creating a mobile app that allows users to find and collect ink stamps across Taiwan',
     theme: 'painted',
     image: '/images/covers/StampHunter_Cover.jpg',
+    // No live link yet — button is hidden until an href is added.
+    cta: { label: 'View Stamphunter' },
   },
   {
     slug: 'paradox',
@@ -158,6 +165,10 @@ export const projects = [
     description: 'Redesigning a high-criticality legacy security app',
     theme: 'blue',
     // image: '/images/paradox-hero.png',
+    cta: {
+      label: 'View Blue eye app',
+      href: 'https://play.google.com/store/apps/details?id=com.paradox.insitegoldv2&hl=en',
+    },
   },
 ]
 
