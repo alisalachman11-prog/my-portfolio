@@ -6,7 +6,7 @@
  */
 export default {
   // Top hero image (1632px wide, shown as a 2:1 banner crop). Add: /images/codux/hero.png
-  hero: { src: '', alt: '' },
+  hero: { src: '/images/covers/Wix_Cover.jpg', alt: '' },
   intro:
     'Codux, a visual IDE headed by Wix co-founder Nadav Avrahami and a core group of Wix professionals.\n\nCreated to remove the ping-pong between developers and designers, Codux is designed to render a live React project on a visual canvas, letting designers change UI directly and modify the real code. Read more about it here.',
   // Intro CTA button. Omit `cta` entirely to hide the button on a study.
@@ -55,7 +55,13 @@ export default {
     },
     {
       type: 'img',
-      src: '/images/codux/02-visual-grid-mapping.jpg',
+      src: '/images/codux/09-visual-grid.jpg',
+      alt: 'Grid Child panels mapped via arrows to a customer-testimonials layout on the canvas.',
+      caption: 'Grid Child properties mapped onto the canvas so designers can see what each control affects.',
+    },
+    {
+      type: 'img',
+      src: '/images/codux/10-visual-grid.jpg',
       alt: 'Grid Child panels mapped via arrows to a customer-testimonials layout on the canvas.',
       caption: 'Grid Child properties mapped onto the canvas so designers can see what each control affects.',
     },
@@ -70,17 +76,19 @@ export default {
       type: 'p',
       text: 'Our solution addressed the true complexity of the code by including a textual element alongside the icon, creating a scalable solution that could include more CSS layouts as needed.',
     },
+
+    {
+      type: 'img',
+      src: '/images/codux/03-grid-panel-states.jpg',
+      alt: 'Rows input progressing from empty, to autocomplete suggestions, to a filled repeat() value.',
+      caption: 'Rows input progressing from empty, to autocomplete suggestions, to a filled repeat() value.',
+    },
+
     {
       type: 'img',
       src: '/images/codux/04-display-values.jpg',
       alt: 'Display dropdown alongside the full list of CSS display values shown as text.',
       caption: 'The Display dropdown surfacing the full set of CSS display values as labeled text.',
-    },
-    {
-      type: 'img',
-      src: '/images/codux/05-rows-input.jpg',
-      alt: 'Rows input progressing from empty, to autocomplete suggestions, to a filled repeat() value.',
-      caption: 'Rows input progressing from empty, to autocomplete suggestions, to a filled repeat() value.',
     },
 
     { type: 'h2', text: 'Faster and easier starts with grid presets' },

@@ -11,6 +11,7 @@ import {
   CarouselPrevious,
 } from '@/components/ui/carousel'
 import { Button } from '@/components/ui/button'
+import { ZoomableImage } from '@/components/Lightbox'
 import { Card, CardContent, CardDescription } from '@/components/ui/card'
 import {
   Collapsible,
@@ -65,7 +66,7 @@ export default function CaseStudyBlock({ block }) {
       return (
         <figure className="mx-auto my-12 w-full max-w-cs-media">
           {block.src ? (
-            <img className={figureMedia} src={asset(block.src)} alt={block.alt || ''} />
+            <ZoomableImage className={figureMedia} src={block.src} alt={block.alt || ''} />
           ) : (
             <div className={placeholder}>Image placeholder</div>
           )}
@@ -79,7 +80,7 @@ export default function CaseStudyBlock({ block }) {
           {block.images.map((img, i) => (
             <figure key={i}>
               {img.src ? (
-                <img className={figureMedia} src={asset(img.src)} alt={img.alt || ''} />
+                <ZoomableImage className={figureMedia} src={img.src} alt={img.alt || ''} />
               ) : (
                 <div className={placeholder}>Image</div>
               )}

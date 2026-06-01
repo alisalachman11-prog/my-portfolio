@@ -1,16 +1,34 @@
-import { useEffect } from 'react'
+import { useEffect, useMemo } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
 import { projects, ui, meta } from '../content/site.js'
 import { caseStudies } from '../content/case-studies/index.js'
 import CaseStudyBlock from '../components/CaseStudyBlock.jsx'
 import CaseStudyNav from '../components/CaseStudyNav.jsx'
+import { LightboxProvider } from '../components/Lightbox.jsx'
 import { Button } from '@/components/ui/button'
 import { asset, cn } from '@/lib/utils'
 import { typography } from '@/lib/typography'
 import { renderRich } from '@/lib/richText'
 
 const prose = 'mx-auto w-full max-w-cs-text'
+
+// Flat, in-render-order list of the zoomable images in a study (single images
+// and image-rows only). Drives the shared lightbox so a reader can scroll
+// through every image once one is opened.
+function collectGalleryImages(study) {
+  const out = []
+  for (const block of study?.blocks ?? []) {
+    if (block.type === 'img' && block.src) {
+      out.push({ src: block.src, alt: block.alt || '', caption: block.caption })
+    } else if (block.type === 'img-row' && Array.isArray(block.images)) {
+      for (const img of block.images) {
+        if (img.src) out.push({ src: img.src, alt: img.alt || '', caption: img.caption })
+      }
+    }
+  }
+  return out
+}
 
 function BackToHomeButton() {
   return (
@@ -49,8 +67,9 @@ export default function CaseStudy() {
   }
 
   const others = projects.filter((p) => p.slug !== slug)
+  const galleryImages = useMemo(() => collectGalleryImages(study), [study])
 
-  
+
 
   return (
     <main className="mx-auto min-h-screen max-w-[800px] bg-background px-6 pt-12 pb-24 max-[720px]:px-4 max-[720px]:pt-6 max-[720px]:pb-16">
@@ -105,15 +124,17 @@ export default function CaseStudy() {
         </div>
       )}
 
-      <article className="w-full">
-        {study?.blocks?.length ? (
-          study.blocks.map((block, i) => <CaseStudyBlock key={i} block={block} />)
-        ) : (
-          <p className={`${prose} italic`}>
-            {ui.caseStudyComingSoon}
-          </p>
-        )}
-      </article>
+      <LightboxProvider images={galleryImages}>
+        <article className="w-full">
+          {study?.blocks?.length ? (
+            study.blocks.map((block, i) => <CaseStudyBlock key={i} block={block} />)
+          ) : (
+            <p className={`${prose} italic`}>
+              {ui.caseStudyComingSoon}
+            </p>
+          )}
+        </article>
+      </LightboxProvider>
 
       <div className={prose}>
         <CaseStudyNav heading={ui.caseStudyOtherHeading} others={others} />
