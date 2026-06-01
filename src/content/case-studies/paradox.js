@@ -5,7 +5,7 @@
  */
 export default {
   // Top hero image (1632px wide, shown as a 2:1 banner crop). Add: /images/paradox/hero.png
-  hero: { src: '', alt: '' },
+  hero: { src: '/images/covers/Paradox_Cover.jpg', alt: '' },
   intro:
     'Paradox Security Systems is a B2B security hardware company. The app, used daily by end users to monitor and control their home or business security, was a legacy product that had drifted out of sync with modern mobile UX.',
   // Intro CTA button. Omit `cta` entirely to hide the button on a study.
