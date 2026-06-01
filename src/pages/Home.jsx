@@ -2,7 +2,6 @@ import { useEffect } from 'react'
 import Sidebar from '../components/Sidebar.jsx'
 import ProjectShowcase from '../components/ProjectShowcase.jsx'
 import { projects, meta } from '../content/site.js'
-import { Button } from '@base-ui/react'
 
 export default function Home() {
   useEffect(() => {
