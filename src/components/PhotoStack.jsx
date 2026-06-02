@@ -60,6 +60,8 @@ export default function PhotoStack({ images = [], className = '' }) {
             alt=""
             aria-hidden="true"
             draggable={false}
+            loading="lazy"
+            decoding="async"
             className="absolute h-[150px] w-[120px] rounded-lg object-cover shadow-md transition-all duration-500 ease-out select-none motion-reduce:transition-none"
             style={{
               transform: `translate(${slot.x}px, ${slot.y}px) rotate(${slot.rot}deg) scale(${slot.scale})`,

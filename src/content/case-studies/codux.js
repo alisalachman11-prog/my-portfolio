@@ -123,7 +123,7 @@ export default {
     },
     {
       type: 'video',
-      src: '/images/codux/07-grid-child.mov',
+      src: '/images/codux/07-grid-child.mp4',
       alt: 'A video of how to use the grid child properties visual controlers',
       caption: 'A video of how to use the grid child properties visual controlers',
     },
