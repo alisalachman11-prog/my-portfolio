@@ -8,14 +8,19 @@ export default {
   // Top hero image (1632px wide, shown as a 2:1 banner crop). Add: /images/codux/hero.png
   hero: { src: '/images/covers/Wix_Cover.jpg', alt: '' },
   intro:
-    'Codux, a visual IDE headed by Wix co-founder Nadav Avrahami and a core group of Wix professionals.\n\nCreated to remove the ping-pong between developers and designers, Codux is designed to render a live React project on a visual canvas, letting designers change UI directly and modify the real code. Read more about it here.',
+    'Codux is a visual IDE headed by Wix co-founder Nadav Avrahami and a core group of Wix professionals.\n\nCreated to remove the ping-pong between developers and designers who work together. Codux renders a live React project on a visual canvas, letting designers change the UI directly and modify the real code.',
   // Intro CTA button. Omit `cta` entirely to hide the button on a study.
   cta: { label: 'Introducing Codux', href: 'https://dev.to/codux/introducing-codux-15j5' },
   blocks: [
-    { type: 'h2', text: 'The blocker holding designers back' },
+    { type: 'h2', text: 'Focusing on product blockers holding designers back' },
     {
       type: 'p',
-      text: "The company's preliminary research revealed that one of the biggest hurdles blocking designers from working in a code-rich React environment is creating and editing a layout. My squad and I were chosen to target this issue.",
+      text: "The company’s main objective was to focus on agencies by targeting design-oriented tasks. The company's preliminary research revealed that one of the biggest tasks for designers was creating layouts, and my squad and I were chosen to target this issue.",
+    },
+
+    {
+      type: 'p',
+      text: "Our main focus was targeting product blockers and not learnability - we have uncovered some critical blockers for designers who were working in our code-rich React environment.",
     },
 
     {
@@ -24,7 +29,7 @@ export default {
     },
     {
       type: 'p',
-      text: 'The PM and I set the bar up front: a tech-savvy designer should be able to build a full page layout end to end in the visual editor — grid, edits, components — without writing code.',
+      text: 'The PM and I set the bar up front: a tech-savvy designer should be able to build a full page layout end to end in the visual editor - grid, edits, components - without writing code.',
     },
     {
       type: 'p',
@@ -34,7 +39,7 @@ export default {
     { type: 'h2', text: 'The lighthouse at the edge of the code' },
     {
       type: 'p',
-      text: "The company's complex system requires a robust set of principles to guide the team towards the best decisions on the route to developing the product.",
+      text: "The company's complex system requires a set of principles to guide the team towards the best decisions on the route to developing the product.",
     },
     {
       type: 'img',
@@ -89,7 +94,7 @@ export default {
     { type: 'h2', text: 'Faster and easier starts with grid presets' },
     {
       type: 'p',
-      text: 'As there is no reason to do the complex work of starting a new grid from scratch each time, we added the option to use presets — and custom presets — so the user can get going with their project much faster.',
+      text: 'As there is no reason to do the complex work of starting a new grid from scratch each time, we added the option to use presets and custom presets so the user can get going with their project much faster.',
     },
 
     {
@@ -131,11 +136,15 @@ export default {
     { type: 'h2', text: 'Mental model vs. System model' },
     {
       type: 'p',
-      text: "Many users tried inputting the number of columns and rows they wanted to have on stage, but didn't achieve this — that habit eroded the size of the rows, mirroring what it does in the code.",
+      text: "Many users typed the number of columns/rows they wanted on stage, but didn't get the expected outcome because the input actually controlled the size of each row/column, not the count.",
     },
     {
       type: 'p',
-      text: 'The approach I proposed here was to simplify the non-trivial by allowing them to do this, and creating a distinct complex mode to customise the grid further.',
+      text: "This created a mismatch between the users' mental model and the system model we had applied. Our implementation mirrored the underlying code logic (resizing rows/columns), but users naturally expected to define the quantity.",
+    },
+    {
+      type: 'p',
+      text: 'My proposed approach resolves this by making the simple case simple: users can directly set the number of rows/columns they want, while a distinct advanced mode is available for those who need deeper control over grid customisation.',
     },
     {
       type: 'img',
@@ -159,13 +168,13 @@ export default {
     {
       type: 'list',
       items: [
-        "Presets that landed because placement was researched, not guessed. 4 of 5 designers used the grid presets and all found them fast — because I'd mapped where designers expected them in earlier rounds, before they existed.",
-        "An input redesigned to match instinct. Designers kept typing the number of rows/columns into a control that set their size — a known, recurring mismatch. After I redesigned it to represent count, their instinct finally produced what they expected.",
+        "4 of 5 designers used the grid presets and all found them fast because I'd mapped where designers expected them in earlier rounds, before they existed.",
+        "Designers kept typing the number of rows/columns into a control that set their size. This was a known, recurring mismatch. After I redesigned it to represent count, their instinct finally produced what they expected.",
       ],
     },
     {
       type: 'p',
-      text: 'I treated testing as an ongoing instrument, not a final gate — which is what caught these mismatches early.',
+      text: 'I treated testing as an ongoing instrument, not a final gate, which is what caught these mismatches early.',
     },
   ],
 }
