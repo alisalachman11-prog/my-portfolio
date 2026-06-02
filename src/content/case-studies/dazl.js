@@ -63,6 +63,13 @@ export default {
       text: 'While developing the solution, we went through several iterations. Going through them, it was key for me to be humble and to work closely with the development team — successfully identifying personal biases (both mine and theirs) and fully comprehending the effect rejections and suggestions had.',
     },
     { type: 'p', text: 'Some of the key iterations we went through:' },
+
+    { type: 'h3', text: 'Option 1 — Debugging vs. Editing mode' },
+    {
+      type: 'p',
+      text: 'Instead of showing an overwhelming amount of information in a single panel, create mode-specific panels for the user to cycle between as needed.',
+    },
+
     {
       type: 'img',
       src: '/images/dazl/05-mode-toggle.jpg',
@@ -70,35 +77,25 @@ export default {
       caption: 'Option 1 — mode-specific panels for Editing and Debugging, cycled between as needed.',
     },
 
-    { type: 'h3', text: 'Option 1 — Debugging vs. Editing mode' },
+    { type: 'h3', text: 'Option 2 — Computed values on demand' },
     {
       type: 'p',
-      text: 'Instead of showing an overwhelming amount of information in a single panel, create mode-specific panels for the user to cycle between as needed.',
+      text: 'Keep the single-panel approach but resolve information overflow by hiding computed values until requested — exposed via hover or click. Fully scalable regardless of the size of the value.',
     },
+
+    
     {
       type: 'img',
       src: '/images/dazl/06-computed.jpg',
       alt: 'Property panel revealing computed values via a hover popover.',
       caption: 'Option 2 — computed values exposed on hover so the default view stays calm.',
     },
-
-    { type: 'h3', text: 'Option 2 — Computed values on demand' },
-    {
-      type: 'p',
-      text: 'Keep the single-panel approach but resolve information overflow by hiding computed values until requested — exposed via hover or click. Fully scalable regardless of the size of the value.',
-    },
-    {
-      type: 'img',
-      src: '/images/dazl/07-side-by-side.jpg',
-      alt: 'Two stacked property panels showing primary view and computed values side by side.',
-      caption: 'Option 3 — a wider panel that organizes primary view and computed values together.',
-    },
-
     { type: 'h3', text: 'Option 3 — Side by side' },
     {
       type: 'p',
       text: 'Tackle the one-panel issue head-on by creating a larger panel that is organized well enough to still be usable.',
     },
+  
     {
       type: 'img',
       src: '/images/dazl/07-side-by-side.jpg',
