@@ -156,7 +156,7 @@ Abilities that the app provides:
     },
     {
       type: 'video',
-      src: '/images/stamphunter/01-video-design-changes.mov',
+      src: '/images/stamphunter/01-video-design-changes.mp4',
       alt: 'A video of manual changes to the app design.',
       caption: 'A video of manual changes to the app design.',
     },

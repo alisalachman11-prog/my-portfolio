@@ -16,6 +16,8 @@ export default function ProjectShowcase({ project }) {
             className="h-full w-full object-cover"
             src={asset(image)}
             alt={`${title} preview`}
+            loading="lazy"
+            decoding="async"
           />
         ) : (
           <div

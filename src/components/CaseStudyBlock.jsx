@@ -106,6 +106,8 @@ export default function CaseStudyBlock({ block }) {
                         className="block h-[600px] w-auto max-w-none rounded-[4px]"
                         src={asset(img.src)}
                         alt={img.alt || ''}
+                        loading="lazy"
+                        decoding="async"
                       />
                     ) : (
                       <div className={`${placeholder} h-[600px]`}>Image</div>
@@ -137,6 +139,7 @@ export default function CaseStudyBlock({ block }) {
               muted
               loop
               playsInline
+              preload="metadata"
               aria-label={block.alt || ''}
             />
           ) : (
@@ -276,7 +279,7 @@ function CollapsibleImage({ block }) {
       </Card>
       <figure className="md:sticky md:top-24">
         {active?.image ? (
-          <img className={figureMedia} src={asset(active.image)} alt={active.alt || ''} />
+          <img className={figureMedia} src={asset(active.image)} alt={active.alt || ''} loading="lazy" decoding="async" />
         ) : (
           <div className={placeholder}>Image placeholder</div>
         )}

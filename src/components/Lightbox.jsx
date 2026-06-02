@@ -60,7 +60,7 @@ export function ZoomableImage({ src, alt = '', className }) {
   const open = ctx?.open
 
   if (!open) {
-    return <img className={className} src={asset(src)} alt={alt} />
+    return <img className={className} src={asset(src)} alt={alt} loading="lazy" decoding="async" />
   }
 
   return (
@@ -69,6 +69,8 @@ export function ZoomableImage({ src, alt = '', className }) {
         className={cn(className, 'cursor-zoom-in')}
         src={asset(src)}
         alt={alt}
+        loading="lazy"
+        decoding="async"
         onClick={() => open(src)}
         onMouseEnter={(e) => setLabelPos({ x: e.clientX, y: e.clientY })}
         onMouseMove={(e) => setLabelPos({ x: e.clientX, y: e.clientY })}
@@ -161,6 +163,7 @@ function LightboxView({ images, startIndex, onClose }) {
           className="max-h-[82vh] max-w-[92vw] rounded-[4px] object-contain"
           src={asset(img.src)}
           alt={img.alt || ''}
+          decoding="async"
         />
       </figure>
 
