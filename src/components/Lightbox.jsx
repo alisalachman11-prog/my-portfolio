@@ -9,6 +9,7 @@ import {
 import { createPortal } from 'react-dom'
 import { ChevronLeftIcon, ChevronRightIcon, XIcon } from 'lucide-react'
 import { asset, cn } from '@/lib/utils'
+import { MediaImage } from '@/components/MediaImage'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 
 const HOVER_LABEL = 'Click to see image in larger scale'
@@ -60,17 +61,16 @@ export function ZoomableImage({ src, alt = '', className }) {
   const open = ctx?.open
 
   if (!open) {
-    return <img className={className} src={asset(src)} alt={alt} loading="lazy" decoding="async" />
+    return <MediaImage src={src} alt={alt} wrapperClassName={cn('w-full', className)} />
   }
 
   return (
     <>
-      <img
-        className={cn(className, 'cursor-zoom-in')}
-        src={asset(src)}
+      <MediaImage
+        className="cursor-zoom-in"
+        src={src}
         alt={alt}
-        loading="lazy"
-        decoding="async"
+        wrapperClassName={cn('w-full', className)}
         onClick={() => open(src)}
         onMouseEnter={(e) => setLabelPos({ x: e.clientX, y: e.clientY })}
         onMouseMove={(e) => setLabelPos({ x: e.clientX, y: e.clientY })}

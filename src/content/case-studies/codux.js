@@ -80,8 +80,8 @@ export default {
     {
       type: 'img',
       src: '/images/codux/03-grid-panel-states.jpg',
-      alt: 'Before and after of the layout controlers in the syle panel - icons only vs. icons with text lables.',
-      caption: 'Before and after of the layout controlers in the syle panel - icons only vs. icons with text lables ',
+      alt: 'Before and after of the layout controlers in the style panel - icons only vs. icons with text lables.',
+      caption: 'Before and after of the layout controlers in the style panel - icons only vs. icons with text lables ',
     },
 
     {

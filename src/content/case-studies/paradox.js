@@ -30,7 +30,7 @@ export default {
       type: 'img',
       src: '/images/paradox/02-areas-before-after.jpg',
       alt: 'After/before comparison of the home areas screen — redesigned tabs and area cards vs. the dark legacy version.',
-      caption: 'Home areas screen — the redesigned tabs and area cards next to the dated legacy version.',
+      caption: 'Home areas screen - the redesigned tabs and area cards next to the dated legacy version.',
     },
 
     { type: 'h2', text: 'Creating a design system' },
@@ -46,19 +46,19 @@ export default {
       type: 'img',
       src: '/images/paradox/04-design-system-annotations.jpg',
       alt: 'Design system internals: Figma component annotations from the team alongside the library of system files (UI Library, Events, Doorbell, On Boarding, etc.).',
-      caption: 'Design-system internals — Figma annotations alongside the new library of system files.',
+      caption: 'Design system components preview and file structure overview.',
     },
     {
       type: 'img',
-      src: '/images/paradox/05-design-system-in-use.jpg',
-      alt: 'Four production screens (Help Center, Installer Login, Invite Owner, Create Site) showing the design system applied across flows.',
-      caption: 'The design system applied across Help Center, Installer Login, Invite Owner, and Create Site.',
+      src: '/images/paradox/01-legacy-app.jpg',
+      alt: 'Old app screens before the redesign',
+      caption: 'Old app screens before the redesign',
     },
 
     { type: 'h2', text: 'Testing the new doorbell functionality with the real hardware' },
     {
       type: 'p',
-      text: 'add here some textabout the testing with the real hardwer',
+      text: 'Testing with real hardware is crucial because it reveal physical and environmental edge cases. During the whole design process I was validating network connectivity to the mobile app and  how precise were the sensors.',
     },
 
     {
@@ -156,19 +156,29 @@ export default {
       caption: 'Doorbell call flow — incoming call, in-call with a package delivery, and the missed-call countdown.',
     },
 
-    { type: 'h2', text: 'All Notifications in one place' },
+    { type: 'h2', text: 'Having the ability to trigger a siren' },
     {
       type: 'p',
-      text: 'Combining all notifications in one place to create better management of all notifications. Combining security and recordings in one dedicated space.',
+      text: 'Customers requested to have the ability to trigger the siren from the app, so if they spot a thief on the cameras, they can scare them by triggering the siren.',
     },
-    { type: 'img' },
+    {
+      type: 'img',
+      src: '/images/paradox/01-siren-trigger.jpg',
+      alt: 'Illustration of a siren being triggered from the app',
+      caption: 'Illustration of a siren being triggered from the app',
+    },
 
-    { type: 'h2', text: 'Some illustrations I had the opportunity to add to the app' },
+    { type: 'h2', text: 'Illustrations I had the opportunity to add to the app' },
     {
       type: 'p',
       text: 'While working on redesigning the app I had the pleasure on working on some illustrations that were integrated to the new look and feel of the app.',
     },
-    { type: 'img' },
+    {
+      type: 'img',
+      src: '/images/paradox/05-design-system-in-use.jpg',
+      alt: 'Various illustrations in different screens of the app',
+      caption: 'Various illustrations in different screens of the app',
+    },
 
     { type: 'h2', text: 'Testing without research' },
     {
