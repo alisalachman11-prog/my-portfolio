@@ -56,7 +56,7 @@ export default function CaseStudyBlock({ block }) {
     case 'blockquote':
       return (
         <blockquote className={cn(textCol, typography.blockquote)}>
-          {renderRich(block.text)}
+          &quot;{renderRich(block.text)}&quot;
         </blockquote>
       )
 

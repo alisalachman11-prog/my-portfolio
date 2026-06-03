@@ -3,7 +3,7 @@ import { ui } from '../content/site.js'
 import { asset } from '@/lib/utils'
 
 export default function ProjectShowcase({ project }) {
-  const { title, description, slug, image } = project
+  const { title, description, slug, image, brand, note } = project
 
   return (
     <section
@@ -31,8 +31,10 @@ export default function ProjectShowcase({ project }) {
       </div>
 
       <ProjectInfo
+        brand={brand}
         title={title}
         text={description}
+        note={note}
         ctaHref={`/work/${slug}`}
       />
     </section>
