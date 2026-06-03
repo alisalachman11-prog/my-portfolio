@@ -136,7 +136,7 @@ export const projects = [
   },
   {
     slug: 'codux',
-    brand: { logo: '/images/Logos/Logo-Codux.svg', word: 'Codux' },
+    brand: { logo: '/images/Logos/Logo-Wix.svg', word: 'Codux' },
     title: 'Codux by Wix - a visual IDE for react projects',
     description:
       'CSS Grid is powerful but hard to use. We designed the grid layout experience - letting designers build production layouts without writing code.',

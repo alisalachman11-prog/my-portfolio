@@ -80,8 +80,8 @@ export default {
     {
       type: 'img',
       src: '/images/codux/03-grid-panel-states.jpg',
-      alt: 'Before and after of the layout controlers in the style panel - icons only vs. icons with text lables.',
-      caption: 'Before and after of the layout controlers in the style panel - icons only vs. icons with text lables ',
+      alt: 'Before and after of the layout controllers in the style panel - icons only vs. icons with text labels.',
+      caption: 'Before and after of the layout controllers in the style panel - icons only vs. icons with text labels ',
     },
 
     {
@@ -129,8 +129,8 @@ export default {
     {
       type: 'video',
       src: '/images/codux/07-grid-child.mp4',
-      alt: 'A video of how to use the grid child properties visual controlers',
-      caption: 'A video of how to use the grid child properties visual controlers',
+      alt: 'A video of how to use the grid child properties visual controllers',
+      caption: 'A video of how to use the grid child properties visual controllers',
     },
 
     { type: 'h2', text: 'Mental model vs. System model' },
