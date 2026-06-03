@@ -2,6 +2,7 @@ import * as React from "react"
 import useEmblaCarousel from "embla-carousel-react";
 
 import { cn } from "@/lib/utils"
+import { track } from "@/lib/analytics"
 import { Button } from "@/components/ui/button"
 import { ChevronLeftIcon, ChevronRightIcon } from "lucide-react"
 
@@ -40,10 +41,12 @@ function Carousel({
   }, [])
 
   const scrollPrev = React.useCallback(() => {
+    track('carousel_advance', { direction: 'prev' })
     api?.scrollPrev()
   }, [api])
 
   const scrollNext = React.useCallback(() => {
+    track('carousel_advance', { direction: 'next' })
     api?.scrollNext()
   }, [api])
 
