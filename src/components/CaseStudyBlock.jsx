@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ChevronDownIcon } from 'lucide-react'
 import { asset, cn } from '@/lib/utils'
+import { track } from '@/lib/analytics'
 import { typography } from '@/lib/typography'
 import { renderRich } from '@/lib/richText'
 import {
@@ -140,6 +141,7 @@ export default function CaseStudyBlock({ block }) {
               playsInline
               preload="metadata"
               aria-label={block.alt || ''}
+              onPlay={() => track('video_play', { src: block.src })}
             />
           ) : (
             <div className={placeholder}>Video placeholder</div>
@@ -155,7 +157,13 @@ export default function CaseStudyBlock({ block }) {
         <Card className="mx-auto my-8 w-full max-w-cs-text gap-4">
           <CardContent>
           {block.items.map((item, i) => (
-            <Collapsible key={i} className="rounded-md data-open:bg-muted">
+            <Collapsible
+              key={i}
+              onOpenChange={(open) =>
+                open && track('collapsible_open', { trigger: item.trigger })
+              }
+              className="rounded-md data-open:bg-muted"
+            >
               <CollapsibleTrigger
                 render={
                   <Button variant="ghost" className="group w-full" />
@@ -215,7 +223,10 @@ function PromptCard({ block }) {
             {block.text}
           </p>
           <div className="absolute inset-x-0 bottom-0 flex h-40 flex-col items-center justify-end gap-3 bg-gradient-to-t from-card via-card/90 to-transparent pb-4">
-            <DialogTrigger render={<Button variant="outline" size="lg" />}>
+            <DialogTrigger
+              render={<Button variant="outline" size="lg" />}
+              onClick={() => track('prompt_open', { title: block.title })}
+            >
               {cta}
             </DialogTrigger>
           </div>
@@ -251,7 +262,12 @@ function CollapsibleImage({ block }) {
             <Collapsible
               key={i}
               open={activeIndex === i}
-              onOpenChange={(open) => open && setActiveIndex(i)}
+              onOpenChange={(open) => {
+                if (open) {
+                  setActiveIndex(i)
+                  track('collapsible_open', { trigger: item.trigger })
+                }
+              }}
               className="rounded-md data-open:bg-muted"
             >
               <CollapsibleTrigger

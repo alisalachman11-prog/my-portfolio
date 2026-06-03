@@ -6,6 +6,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Item, ItemGroup, ItemMedia, ItemContent, ItemTitle, ItemActions } from "@/components/ui/item"
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion"
 import { renderRich } from "@/lib/richText"
+import { track } from "@/lib/analytics"
 
 const TABS = [
   { id: 'about', label: ui.sidebarTabs.about, Panel: AboutPanel },
@@ -66,6 +67,7 @@ export default function Sidebar() {
             render={
               <a
                 href={href}
+                onClick={() => track('contact_click', { channel: label, href })}
                 {...(external ? { target: '_blank', rel: 'noreferrer' } : {})}
               />
             }

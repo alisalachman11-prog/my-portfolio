@@ -9,6 +9,7 @@ import {
 import { createPortal } from 'react-dom'
 import { ChevronLeftIcon, ChevronRightIcon, XIcon } from 'lucide-react'
 import { asset, cn } from '@/lib/utils'
+import { track } from '@/lib/analytics'
 import { MediaImage } from '@/components/MediaImage'
 import { Dialog, DialogContent, DialogTitle } from '@/components/ui/dialog'
 
@@ -31,6 +32,7 @@ export function LightboxProvider({ images = [], children }) {
   const open = useCallback(
     (src) => {
       const idx = images.findIndex((img) => img.src === src)
+      track('image_zoom', { src })
       setOpenIndex(idx >= 0 ? idx : 0)
     },
     [images],

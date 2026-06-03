@@ -8,10 +8,14 @@ import CaseStudyNav from '../components/CaseStudyNav.jsx'
 import { LightboxProvider } from '../components/Lightbox.jsx'
 import { Button } from '@/components/ui/button'
 import { asset, cn } from '@/lib/utils'
+import { track } from '@/lib/analytics'
 import { typography } from '@/lib/typography'
 import { renderRich } from '@/lib/richText'
 
 const prose = 'mx-auto w-full max-w-cs-text'
+
+// Scroll-depth milestones to report per case study (once each).
+const SCROLL_MILESTONES = [25, 50, 75, 100]
 
 // Flat, in-render-order list of the zoomable images in a study (single images
 // and image-rows only). Drives the shared lightbox so a reader can scroll
@@ -53,6 +57,29 @@ export default function CaseStudy() {
       ? `${project.title} — ${meta.siteTitle}`
       : meta.siteTitle
     window.scrollTo(0, 0)
+  }, [project, slug])
+
+  // Fire one `case_study_view` per study, and `scroll_depth` as the reader
+  // passes 25/50/75/100% — the signal for how deeply a study actually gets read.
+  useEffect(() => {
+    if (!project) return
+    track('case_study_view', { slug, title: project.title })
+
+    const reached = new Set()
+    const onScroll = () => {
+      const doc = document.documentElement
+      const max = doc.scrollHeight - window.innerHeight
+      const pct = max > 0 ? (window.scrollY / max) * 100 : 100
+      for (const m of SCROLL_MILESTONES) {
+        if (pct >= m && !reached.has(m)) {
+          reached.add(m)
+          track('scroll_depth', { slug, depth: m })
+        }
+      }
+    }
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
   }, [project, slug])
 
   if (!project) {
@@ -122,7 +149,18 @@ export default function CaseStudy() {
               variant="secondary"
               nativeButton={false}
               render={
-                <a href={study.cta.href} target="_blank" rel="noreferrer" />
+                <a
+                  href={study.cta.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  onClick={() =>
+                    track('external_cta_click', {
+                      slug,
+                      label: study.cta.label,
+                      href: study.cta.href,
+                    })
+                  }
+                />
               }
             >
               {study.cta.label}
