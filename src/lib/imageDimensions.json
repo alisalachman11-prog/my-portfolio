@@ -1,0 +1,258 @@
+{
+  "/images/about/1_countries.jpg": {
+    "w": 2000,
+    "h": 1500
+  },
+  "/images/about/1_origami.jpg": {
+    "w": 2400,
+    "h": 1109
+  },
+  "/images/about/1_youtube.jpg": {
+    "w": 2400,
+    "h": 1109
+  },
+  "/images/about/2_countries.jpg": {
+    "w": 1500,
+    "h": 2000
+  },
+  "/images/about/2_origami.jpg": {
+    "w": 2400,
+    "h": 1109
+  },
+  "/images/about/2_youtube.jpg": {
+    "w": 2400,
+    "h": 1351
+  },
+  "/images/about/3_countries.jpg": {
+    "w": 1500,
+    "h": 2000
+  },
+  "/images/about/3_origami.jpg": {
+    "w": 2400,
+    "h": 1109
+  },
+  "/images/about/3_youtube.jpg": {
+    "w": 2400,
+    "h": 1351
+  },
+  "/images/about/4_countries.jpg": {
+    "w": 1500,
+    "h": 2000
+  },
+  "/images/about/4_origami.jpg": {
+    "w": 2400,
+    "h": 1109
+  },
+  "/images/about/4_youtube.jpg": {
+    "w": 2400,
+    "h": 1351
+  },
+  "/images/about/5_youtube.jpg": {
+    "w": 2400,
+    "h": 1351
+  },
+  "/images/codux/01-principles.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/codux/02-visual-grid-mapping.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/codux/03-grid-panel-states.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/codux/04-display-values.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/codux/05-rows-input.jpg": {
+    "w": 2400,
+    "h": 1351
+  },
+  "/images/codux/06-grid-presets.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/codux/07-display-dropdown.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/codux/09-visual-grid.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/codux/10-visual-grid.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/covers/Dazl_cover(test).jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/covers/Dazl_cover.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/covers/Paradox_Cover.jpg": {
+    "w": 2400,
+    "h": 1296
+  },
+  "/images/covers/StampHunter_Cover.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/covers/Wix_Cover.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/01-before.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/02-focused-panel.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/03-complexity.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/04-iteration.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/05-mode-toggle.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/06-computed.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/07-side-by-side.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/08-final-ui.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/09-add-property.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/10-errors.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/11-simple.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/12-brand-teaser.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/dazl/13-simple panel.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/paradox/01-carusel-testing.jpg": {
+    "w": 1801,
+    "h": 2400
+  },
+  "/images/paradox/01-legacy-app.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/paradox/02-areas-before-after.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/paradox/02-carusel-testing.jpg": {
+    "w": 1201,
+    "h": 1600
+  },
+  "/images/paradox/03-carusel-testing.jpg": {
+    "w": 1078,
+    "h": 2400
+  },
+  "/images/paradox/03-doorbell-before-after.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/paradox/04-carusel-testing.jpg": {
+    "w": 1078,
+    "h": 2400
+  },
+  "/images/paradox/04-design-system-annotations.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/paradox/05-carusel-testing.jpg": {
+    "w": 921,
+    "h": 2048
+  },
+  "/images/paradox/05-design-system-in-use.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/paradox/06-doorbell-anatomy.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/paradox/07-doorbell-call-flow.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/paradox/08-video-timeline.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/stamphunter/01-carusel.jpg": {
+    "w": 1712,
+    "h": 2400
+  },
+  "/images/stamphunter/01-facebook.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/stamphunter/02-carusel.jpg": {
+    "w": 1549,
+    "h": 2400
+  },
+  "/images/stamphunter/02-supabase.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/stamphunter/03-carusel.jpg": {
+    "w": 1573,
+    "h": 2400
+  },
+  "/images/stamphunter/03-google-maps.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/stamphunter/04-app-flow.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/stamphunter/04-carusel.jpg": {
+    "w": 2091,
+    "h": 2036
+  },
+  "/images/stamphunter/05-carusel.jpg": {
+    "w": 2091,
+    "h": 1870
+  },
+  "/images/stamphunter/05-skills.jpg": {
+    "w": 2400,
+    "h": 1350
+  },
+  "/images/stamphunter/06-prototype.jpg": {
+    "w": 2400,
+    "h": 1350
+  }
+}

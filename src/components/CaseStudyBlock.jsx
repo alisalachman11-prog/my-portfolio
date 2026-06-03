@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/carousel'
 import { Button } from '@/components/ui/button'
 import { ZoomableImage } from '@/components/Lightbox'
+import { MediaImage } from '@/components/MediaImage'
 import { Card, CardContent, CardDescription } from '@/components/ui/card'
 import {
   Collapsible,
@@ -102,12 +103,10 @@ export default function CaseStudyBlock({ block }) {
                 <CarouselItem key={i} className="basis-auto pl-4 ">
                   <figure className="flex flex-col w-min">
                     {img.src ? (
-                      <img
-                        className="block h-[600px] w-auto max-w-none rounded-[4px]"
-                        src={asset(img.src)}
+                      <MediaImage
+                        src={img.src}
                         alt={img.alt || ''}
-                        loading="lazy"
-                        decoding="async"
+                        wrapperClassName="inline-block h-[600px] w-auto max-w-none rounded-[4px]"
                       />
                     ) : (
                       <div className={`${placeholder} h-[600px]`}>Image</div>
@@ -279,7 +278,11 @@ function CollapsibleImage({ block }) {
       </Card>
       <figure className="md:sticky md:top-24">
         {active?.image ? (
-          <img className={figureMedia} src={asset(active.image)} alt={active.alt || ''} loading="lazy" decoding="async" />
+          <MediaImage
+            src={active.image}
+            alt={active.alt || ''}
+            wrapperClassName={cn('w-full', figureMedia)}
+          />
         ) : (
           <div className={placeholder}>Image placeholder</div>
         )}
