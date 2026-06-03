@@ -17,7 +17,7 @@ export default {
       text: "While the stamps are everywhere, the same can't be said about the information regarding their locations. There is no central authority about where the stamps are located, the information is scattered between Facebook groups, Google Maps lists, and old blog posts, and even that only covers a small fraction of the actual number of stamps that are out there.",
     },
 
-    { type: 'h2', text: 'Some stamps are available for specific time periods' },
+    { type: 'h2', text: 'Some of the stamps are only available for specific time periods' },
     { type: 'p', text: 'Sometimes they even have time-limited challenges with little symbolic gifts like “collect the 5 unique stamps available across the city for a special event this week and receive a commemorative keychain” that the only way to know about them for a visitor is to see one of the stamping stations in person, or to dig through a Facebook group (1.3k members, ~54 posts a week).'},
     { type: 'p', text: 'While the treasure-hunt aspect is definitely part of the fun of it, I like a little more efficiency in my hobbies and the ability to plan ahead, to be intentional about it.'},
     {
@@ -60,7 +60,7 @@ export default {
 
 
     { type: 'h2', text: 'Cluttered google map view with millions of blue pins' },
-    { type: 'p', text: 'Most community maps people share are packed with pins - so many that the map becomes hard to actually read. And the only way to clear them is buried: Saved → your lists → hide on map.' },
+    { type: 'p', text: 'Most community maps people share are packed with pins — so many that the map becomes hard to actually read. And the only way to clear them is buried: Saved → your lists → hide on map.' },
     {type: 'p', text: "As a tourist trying to get around Taiwan, having all of that on screen when I didn't need it just got in the way." },
      {
       type: 'img',
@@ -77,6 +77,7 @@ export default {
 
     { type: 'h2', text: 'AI workflow ' },
     {type: 'h3', text: '⋆✴︎˚｡⋆ Using only necessary skills'},
+    { type: 'p', text: 'One of the most important things was not getting distracted by every cool skill out there — but figuring out what I actually needed, and using only those.' },
     {type: 'p', text: 'I have focused on finding and creating skills that will help me uncover opportunities, and plan my work with the LLM to be faster and more precise.' },
     {
       type: 'img',
@@ -129,7 +130,7 @@ Abilities that the app provides:
       type: 'img',
       src: '/images/stamphunter/06-prototype.jpg',
       alt: 'Four production screens (Help Center, Installer Login, Invite Owner, Create Site) showing the design system applied across flows.',
-      caption: 'Sceenshots from my iterations with Lovable & Base44',
+      caption: 'Screenshots from my iterations with Lovable & Base44',
     },
 
     { type: 'h3', text: "⋆✴︎˚｡⋆ AI helps - but some things you just have to do yourself"},
@@ -137,8 +138,8 @@ Abilities that the app provides:
     {
       type: 'list',
       items: [
-        '==Not putting API keys in the chat - == For things like database and Google Auth setup, I just ask the LLM for clear, simple step-by-step instructionsand configure the keys myself, they never go into the chat, for security reasons.',
-        "==Asking humans for a sanity check - == Sometimes the AI insists on something, and I don't fully get why. For example, t pushed hard for Supabase, but free Supabase projects auto-pause after a week of inactivity. After talking to a developer, I looked into Strapi as an alternative and into using GitHub Actions to ping the Supabase API periodically to keep it alive.",
+        '==Not putting API keys in the chat -==  For things like database and Google Auth setup, I just ask the LLM for clear, simple step-by-step instructions and configure the keys myself — they never go into the chat, for security reasons.',
+        "==Asking humans for a sanity check -==  Sometimes the AI insists on something and I don't fully get why. For example, it pushed hard for Supabase — but free Supabase projects auto-pause after a week of inactivity. After talking to a developer, I looked into Strapi as an alternative, and into using GitHub Actions to ping the Supabase API periodically to keep it alive.",
       ],
     },
 
@@ -147,8 +148,8 @@ Abilities that the app provides:
     {
       type: 'list',
       items: [
-        '==Asked why it made specific decisions,== instead of accepting the output as-is',
-        '==Asked where particular snippets and styles lived in the codebase==',
+        '==Asked why== it made specific decisions, instead of accepting the output as-is',
+        '==Asked where== particular snippets and styles lived in the codebase',
         "Used those answers to build a real mental map of the project",
         'This let me make UI changes manually when I needed more control, rather than relying on prompts for every small tweak',
       ],
@@ -161,20 +162,21 @@ Abilities that the app provides:
     },
     
     { type: 'h2', text: 'Wearing multiple hats in one project' },
-  {type:'p', text:' I built the app itself, using Claude Code as my pair.'},
+  {type:'p', text:' I built the app itself, using Claude Code as my pair:'},
     {
       type: 'list',
       items: [
-        'Aggregating the current available data from different sources and organizing it uniformly in a cloud-based database (Supabase).',
+        'Aggregating the current available data from different sources and organizing it uniformly in a cloud-based database.',
         'Setting up OAuth and other prerequisites for a user-facing app.',
         'Designing and building an Alpha-stage iOS / Android app.',
         'Worked with a basic React component library, focused on making the app functional and usable rather than pixel-perfect.',
-        "spotted UX/UI issues and described them to Claude the way I'd point out a visual problem to a developer - it helped me phrase each one clearly and turn it into a Git ticket with the full steps to fix it",
-
-
-        
+        "Spotted UX/UI issues and described them to Claude, the way I'd point out a visual problem to a developer. It helped me phrase each one clearly and turn it into a Git ticket with the full steps to fix it."
       ],
     },
+
   ],
+
+  
+
 }
 
