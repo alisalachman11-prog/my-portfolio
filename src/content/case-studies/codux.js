@@ -15,12 +15,12 @@ export default {
     { type: 'h2', text: 'Focusing on product blockers holding designers back' },
     {
       type: 'p',
-      text: "The company’s main objective was to focus on agencies by targeting design-oriented tasks. The company's preliminary research revealed that one of the biggest tasks for designers was creating layouts, and my squad and I were chosen to target this issue.",
+      text: "==The company’s main objective was to focus on agencies by targeting design-oriented tasks.== The company's preliminary research revealed that one of the biggest tasks for designers was creating layouts, and my squad and I were chosen to target this issue.",
     },
 
     {
       type: 'p',
-      text: "Our main focus was targeting product blockers and not learnability - we have uncovered some critical blockers for designers who were working in our code-rich React environment.",
+      text: "==Our main focus was targeting product blockers and not learnability== - we have uncovered some critical blockers for designers who were working in our code-rich React environment.",
     },
 
     {
@@ -33,7 +33,7 @@ export default {
     },
     {
       type: 'p',
-      text: 'We ran usability as a continuous loop rather than a single final test: 7–8 designers across several rounds (one twice), changing the design and re-testing each time. We tracked whether each friction point got resolved, and the experience improved round over round.',
+      text: '==We ran usability as a continuous loop rather than a single final test: 7–8 designers across several rounds (one twice),== changing the design and re-testing each time. We tracked whether each friction point got resolved, and the experience improved round over round.',
     },
 
     { type: 'h2', text: 'The lighthouse at the edge of the code' },
@@ -140,7 +140,7 @@ export default {
     },
     {
       type: 'p',
-      text: "This created a mismatch between the users' mental model and the system model we had applied. Our implementation mirrored the underlying code logic (resizing rows/columns), but users naturally expected to define the quantity.",
+      text: "This created a mismatch between the users' mental model and the system model we had applied. ==Our implementation mirrored the underlying code logic (resizing rows/columns), but users naturally expected to define the quantity.==",
     },
     {
       type: 'p',

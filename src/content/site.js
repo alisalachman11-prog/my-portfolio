@@ -79,17 +79,17 @@ export const skills = [
     icon: 'search',
     bullets: [
       'User interviews and usability testing',
-      'Behavioral analytics in Mixpanel and FullStory - build reports to surface product opportunities and catch event-tracking issues',
-      'Translating insights into structured product opportunities using the Opportunity Solution Tree framework',
+      'Working with Mixpanel and FullStory',
+      'Translating insights into structured product opportunities using the OST framework',
     ],
   },
   {
     heading: 'Technical Fluency',
     icon: 'code',
     bullets: [
-      'HTML, CSS, TS, JS, and React',
+      'Familiar withHTML, CSS, TS, JS, and React',
       'Ship small ui changes directly to the codebase',
-      'Familiar with Git workflow: commits, PRs, and bug/UX tickets',
+      'Comfortable with the Git workflow: commits, PRs, and bug/UX tickets',
     ],
   },
   {

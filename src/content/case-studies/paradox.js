@@ -98,7 +98,7 @@ export default {
       ]
     },
 
-    { type: 'h2', text: 'Camera — horizontal → vertical' },
+    { type: 'h2', text: 'Camera:horizontal → vertical' },
     {
       type: 'p',
       text: 'Creating a view that is suitable for the format. Vertical view to fit the phone screen.',
@@ -143,11 +143,7 @@ export default {
     },
     {
       type: 'p',
-      text: 'Users can answer instantly, see who’s at the door, talk to the visitor directly via the app, and even unlock the door from the automation tab.',
-    },
-    {
-      type: 'p',
-      text: 'All this happens straight away, without having to manually open the app.',
+      text: 'Users can answer instantly, see who’s at the door, talk to the visitor directly via the app, and even unlock the door from the automation tab. All this happens straight away, without having to manually open the app.',
     },
     {
       type: 'img',
@@ -187,17 +183,7 @@ export default {
     },
     {
       type: 'p',
-      text: 'It wasn’t a substitute for end-user research, but it caught real problems before they reached development and gave us defensible reasoning when arguing for design decisions in a sales-led org.',
-    },
-
-    { type: 'h2', text: 'Impact' },
-    {
-      type: 'p',
-      text: 'We didn’t have formal metrics — no analytics on the app, no PM tracking outcomes, no follow-up research. App-store reviews were mixed: visual and structural improvements landed, and many users praised the new look and the rebuild — but the underlying connectivity issues that drove crashes continued, and many reviews reflected that.',
-    },
-    {
-      type: 'p',
-      text: 'The redesign solved what design could solve — the connectivity layer was outside our scope.',
+      text: 'It wasn’t a substitute for end-user research, but it caught real problems before they reached development.',
     },
   ],
 }
