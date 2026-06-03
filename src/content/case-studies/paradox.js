@@ -164,7 +164,7 @@ export default {
     {
       type: 'img',
       src: '/images/paradox/01-siren-trigger.jpg',
-      alt: 'Illustration of a siren being triggered from the app',
+      alt: 'Flow of the siren manual trigger flow: ',
       caption: 'Illustration of a siren being triggered from the app',
     },
 

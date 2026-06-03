@@ -126,20 +126,21 @@ export const skills = [
 export const projects = [
   {
     slug: 'dazl',
-    brand: { mark: 'asterisk', word: 'Dazl' },
-    title: 'AI-Builder',
+    brand: { logo: '/images/Logos/Logo-Dazl.svg', word: 'Dazl' },
+    title: 'Dazl - AI-Builder',
     description:
-      'Designing a dual-mode property panel for an AI builder - built for both developers and designers',
+      'Designing a dual-mode property panel experience for an AI builder - built for both developers and designers',
     theme: 'light',
     image: '/images/covers/Dazl_cover.jpg',
-    cta: { label: 'View Dazzl', href: 'https://dazl.dev/' },
+    cta: { label: 'View Dazl', href: 'https://dazl.dev/' },
   },
   {
     slug: 'codux',
-    brand: { mark: null, word: 'WIX' },
-    title: 'Codux - visual IDE for react projects',
+    brand: { logo: '/images/Logos/Logo-Codux.svg', word: 'Codux' },
+    title: 'Codux by Wix - a visual IDE for react projects',
     description:
       'CSS Grid is powerful but hard to use. We designed the grid layout experience - letting designers build production layouts without writing code.',
+    note: 'Codux is deprecated. The product has since evolved into Dazl.',
     theme: 'dark',
     image: '/images/covers/Wix_Cover.jpg',
     cta: {
@@ -149,20 +150,21 @@ export const projects = [
   },
   {
     slug: 'stamphunter',
-    brand: { mark: 'triangle', word: 'stamphunter' },
-    title: 'A passion project (WIP)',
+    // No logo file yet — word-only until you add e.g. /images/Logos/Logo-StampHunter.svg
+    brand: { word: 'Stamp Hunter' },
+    title: 'Stamp Hunter -A passion project (WIP)',
     description:
       'Creating a mobile app that allows users to find and collect ink stamps across Taiwan',
     theme: 'painted',
     image: '/images/covers/StampHunter_Cover.jpg',
     // No live link yet — button is hidden until an href is added.
-    cta: { label: 'View Stamphunter' },
+    cta: { label: 'View Stamp Hunter' },
   },
   {
     slug: 'paradox',
-    brand: { mark: 'triangle', word: 'Paradox' },
-    title: 'B2B security hardware company',
-    description: 'Redesigning a high-criticality legacy security app',
+    brand: { logo: '/images/Logos/Logo-Paradox.png', word: 'Paradox' },
+    title: 'Paradox - B2B security hardware company',
+    description: 'Redesigning a high-criticality legacy security app while integrating a new security hardware product',
     theme: 'blue',
     image: '/images/covers/Paradox_Cover.jpg',
     cta: {

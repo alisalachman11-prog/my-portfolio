@@ -100,6 +100,11 @@ export default function CaseStudy() {
         <h1 className={cn('my-2', typography.h1, 'text-[length:var(--text-4xl)]')}>
           {project.description}
         </h1>
+        {project.note && (
+          <blockquote className={cn(typography.blockquote, 'mt-3 text-sm text-muted-foreground')}>
+            {project.note}
+          </blockquote>
+        )}
       </header>
 
 
