@@ -17,14 +17,14 @@ export default {
   cta: { label: 'Dazl Website', href: 'https://dazl.dev/' },
 
   blocks: [
-    { type: 'h2', text: 'Bridging the gap between Designer and Developer' },
+    { type: 'h2', text: 'Too complex for some, too weak for others' },
     {
       type: 'p',
-      text: 'The challenge my squad and I were given was to recreate the properties panel — a key component of any IDE or design tool, but a very different thing in each of them. The designer expects a direct visual control, and the developer expects a true-to-code, power-user control for manipulating exact variables.',
+      text: 'The challenge my squad and I were given was to recreate the properties panel, a key component of any IDE or design tool, but a very different thing in each of them. ==The designer expects a direct visual control, and the developer expects a true-to-code, power-user control for manipulating exact variables.==',
     },
     {
       type: 'p',
-      text: "The previous property panel that was implemented in Codux tried to be both, and because of that, it was neither — ending up being too complex for some and too weak for others.",
+      text: "The previous property panel that was implemented in Codux tried to be both, and because of that, it was neither ending up being too complex for some and too weak for others.",
     },
     {
       type: 'img',
@@ -36,7 +36,7 @@ export default {
     { type: 'h2', text: 'Be the solution you want to see in the product' },
     {
       type: 'p',
-      text: 'We addressed the designer-to-developer gap from the source — the solution was developed by the close cooperation of a developer and me, from prototyping the scope of this endeavor, assessing what worked and what didn’t in the old panel, to mapping out the tasks a user would expect to complete while working in an IDE, and building components with all possible property types.',
+      text: 'We addressed the designer-to-developer gap from the source. ==The solution was developed by the close cooperation between me and the development team,== from prototyping the scope of this endeavor, assessing what worked and what didn’t in the old panel, to mapping out the tasks a user would expect to complete while working in an IDE, and building components with all possible property types.',
     },
     {
       type: 'img',
@@ -57,14 +57,14 @@ export default {
       caption: 'property panel and style panel side by side, showing the similarity of the design language between the two.',
     },
 
-    { type: 'h2', text: '[try] then [try again]' },
+    { type: 'h2', text: 'Try, then try Again' },
     {
       type: 'p',
-      text: 'While developing the solution, we went through several iterations. Going through them, it was key for me to be humble and to work closely with the development team — successfully identifying personal biases (both mine and theirs) and fully comprehending the effect rejections and suggestions had.',
+      text: 'While developing the solution, we went through several iterations. Going through them, it was key for me to be humble and to work closely with the development team, successfully identifying personal biases (both mine and theirs) and fully comprehending the effect rejections and suggestions had.',
     },
     { type: 'p', text: 'Some of the key iterations we went through:' },
 
-    { type: 'h3', text: 'Option 1 — Debugging vs. Editing mode' },
+    { type: 'h3', text: 'Option 1: Debugging vs. Editing mode' },
     {
       type: 'p',
       text: 'Instead of showing an overwhelming amount of information in a single panel, create mode-specific panels for the user to cycle between as needed.',
@@ -74,13 +74,13 @@ export default {
       type: 'img',
       src: '/images/dazl/05-mode-toggle.jpg',
       alt: 'Two property panels showing Editing and Debugging modes side by side.',
-      caption: 'Option 1 — mode-specific panels for Editing and Debugging, cycled between as needed.',
+      caption: 'Option 1: mode-specific panels for Editing and Debugging, cycled between as needed.',
     },
 
-    { type: 'h3', text: 'Option 2 — Computed values on demand' },
+    { type: 'h3', text: 'Option 2: Computed values on demand' },
     {
       type: 'p',
-      text: 'Keep the single-panel approach but resolve information overflow by hiding computed values until requested — exposed via hover or click. Fully scalable regardless of the size of the value.',
+      text: 'Keep the single-panel approach, but resolve information overflow by hiding computed values until requested and exposed via hover or click. Fully scalable regardless of the size of the value.',
     },
 
     
@@ -90,7 +90,7 @@ export default {
       alt: 'Property panel revealing computed values via a hover popover.',
       caption: 'Option 2 — computed values exposed on hover so the default view stays calm.',
     },
-    { type: 'h3', text: 'Option 3 — Side by side' },
+    { type: 'h3', text: 'Option 3: Side by side' },
     {
       type: 'p',
       text: 'Tackle the one-panel issue head-on by creating a larger panel that is organized well enough to still be usable.',
@@ -118,7 +118,7 @@ export default {
     { type: 'h2', text: 'If you need it, then you’ll see it' },
     {
       type: 'p',
-      text: 'We start by only showing properties that are already passed to the component, while keeping the ability to add new properties via an "Add property" button — addressing the complexity of the code world in a visual way.',
+      text: 'We start by ==only showing properties that are already passed to the component,== while keeping the ability to add values to new properties via an "Add property" button - addressing the complexity of the code world visually.',
     },
     {
       type: 'img',
@@ -130,7 +130,7 @@ export default {
     { type: 'h2', text: 'No error left behind' },
     {
       type: 'p',
-      text: 'Multiple levels of error handling cover all error scenarios — surfacing errors on the tab itself, showing the error on each property, and providing a path to resolve them from a summary view.',
+      text: '==Multiple levels of error handling cover all error scenarios,== surfacing errors on the tab itself, showing the error on each property, and providing a path to resolve them from a summary view.',
     },
     {
       type: 'img',
@@ -142,7 +142,7 @@ export default {
     { type: 'h2', text: 'Keep it simple, keep it useful' },
     {
       type: 'p',
-      text: 'A simple property panel opens on stage with the option to edit only specific primitive properties (boolean, string, number), with a defined set of characteristics per component, so a designer can produce value from directly editing them.',
+      text: '==A simple property panel opens on stage with the option to edit only specific primitive properties (boolean, string, number),== with a defined set of characteristics per component, so a designer can produce value from directly editing them.',
     },
     {
       type: 'img',
