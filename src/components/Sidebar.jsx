@@ -28,9 +28,7 @@ function LinkedInGlyph(props) {
 const CONTACT_LINKS = [
   { label: 'Check my LinkedIn', href:'https://www.linkedin.com/in/alisa-lachman/', external: true, Icon: LinkedInGlyph },
   { label: 'Send me an Email', href: `mailto:alisa.lachman11@gmail.com`, external: false, Icon: Mail },
-  // Hidden until a file link is added: drop a path here (e.g. '/cv.pdf') and the
-  // item appears automatically. Links with an empty href are filtered out below.
-  { label: 'Check my CV', href: '', external: true, Icon: File },
+  { label: 'Check my CV', href: 'https://drive.google.com/file/d/1nOfHSR4PSjMaVtxr1xxogh9dizGa8mAC/view?usp=sharing', external: true, Icon: File },
 ]
 
 const panel = 'flex flex-col gap-6'
