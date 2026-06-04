@@ -16,7 +16,7 @@
  * `capturePageview`) because this is a single-page app.
  */
 
-const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY || 'phc_REPLACE_ME'
+const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY || 'phc_mhzvCnr9dZpauNZ8udS3PmyXRM8B2nQ3tya83AkpZ4eD'
 const POSTHOG_HOST = import.meta.env.VITE_POSTHOG_HOST || 'https://us.i.posthog.com'
 const ASSET_HOST = POSTHOG_HOST.replace('.i.posthog.com', '-assets.i.posthog.com')
 
@@ -61,15 +61,15 @@ export function initAnalytics() {
         ;(p = t.createElement('script')).type = 'text/javascript'
         p.crossOrigin = 'anonymous'
         p.async = !0
-        p.src = a.api_host.replace('.i.posthog.com', '-assets.i.posthog.com') + '/static/array.js'
+        p.src = s.api_host.replace('.i.posthog.com', '-assets.i.posthog.com') + '/static/array.js'
         ;(r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
         var u = e
         for (
-          void 0 !== s ? (u = e[s] = []) : (s = 'posthog'),
+          void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
             u.people = u.people || [],
             u.toString = function (t) {
               var e = 'posthog'
-              return 'posthog' !== s && (e += '.' + s), t || (e += ' (stub)'), e
+              return 'posthog' !== a && (e += '.' + a), t || (e += ' (stub)'), e
             },
             u.people.toString = function () {
               return u.toString(1) + '.people (stub)'
