@@ -29,6 +29,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          # Public, write-only PostHog key. Stored as a repo variable, inlined
+          # by Vite at build time so analytics works on the deployed site.
+          VITE_POSTHOG_KEY: ${{ vars.VITE_POSTHOG_KEY }}
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./dist
