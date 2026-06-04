@@ -112,7 +112,7 @@ export default function CaseStudy() {
             src={asset(study.hero.src)}
             alt={study.hero.alt || ''}
             decoding="async"
-            fetchPriority="high"
+            fetchpriority="high"
           />
         ) : (
           <div className="flex aspect-[2/1] w-full items-center justify-center rounded-[4px] border border-dashed border-border bg-muted text-sm text-muted-foreground">
