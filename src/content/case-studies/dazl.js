@@ -11,7 +11,7 @@ export default {
     alt: 'Dazl brand teaser announcement on the old Codux website: “But something Dazzling is coming next!”',
     caption: 'Dazl brand teaser announcement on the old Codux website: “But something Dazzling is coming next!”', },
   intro:
-    'Codux (a visual IDE we have worked on) journey came to an end and we pivoted on to work on Dazel.\n\nDazl is a cutting-edge AI Builder Check it here headed by Nadav Avrahami, the co-founder of WIX, together with a core group of Wix professionals.',
+    'Codux (a visual IDE we have worked on) journey came to an end and we pivoted on to work on Dazel.\n\nDazl is a cutting-edge AI Builder headed by Nadav Avrahami, the co-founder of WIX, together with a core group of Wix professionals.',
 
   // Intro CTA button. Omit `cta` entirely to hide the button on a study.
   cta: { label: 'Dazl Website', href: 'https://dazl.dev/' },
