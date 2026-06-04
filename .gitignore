@@ -4,5 +4,10 @@ dist
 *.log
 .vite
 
+# Local env files (real keys). Commit .env.example only.
+.env
+.env.*
+!.env.example
+
 # Raw image sources (rendered versions live in public/images/)
 src/images/
