@@ -4,10 +4,9 @@
  * Setup (one-time):
  *   1. Create a free PostHog project at https://posthog.com (US or EU cloud).
  *   2. Copy your *project API key* (starts with `phc_`). This is a PUBLIC,
- *      write-only client key — safe to ship in the browser bundle.
- *   3. Set it as VITE_POSTHOG_KEY: locally in `.env.local`, and in CI as a
- *      GitHub Actions repo variable injected into the build (see deploy.yml).
- *      If you used EU cloud, also set VITE_POSTHOG_HOST=https://eu.i.posthog.com.
+ *      write-only client key — safe to commit and ship in the browser bundle.
+ *   3. Paste it into POSTHOG_KEY below, or set VITE_POSTHOG_KEY in the env.
+ *      If you used EU cloud, also set the host to https://eu.i.posthog.com.
  *
  * Until a real key is set, every call here is a no-op in production. In dev,
  * events are logged to the console so you can verify tracking without a key.
@@ -17,11 +16,11 @@
  * `capturePageview`) because this is a single-page app.
  */
 
-const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY || 'phc_REPLACE_ME'
+const POSTHOG_KEY = import.meta.env.VITE_POSTHOG_KEY || 'phc_mhzvCnr9dZpauNZ8udS3PmyXRM8B2nQ3tya83AkpZ4eD'
 const POSTHOG_HOST = import.meta.env.VITE_POSTHOG_HOST || 'https://us.i.posthog.com'
 const ASSET_HOST = POSTHOG_HOST.replace('.i.posthog.com', '-assets.i.posthog.com')
 
-const isConfigured = POSTHOG_KEY && POSTHOG_KEY !== 'phc_REPLACE_ME'
+const isConfigured = POSTHOG_KEY && POSTHOG_KEY !== 'phc_mhzvCnr9dZpauNZ8udS3PmyXRM8B2nQ3tya83AkpZ4eD'
 const isDev = import.meta.env.DEV
 
 function ph() {
@@ -62,15 +61,15 @@ export function initAnalytics() {
         ;(p = t.createElement('script')).type = 'text/javascript'
         p.crossOrigin = 'anonymous'
         p.async = !0
-        p.src = s.api_host.replace('.i.posthog.com', '-assets.i.posthog.com') + '/static/array.js'
+        p.src = a.api_host.replace('.i.posthog.com', '-assets.i.posthog.com') + '/static/array.js'
         ;(r = t.getElementsByTagName('script')[0]).parentNode.insertBefore(p, r)
         var u = e
         for (
-          void 0 !== a ? (u = e[a] = []) : (a = 'posthog'),
+          void 0 !== s ? (u = e[s] = []) : (s = 'posthog'),
             u.people = u.people || [],
             u.toString = function (t) {
               var e = 'posthog'
-              return 'posthog' !== a && (e += '.' + a), t || (e += ' (stub)'), e
+              return 'posthog' !== s && (e += '.' + s), t || (e += ' (stub)'), e
             },
             u.people.toString = function () {
               return u.toString(1) + '.people (stub)'

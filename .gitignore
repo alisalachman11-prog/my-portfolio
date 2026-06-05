@@ -11,3 +11,6 @@ dist
 
 # Raw image sources (rendered versions live in public/images/)
 src/images/
+
+# Internal analytics notes (not for the public repo)
+ANALYTICS.md
