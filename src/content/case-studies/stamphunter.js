@@ -133,16 +133,6 @@ Abilities that the app provides:
       caption: 'Screenshots from my iterations with Lovable & Base44',
     },
 
-    { type: 'h3', text: "⋆✴︎˚｡⋆ AI helps - but some things you just have to do yourself"},
-    { type: 'p', text: 'AI sped a lot of this up, but a few things I deliberately kept in my own hands:' },
-    {
-      type: 'list',
-      items: [
-        '==Not putting API keys in the chat -==  For things like database and Google Auth setup, I just ask the LLM for clear, simple step-by-step instructions and configure the keys myself — they never go into the chat, for security reasons.',
-        "==Asking humans for a sanity check -==  Sometimes the AI insists on something and I don't fully get why. For example, it pushed hard for Supabase — but free Supabase projects auto-pause after a week of inactivity. After talking to a developer, I looked into Strapi as an alternative, and into using GitHub Actions to ping the Supabase API periodically to keep it alive.",
-      ],
-    },
-
     { type: 'h3', text: "⋆✴︎˚｡⋆ Learning to code with AI"},
     { type: 'p', text: 'I used the build as a way to actually learn the code, not just generate it. My habit throughout:' },
     {

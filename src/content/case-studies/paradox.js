@@ -7,23 +7,19 @@ export default {
   // Top hero image (1632px wide, shown as a 2:1 banner crop). Add: /images/paradox/hero.png
   hero: { src: '/images/covers/Paradox_Cover.jpg', alt: '' },
   intro:
-    'Paradox Security Systems is a B2B security hardware company. The app, used daily by end users to monitor and control their home or business security, was a legacy product that had drifted out of sync with modern mobile UX.',
+    'Paradox Security Systems provides B2B security hardware solutions. Their flagship app (Blue Eye), used daily by end-users to monitor and control their home or business security, was a legacy product that had drifted out of sync with modern mobile UX.\n\nThe redesign also had to push for user-centric decisions in an organization where the app wasn’t the revenue driver - a constraint that shaped both the product and the work.',
   // Intro CTA button. Omit `cta` entirely to hide the button on a study.
   cta: { label: 'Blue Eye app', href: 'https://play.google.com/store/apps/details?id=com.paradox.insitegoldv2&hl=en' },
   blocks: [
-    {
-      type: 'p',
-      text: 'The redesign also had to push for user-centric decisions in an organization where the app wasn’t the revenue driver - a constraint that shaped both the work and how I worked.',
-    },
 
     { type: 'h2', text: 'Why such a critical app needed an overhaul redesign?' },
     {
       type: 'list',
       items: [
-        'Introduction of a new key security product - Doorbell real time camera.',
-        'The app crashed frequently and required a structural rebuild of the app’s foundation.',
-        'Tap targets were small, text was hard to read, the layout fought the device.',
-        'The visual language was dated, with no clear hierarchy.',
+        '==Introduction of a new key security product== - Doorbell real-time camera.',
+        'The ==app was unstable,== crashing frequently and requiring a structural rebuild of its foundation.',
+        'The ==app was difficult to use== — touch targets were small, text was hard to read, and the layout fought the device.',
+        'The ==visual language was dated==, with no clear hierarchy.',
       ],
     },
     {
@@ -36,11 +32,11 @@ export default {
     { type: 'h2', text: 'Creating a design system' },
     {
       type: 'p',
-      text: 'We migrated from XD to Figma and we had to make some order.',
+      text: 'As part of the redesign, we took the opportunity to improve our standards of work. We migrated from XD to Figma and reorganized the workflow and project libraries.',
     },
     {
       type: 'p',
-      text: 'I had the opportunity to mix a significant part in creating and documenting our new design system and in addition organizing a file structure system for our projects and creating a better handoff practice to ensure a clear and more precise communication between designers and developers in the team.',
+      text: 'I had a significant part in ==creating and documenting our new design system, organizing a file structure system for our projects, and creating a better handoff practice== to ensure clear and precise communication between the designers and developers in the team.',
     },
     {
       type: 'img',
@@ -98,14 +94,14 @@ export default {
       ]
     },
 
-    { type: 'h2', text: 'Camera:horizontal → vertical' },
+    { type: 'h2', text: 'Changing directions - taking the Camera from horizontal to vertical' },
     {
       type: 'p',
-      text: 'Creating a view that is suitable for the format. Vertical view to fit the phone screen.',
+      text: 'We created a view that is more suitable for the format, a vertical view to fit a phone screen in an ordinary use scenario. ',
     },
     {
       type: 'p',
-      text: 'In addition I have created a more focused view by granting darker UI when entering the doorbell view itself - and minimizing the elements on screen so the user can focus on what matters the most.',
+      text: 'To maximize the benefits of this change, I have created a more focused view by granting darker UI when entering the doorbell view itself - and minimizing the elements on screen so the user can focus on what matters the most.',
     },
     {
       type: 'img',
@@ -120,14 +116,14 @@ export default {
       caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
     },
 
-    { type: 'h2', text: 'Timeline view that didn’t ship' },
+    { type: 'h2', text: 'Timeline view for a more natural search experience' },
     {
       type: 'p',
-      text: 'I designed a timeline sequence view for recorded footage as an alternative to the standard list — it didn’t ship due to development effort and cost,',
+      text: 'I designed a timeline sequence view for recorded footage as an alternative to the standard list- empowering users to search for recordings in a fashion that more closely fits the way we naturally think about previous events and is more similar to the way that consumer media apps display their recordings, leading to better ease of use. ',
     },
     {
       type: 'p',
-      text: 'but the exploration shaped how I scope design ambition against engineering reality.',
+      text: '==Unfortunately, it didn’t ship due to development effort and cost constraints. But this exploration helped shape the way I scope design ambition against engineering reality.==',
     },
     {
       type: 'img',
@@ -139,7 +135,7 @@ export default {
     { type: 'h2', text: 'New way to answer the door' },
     {
       type: 'p',
-      text: 'When someone rings DoorBell, the phone rings, just like it would for a regular or messenger call.',
+      text: 'We designed it in such a way that when someone interacts with the Doorbell, the phone rings, just like it would for a regular call. Enabling the User to first see who’s at the door and to answer instantly, talk to the visitor directly via the app, and even unlock the door from the automation tab.',
     },
     {
       type: 'p',
@@ -167,7 +163,7 @@ export default {
     { type: 'h2', text: 'Illustrations I had the opportunity to add to the app' },
     {
       type: 'p',
-      text: 'While working on redesigning the app I had the pleasure on working on some illustrations that were integrated to the new look and feel of the app.',
+      text: 'While working on redesigning the app, I had the pleasure of working on some illustrations that were integrated into the new look and feel of the app.',
     },
     {
       type: 'img',
@@ -176,14 +172,10 @@ export default {
       caption: 'Various illustrations in different screens of the app',
     },
 
-    { type: 'h2', text: 'Testing without research' },
+    { type: 'h2', text: 'The challenge of testing without research' },
     {
       type: 'p',
-      text: 'Without access to formal user research, I built Figma prototypes and ran internal testing with peers across the company.',
-    },
-    {
-      type: 'p',
-      text: 'It wasn’t a substitute for end-user research, but it caught real problems before they reached development.',
+      text: "Due to the project's constraints, I had to devise a way to design the app without access to formal user research. My solution was to design Figma prototypes and to run internal testing with peers across the company.",
     },
   ],
 }
