@@ -172,7 +172,7 @@ function SkillsPanel() {
           <ul className={bulletList}>
             {group.bullets.map((bullet, i) => (
               <li key={i} className={smallBody}>
-                {bullet}
+                {renderRich(bullet)}
               </li>
             ))}
           </ul>
