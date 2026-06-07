@@ -11,7 +11,7 @@ export default {
     alt: 'Dazl brand teaser announcement on the old Codux website: “But something Dazzling is coming next!”',
     caption: 'Dazl brand teaser announcement on the old Codux website: “But something Dazzling is coming next!”', },
   intro:
-    'Codux (a visual IDE we have worked on) journey came to an end and we pivoted on to work on Dazel.\n\nDazl is a cutting-edge AI Builder headed by Nadav Avrahami, the co-founder of WIX, together with a core group of Wix professionals.',
+    'The Codux journey came to an end and we pivoted to working on Dazl.\n\nDazl is a cutting-edge AI Builder headed by Nadav Avrahami, the co-founder of WIX, together with a core group of Wix professionals.',
 
   // Intro CTA button. Omit `cta` entirely to hide the button on a study.
   cta: { label: 'Dazl Website', href: 'https://dazl.dev/' },
@@ -24,7 +24,7 @@ export default {
     },
     {
       type: 'p',
-      text: "The previous property panel that was implemented in Codux tried to be both, and because of that, it was neither ending up being too complex for some and too weak for others.",
+      text: "The previous property panel that was implemented in Codux tried to be both, and because of that, it ended up being neither: too complex for some, too weak for others.",
     },
     {
       type: 'img',
@@ -161,7 +161,7 @@ export default {
     { type: 'h2', text: 'Conclusions' },
     {
       type: 'p',
-      text: "I had the pleasure of working with great people on an intense but insightful 90-day sprint, In which we made a pivot from working on Codux (Visual IDE)  to Dazl, a dazzling new AI builder.",
+      text: "I had the pleasure of working with great people on an intense but insightful 90-day sprint, in which we pivoted from working on Codux (Visual IDE)  to Dazl, a dazzling new AI builder.",
     },
     {
       type: 'p',
@@ -169,7 +169,7 @@ export default {
     },
     {
       type: 'p',
-     text: "Throughout the project, I collaborated with brilliant developers - together we built components using every React property , watched how each one was reflected in Codux, and let that hands-on testing tell us what worked and what didn't.",
+     text: "Throughout the project, I collaborated with brilliant developers - together we built components using every React property, watched how each one was reflected in Codux, and let that hands-on testing tell us what worked and what didn't.",
     },
     {
       type: 'p',

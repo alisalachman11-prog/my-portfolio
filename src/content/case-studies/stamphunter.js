@@ -18,7 +18,7 @@ export default {
     },
 
     { type: 'h2', text: 'Some of the stamps are only available for specific time periods' },
-    { type: 'p', text: 'Sometimes they even have time-limited challenges with little symbolic gifts like “collect the 5 unique stamps available across the city for a special event this week and receive a commemorative keychain” that the only way to know about them for a visitor is to see one of the stamping stations in person, or to dig through a Facebook group (1.3k members, ~54 posts a week).'},
+    { type: 'p', text: 'Sometimes they even have time-limited challenges with little symbolic gifts like “collect the 5 unique stamps available across the city for a special event this week and receive a commemorative keychain” and the only way for a visitor to learn about them is to spot a stamping station in person, or to dig through a Facebook group (1.3k members, ~54 posts a week).'},
     { type: 'p', text: 'While the treasure-hunt aspect is definitely part of the fun of it, I like a little more efficiency in my hobbies and the ability to plan ahead, to be intentional about it.'},
     {
       type: 'carousel',
@@ -59,14 +59,14 @@ export default {
     },
 
 
-    { type: 'h2', text: 'Cluttered google map view with millions of blue pins' },
+    { type: 'h2', text: 'Cluttered Google Maps view with millions of blue pins' },
     { type: 'p', text: 'Most community maps people share are packed with pins — so many that the map becomes hard to actually read. And the only way to clear them is buried: Saved → your lists → hide on map.' },
     {type: 'p', text: "As a tourist trying to get around Taiwan, having all of that on screen when I didn't need it just got in the way." },
      {
       type: 'img',
       src: '/images/stamphunter/03-google-maps.jpg',
       alt: 'Four production screens (Help Center, Installer Login, Invite Owner, Create Site) showing the design system applied across flows.',
-      caption: 'Google map view with million of blue pines - and a flow of removing them from the map',
+      caption: 'Google Maps view with millions of blue pins - and a flow of removing them from the map',
     },
     {
       type: 'img',
@@ -76,9 +76,9 @@ export default {
     },
 
     { type: 'h2', text: 'AI workflow ' },
-    {type: 'h3', text: '⋆✴︎˚｡⋆ Using only necessary skills'},
+    {type: 'h3', text: 'Using only necessary skills'},
     { type: 'p', text: 'One of the most important things was not getting distracted by every cool skill out there — but figuring out what I actually needed, and using only those.' },
-    {type: 'p', text: 'I have focused on finding and creating skills that will help me uncover opportunities, and plan my work with the LLM to be faster and more precise.' },
+    {type: 'p', text: 'I focused on finding and creating skills that will help me uncover opportunities, and plan my work with the LLM to be faster and more precise.' },
     {
       type: 'img',
       src: '/images/stamphunter/05-skills.jpg',
@@ -86,7 +86,7 @@ export default {
       caption: '5 skills that I used to create StampHunter',
     },
 
-    { type: 'h3', text: "⋆✴︎˚｡⋆ Prototyping to test what works and what doesn't - quickly"},
+    { type: 'h3', text: "Prototyping to test what works and what doesn't - quickly"},
     { type: 'p', text: 'A couple of the concepts I tested:' },
     {
       type: 'list',
@@ -96,7 +96,7 @@ export default {
         'Earning badges for collected stamps',
       ],
     },
-    {type: 'p', text: 'I have curated a prompt that explains my motivation, goals and  abilities that the app provides:' },
+    {type: 'p', text: 'I wrote a prompt that explains my motivation, goals and  abilities that the app provides:' },
 
     {
       type: 'prompt',
@@ -131,16 +131,6 @@ Abilities that the app provides:
       src: '/images/stamphunter/06-prototype.jpg',
       alt: 'Four production screens (Help Center, Installer Login, Invite Owner, Create Site) showing the design system applied across flows.',
       caption: 'Screenshots from my iterations with Lovable & Base44',
-    },
-
-    { type: 'h3', text: "⋆✴︎˚｡⋆ AI helps - but some things you just have to do yourself"},
-    { type: 'p', text: 'AI sped a lot of this up, but a few things I deliberately kept in my own hands:' },
-    {
-      type: 'list',
-      items: [
-        '==Not putting API keys in the chat -==  For things like database and Google Auth setup, I just ask the LLM for clear, simple step-by-step instructions and configure the keys myself — they never go into the chat, for security reasons.',
-        "==Asking humans for a sanity check -==  Sometimes the AI insists on something and I don't fully get why. For example, it pushed hard for Supabase — but free Supabase projects auto-pause after a week of inactivity. After talking to a developer, I looked into Strapi as an alternative, and into using GitHub Actions to ping the Supabase API periodically to keep it alive.",
-      ],
     },
 
     { type: 'h3', text: "⋆✴︎˚｡⋆ Learning to code with AI"},
