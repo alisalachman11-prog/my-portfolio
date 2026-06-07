@@ -14,7 +14,7 @@ export const meta = {
 // ---------- Sidebar: profile ----------
 export const profile = {
   intro:
-  "Hey, I'm Alisa 👋 \n I’m a product designer for complex systems.\n\n My most recent work was for Wix, where I collaborated on creating a **Visual IDE** and an **AI builder**, both projects involving highly complex technical workflows. For both, I have contributed across the full product lifecycle, from discovery through to codebase contributions. Previously, I worked on a high-criticality IoT mobile app.\n\n Currently, I am traveling the world, and I have been to 17 countries so far. In my free time, I enjoy folding origami and watching scientific videos.",
+  "Hey, I'm Alisa 👋 \n\nI'm a product designer for complex systems - most recently **Codux, a visual IDE for React**, and **Dazl, an AI builder**, at Wix. I contributed across the full product lifecycle, from discovery to codebase contributions. Before that, I redesigned a high-criticality IoT security app.\n\nI'm on a sabbatical traveling the world (8 countries so far) - and still building: **Stamp Hunter**, a mobile app for collecting ink stamps across Taiwan, with Claude Code as my pair. Now looking for my next role.\n\nIn my free time I enjoy folding origami and watching science videos.",
   // avatar: '/images/avatar.jpg', // ← uncomment after adding a square photo to public/images/
 }
 
@@ -22,11 +22,14 @@ export const aboutMe = {
   // Fanned photo stack shown at the top of the About panel. Hovering shuffles
   // through them. Reuses the about images — reorder, add, or swap freely.
   gallery: [
-    '/images/about/1_countries.jpg',
+    '/images/about/4_youtube.jpg',
     '/images/about/1_origami.jpg',
-    '/images/about/1_youtube.jpg',
+    '/images/about/2_origami.jpg',
+    '/images/about/3_origami.jpg',
     '/images/about/2_countries.jpg',
+    '/images/about/4_origami.jpg',
     '/images/about/3_countries.jpg',
+    '/images/about/1_youtube.jpg',
   ],
   // Plain About blurb. Was previously a template with hover-card facts; now just text.
 };
@@ -34,15 +37,15 @@ export const aboutMe = {
 export const experience = [
   {
     company: 'Wix',
-    years: '2023 - 2025',
+    years: '2023–2025',
     summary:
-      'At Wix, I designed two developer-focused products: a visual IDE for React that pivoted into an AI-powered builder. Owned product areas, defined KPIs with product, and shipped iteratively. Worked closely with engineers and occasionally contributed to the codebase. Ran interviews, usability tests, and analytics (Mixpanel, FullStory), and introduced an Opportunity Solution Tree framework to the team.',
+      'At Wix, I designed two developer-focused products: a visual IDE for React that pivoted into an AI-powered builder. Owned product areas, defined KPIs with product, and shipped iteratively. Worked closely with engineers and shipped UI changes directly to the codebase. Ran interviews, usability tests, and analytics (Mixpanel, FullStory), and introduced an Opportunity Solution Tree framework to the team.',
   },
   {
     company: 'Paradox Security',
     years: '2020 - 2023',
     summary:
-      "At Paradox, I helped redesign a critical legacy mobile app and shaped the experience for the Doorbell, a new security device. Built and documented a design system, restructured the file architecture, refined the design-to-dev handoff, and created onboarding for new designers.",
+      "At Paradox, I helped redesign a critical legacy mobile app and shaped the experience for the Doorbell, a new security device. Co-created and documented a design system, restructured the file architecture, refined the design-to-dev handoff, and created onboarding for new designers.",
   },
 ]
 
@@ -69,34 +72,34 @@ export const skills = [
     heading: 'Domain Expertise',
     icon: 'apple',
     bullets: [
-      'Complex workflows for enterprise B2B SaaS',
-      'Designed developer tools and AI-powered builders (Codux, Dazl)',
-      'IoT security products, designed app integrations and tested them against real security hardware'
+      'Design complex workflows for enterprise B2B SaaS',
+      'Design developer tools and AI-powered builders (Codux, Dazl)',
+      'Design app integrations for IoT security products, tested against real hardware',
     ],
   },
   {
     heading: 'Research & Discovery',
     icon: 'search',
     bullets: [
-      'User interviews and usability testing',
-      'Working with Mixpanel and FullStory',
-      'Translating insights into structured product opportunities using the Opportunity Solution Tree (OST) framework',
+     'Run user interviews and usability testing',
+    'Analyze product behavior with Mixpanel and FullStory',
+     'Translate insights into structured product opportunities using the Opportunity Solution Tree (OST) framework',
     ],
   },
   {
     heading: 'Technical Fluency',
     icon: 'code',
     bullets: [
-      'Familiar with HTML, CSS, TS, JS, and React',
+      'Comfortable with HTML, CSS, TS, JS, and React \n(still deepening)',
       'Ship UI changes directly to the codebase',
-      'Comfortable with the Git workflow: commits, PRs, and bug/UX tickets',
+      'Navigate the Git workflow comfortably: commits, PRs, and bug/UX tickets',
     ],
   },
   {
     heading: 'Building with AI',
     icon: 'Wand',
     bullets: [
-      'Prototype and iterate design concepts using Claude Code, Cursor, Base44, and Lovable',
+      'Prototype and iterate on design concepts using Claude Code, Cursor, Base44, and Lovable',
       'Evaluate LLM design outputs as part of shipping AI features',
       'Build personal projects end-to-end using AI-assisted planning, design, and code',
     ],
@@ -105,16 +108,16 @@ export const skills = [
     heading: 'Design Systems & Team Process',
     icon: 'swatch-book',
     bullets: [
-      'Co-created and documented a design system',
-      'Improved the design-to-development handoff process',
-      'Designed an onboarding experience for new designers',
+      'Co-created and documented design systems',
+      'Improve design-to-development handoff processes',
+      'Design onboarding experiences for new team members',
     ],
   },
   {
     heading: 'Collaboration & Ownership',
     icon: 'smile-plus',
     bullets: [
-      'Comfortable operating inside squads, across teams, and alongside other designers',
+      'Operate inside squads, across teams, and alongside other designers',
       'Own end-to-end decisions independently when needed',
     ],
   },
