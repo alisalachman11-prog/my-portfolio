@@ -62,8 +62,8 @@ export default {
     {
       type: 'img',
       src: '/images/codux/10-visual-grid.jpg',
-      alt: 'Grid visual representation on canvas - focuse on a code snippet + style panel controllers',
-      caption: 'Grid visual representation on canvas - focuse on a code snippet + style panel controllers',
+      alt: 'Grid visual representation on canvas - focused on a code snippet + style panel controllers',
+      caption: 'Grid visual representation on canvas - focused on a code snippet + style panel controllers',
     },
 
     { type: 'h2', text: 'Not everything can be an icon' },
@@ -144,7 +144,7 @@ export default {
     },
     {
       type: 'p',
-      text: 'My proposed approach resolves this by making the simple case simple: users can directly set the number of rows/columns they want, while a distinct advanced mode is available for those who need deeper control over grid customisation.',
+      text: 'My proposed approach resolves this by making the simple case simple: users can directly set the number of rows/columns they want, while a distinct advanced mode is available for those who need deeper control over grid customization.',
     },
     {
       type: 'img',
@@ -168,7 +168,7 @@ export default {
     {
       type: 'list',
       items: [
-        "4 of 5 designers used the grid presets and all found them fast because I'd mapped where designers expected them in earlier rounds, before they existed.",
+        "In final-round testing, 4 of 5 designers used the grid presets and all found them fast because I'd mapped where designers expected them in earlier rounds, before they existed.",
         "Designers kept typing the number of rows/columns into a control that set their size. This was a known, recurring mismatch. After I redesigned it to represent count, their instinct finally produced what they expected.",
       ],
     },

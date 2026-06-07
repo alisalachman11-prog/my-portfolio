@@ -12,7 +12,7 @@ export default {
   cta: { label: 'Blue Eye app', href: 'https://play.google.com/store/apps/details?id=com.paradox.insitegoldv2&hl=en' },
   blocks: [
 
-    { type: 'h2', text: 'Why such a critical app needed an overhaul redesign?' },
+    { type: 'h2', text: 'Why did such a critical app need an overhaul?' },
     {
       type: 'list',
       items: [
@@ -54,7 +54,7 @@ export default {
     { type: 'h2', text: 'Testing the new doorbell functionality with the real hardware' },
     {
       type: 'p',
-      text: 'Testing with real hardware is crucial because it reveal physical and environmental edge cases. During the whole design process I was validating network connectivity to the mobile app and  how precise were the sensors.',
+      text: 'Testing with real hardware is crucial because it reveals physical and environmental edge cases. During the whole design process I was validating network connectivity to the mobile app and  how precise the sensors were.',
     },
 
     {

@@ -70,8 +70,8 @@ export const skills = [
     icon: 'apple',
     bullets: [
       'Complex workflows for enterprise B2B SaaS',
-      'Worked on Developer tool and AI-powered builder',
-      'IoT security products - designed app integrations tested against real security hardware'
+      'Designed developer tools and AI-powered builders (Codux, Dazl)',
+      'IoT security products, designed app integrations and tested them against real security hardware'
     ],
   },
   {
@@ -80,15 +80,15 @@ export const skills = [
     bullets: [
       'User interviews and usability testing',
       'Working with Mixpanel and FullStory',
-      'Translating insights into structured product opportunities using the OST framework',
+      'Translating insights into structured product opportunities using the Opportunity Solution Tree (OST) framework',
     ],
   },
   {
     heading: 'Technical Fluency',
     icon: 'code',
     bullets: [
-      'Familiar withHTML, CSS, TS, JS, and React',
-      'Ship small ui changes directly to the codebase',
+      'Familiar with HTML, CSS, TS, JS, and React',
+      'Ship UI changes directly to the codebase',
       'Comfortable with the Git workflow: commits, PRs, and bug/UX tickets',
     ],
   },
@@ -114,7 +114,7 @@ export const skills = [
     heading: 'Collaboration & Ownership',
     icon: 'smile-plus',
     bullets: [
-      'Comfortable working under leadership, operate inside squads, across teams, and alongside other designers',
+      'Comfortable operating inside squads, across teams, and alongside other designers',
       'Own end-to-end decisions independently when needed',
     ],
   },
