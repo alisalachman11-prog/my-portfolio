@@ -64,31 +64,26 @@ export default {
       type: 'img',
       src: '/images/paradox/01-carusel-testing.jpg',
       alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
-      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
         },
         {
       type: 'img',
       src: '/images/paradox/02-carusel-testing.jpg',
       alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
-      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
         },
         {
       type: 'img',
       src: '/images/paradox/03-carusel-testing.jpg',
       alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
-      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
         },
         {
       type: 'img',
       src: '/images/paradox/04-carusel-testing.jpg',
       alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
-      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
         },
         {
       type: 'img',
       src: '/images/paradox/05-carusel-testing.jpg',
       alt: 'Before/after comparison of the doorbell stream — dated legacy thumbnails vs. full-bleed redesigned call screens.',
-      caption: 'Anatomy of the doorbell stream — header, video controls, and action buttons, called out.',
         },
         
       ]
