@@ -14,3 +14,6 @@ src/images/
 
 # Internal analytics notes (not for the public repo)
 ANALYTICS.md
+
+#contains Bash permission allowlist. The .local suffix means user-specific;
+.claude/settings.local.json
