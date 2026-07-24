@@ -152,6 +152,15 @@ export const projects = [
     },
   },
   {
+    slug: 'wix-more',
+    brand: { logo: '/images/Logos/Logo-Wix.svg', word: 'Wix' },
+    title: 'More projects that I worked on in Wix',
+    description: 'Some more work from Wix.',
+    theme: 'light',
+    image: '/images/covers/Wix_more_cover.jpg',
+    cta: { label: 'View more Wix work' },
+  },
+  {
     slug: 'stamphunter',
     // No logo file yet — word-only until you add e.g. /images/Logos/Logo-StampHunter.svg
     brand: { word: 'Stamp Hunter' },

@@ -6,10 +6,12 @@ import dazl from './dazl.js'
 import paradox from './paradox.js'
 import stamphunter from './stamphunter.js'
 import codux from './codux.js'
+import wixMore from './wix-more.js'
 
 export const caseStudies = {
   dazl,
   paradox,
   stamphunter,
   codux,
+  'wix-more': wixMore,
 }
