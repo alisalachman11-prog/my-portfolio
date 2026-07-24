@@ -9,7 +9,7 @@
  * additional project, and fill in real titles/copy/images.
  */
 export default {
-  hero: { src: '', alt: '/images/covers/Wix_More_Cover.jpg' },
+  hero: { src: '/images/covers/Wix_more_cover.jpg', alt:''},
   intro:
     'A few additional projects I worked on during my time at Wix.',
   blocks: [
